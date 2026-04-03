@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380">
+  <style>
+    text {
+      font-family: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+      font-size: 26px;
+      font-weight: 900;
+      fill: #D4AF37;
+      white-space: pre;
+    }
+  </style>
+  <text x="10.5" y="117" style="text-shadow: 0 0 6px rgba(212,175,55,0.7);">
+    <tspan x="10.5" dy="0"> ██████╗ ██╗  ████████╗</tspan>
+    <tspan x="10.5" dy="1.2em">██╔════╝ ██║  ╚══██╔══╝</tspan>
+    <tspan x="10.5" dy="1.2em">██║  ███╗██║     ██║   </tspan>
+    <tspan x="10.5" dy="1.2em">██║   ██║██║     ██║   </tspan>
+    <tspan x="10.5" dy="1.2em">╚██████╔╝███████╗██║   </tspan>
+    <tspan x="10.5" dy="1.2em"> ╚═════╝ ╚══════╝╚═╝   </tspan>
+  </text>
+</svg>
