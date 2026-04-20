@@ -107,6 +107,7 @@ Amo i progetti che risolvono problemi reali, ma la cosa che più amo è over-ing
     modal_stack:    'Stack tecnologico',
     modal_appstore: '🍎 App Store',
     modal_github:   '🐙 GitHub',
+    modal_website:  '🌐 Visita il sito',
 
     // Game strings
     snake_score_label: 'Score:',
@@ -218,6 +219,7 @@ I love projects that solve real problems, but what I love most is over-engineeri
     modal_stack:    'Tech stack',
     modal_appstore: '🍎 App Store',
     modal_github:   '🐙 GitHub',
+    modal_website:  '🌐 Visit website',
 
     // Game strings
     snake_score_label: 'Score:',
@@ -248,128 +250,126 @@ const PROJECTS = [
   {
     id: 'risikino',
     name: 'Risikino',
-    tag_it: 'iOS App · Gioco',  tag_en: 'iOS App · Game',
-    shortDesc_it: 'Il Risiko tascabile per sfidare gli amici ovunque.',
-    shortDesc_en: 'Pocket Risiko — challenge your friends anywhere.',
+    tag_it: 'iOS App · Brand Identity',  tag_en: 'iOS App · Brand Identity',
+    shortDesc_it: 'Il Risiko tascabile — app, sito web e brand identity.',
+    shortDesc_en: 'Pocket Risiko — app, website and brand identity.',
     icon: '🎲',
-    tech: ['Swift', 'SwiftUI', 'Game Center', 'CloudKit', 'Firebase'],
-    description_it: `Risikino nasce dalla voglia di avere un Risiko sempre in tasca.
-L'app porta la classica esperienza del gioco da tavolo su iPhone con una UI moderna,
-partite multigiocatore in tempo reale e un sistema di classifiche online.
+    tech: ['Swift', 'SwiftUI', 'Game Center', 'CloudKit', 'HTML', 'CSS', 'JavaScript'],
+    description_it: `Risikino è un progetto completo di cui ho curato ogni aspetto: dall'identità visiva del brand — logo, palette colori, tipografia — al sito web di presentazione, fino all'app iOS vera e propria.
+L'app porta la classica esperienza del gioco da tavolo su iPhone con una UI moderna, partite multigiocatore in tempo reale e un sistema di classifiche online.
 Ogni armata, ogni attacco, ogni alleanza — tutto nella tua tasca.`,
-    description_en: `Risikino was born from the desire to have a Risiko game always in your pocket.
-The app brings the classic board-game experience to iPhone with a modern UI,
-real-time multiplayer matches, and an online ranking system.
+    description_en: `Risikino is a complete project where I handled every aspect: from the brand visual identity — logo, colour palette, typography — to the presentation website, all the way to the iOS app itself.
+The app brings the classic board-game experience to iPhone with a modern UI, real-time multiplayer matches, and an online ranking system.
 Every army, every attack, every alliance — in the palm of your hand.`,
     features_it: [
+      'Brand identity completa: logo, palette, tipografia',
+      'Sito web di presentazione del prodotto',
       'Multiplayer online in tempo reale',
       'Modalità locale pass-and-play',
       'Classifiche globali con Game Center',
-      'Mappe personalizzabili',
-      'AI avversari con difficoltà variabile',
     ],
     features_en: [
+      'Full brand identity: logo, palette, typography',
+      'Product presentation website',
       'Real-time online multiplayer',
       'Local pass-and-play mode',
       'Global leaderboards with Game Center',
-      'Customisable maps',
-      'AI opponents with variable difficulty',
     ],
-    appStore: 'https://apps.apple.com/app/risikino',
+    website: 'https://risikino.app',
+    appStore: null,
+    github: null,
+  },
+  {
+    id: 'drew',
+    name: 'Drew Clothing',
+    tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',
+    shortDesc_it: 'E-commerce streetwear realizzato con Shopify.',
+    shortDesc_en: 'Streetwear e-commerce built with Shopify.',
+    icon: '👕',
+    tech: ['Shopify', 'Liquid', 'CSS', 'JavaScript'],
+    description_it: `Sito e-commerce realizzato per un amico che produce e vende streetwear con il brand Drew Clothing Official.
+Ho scelto Shopify per dargli la massima autonomia nella gestione quotidiana del negozio — prodotti, ordini, sconti — senza dipendere da uno sviluppatore per le operazioni di routine.
+Il risultato è uno shop pulito, veloce e completamente gestibile in autonomia.`,
+    description_en: `E-commerce website built for a friend who produces and sells streetwear under the Drew Clothing Official brand.
+I chose Shopify to give him full autonomy in the day-to-day management of the store — products, orders, discounts — without depending on a developer for routine operations.
+The result is a clean, fast shop that he can manage entirely on his own.`,
+    features_it: [
+      'Store Shopify personalizzato',
+      'Design coerente con il brand streetwear',
+      'Gestione prodotti e ordini in autonomia',
+      'Ottimizzato per mobile',
+      'Integrazione pagamenti e spedizioni',
+    ],
+    features_en: [
+      'Custom Shopify store',
+      'Design consistent with the streetwear brand',
+      'Autonomous product and order management',
+      'Mobile optimised',
+      'Payments and shipping integration',
+    ],
+    website: 'https://www.drewclothingofficial.it',
+    appStore: null,
     github: null,
   },
   {
     id: 'caelus',
-    name: 'Gestionale CAELUS',
-    tag_it: 'Web App · Gestionale',  tag_en: 'Web App · Management',
-    shortDesc_it: 'Sistema gestionale per organizzazioni sportive.',
-    shortDesc_en: 'Management platform for sports organisations.',
-    icon: '🏛️',
-    tech: ['React', 'Node.js', 'Firebase', 'Tailwind', 'Chart.js'],
-    description_it: `Piattaforma web completa per la gestione di associazioni sportive.
-Dalla gestione degli atleti e degli allenatori, ai calendari delle competizioni,
-fino alla reportistica finanziaria — CAELUS centralizza tutto in un'unica dashboard intuitiva.`,
-    description_en: `A full-featured web platform for managing sports associations.
-From athletes and coaches to competition calendars and financial reports —
-CAELUS centralises everything in a single, intuitive dashboard.`,
+    name: 'Caelus Nuclear',
+    tag_it: 'Web · Startup · CTO',  tag_en: 'Web · Startup · CTO',
+    shortDesc_it: 'Sono il CTO di Caelus Nuclear, startup nel settore nucleare.',
+    shortDesc_en: 'I am CTO of Caelus Nuclear, a nuclear energy startup.',
+    icon: '⚛️',
+    tech: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Node.js'],
+    description_it: `Caelus Nuclear è una startup italiana che opera nel settore dell'energia nucleare pulita, con l'obiettivo di rendere il nucleare una fonte energetica sicura, scalabile e sostenibile per il futuro.
+In questo progetto ricopro il ruolo di CTO: mi occupo dell'architettura tecnologica dell'azienda, della presenza digitale — dal sito istituzionale ai sistemi interni — e guido le scelte tecniche in linea con la visione del team.`,
+    description_en: `Caelus Nuclear is an Italian startup operating in the clean nuclear energy sector, with the goal of making nuclear power a safe, scalable, and sustainable energy source for the future.
+In this project I hold the role of CTO: I handle the company's technology architecture, digital presence — from the institutional website to internal systems — and drive technical decisions aligned with the team's vision.`,
     features_it: [
-      'Dashboard con KPI in tempo reale',
-      'Gestione tesseramenti e scadenze',
-      'Calendario competizioni integrato',
-      'Sistema di notifiche',
-      'Reportistica finanziaria avanzata',
+      'Ruolo di CTO e responsabile tecnologico',
+      'Architettura dei sistemi digitali aziendali',
+      'Sito istituzionale multilingua',
+      'Gestione dell\'infrastruttura tech',
+      'Energia nucleare pulita e sostenibile',
     ],
     features_en: [
-      'Real-time KPI dashboard',
-      'Membership & deadline management',
-      'Integrated competition calendar',
-      'Notification system',
-      'Advanced financial reporting',
+      'CTO and technology lead role',
+      'Company digital systems architecture',
+      'Multilingual institutional website',
+      'Tech infrastructure management',
+      'Clean and sustainable nuclear energy',
     ],
+    website: 'https://caelus-nuclear.com/en',
     appStore: null,
-    github: 'https://github.com/gianlorenzo-t/caelus',
-  },
-  {
-    id: 'plaiwise',
-    name: 'Plaiwise',
-    tag_it: 'iOS + Web · AI Platform',  tag_en: 'iOS + Web · AI Platform',
-    shortDesc_it: 'AI trainer per atleti multisport.',
-    shortDesc_en: 'AI trainer for multi-sport athletes.',
-    icon: '🏆',
-    tech: ['Swift', 'SwiftUI', 'Python', 'FastAPI', 'OpenAI', 'HealthKit'],
-    description_it: `Plaiwise è una piattaforma AI che genera piani di allenamento personalizzati
-per atleti di qualsiasi sport. Integrando i dati dall'Apple Watch e da HealthKit,
-l'AI analizza le performance e ottimizza ogni sessione per massimizzare i risultati.`,
-    description_en: `Plaiwise is an AI platform that generates personalised training plans
-for athletes across any sport. By integrating Apple Watch and HealthKit data,
-the AI analyses performance and optimises every session for maximum results.`,
-    features_it: [
-      'Piano AI generato in base alle prestazioni reali',
-      'Supporto per calcio, nuoto, basket, running e altro',
-      'Integrazione HealthKit e Apple Watch',
-      'Progressive overload automatico',
-      'Dashboard statistiche avanzata',
-    ],
-    features_en: [
-      'AI plan generated from real performance data',
-      'Support for football, swimming, basketball, running & more',
-      'HealthKit & Apple Watch integration',
-      'Automatic progressive overload',
-      'Advanced stats dashboard',
-    ],
-    appStore: 'https://apps.apple.com/app/plaiwise',
     github: null,
   },
   {
-    id: 'softhouse',
-    name: 'Software House Landing',
-    tag_it: 'Web · Landing Page',  tag_en: 'Web · Landing Page',
-    shortDesc_it: 'Landing page moderna per una software house.',
-    shortDesc_en: 'Modern landing page for a software house.',
-    icon: '🖥️',
-    tech: ['HTML', 'CSS', 'JavaScript', 'GSAP', 'Vite'],
-    description_it: `Landing page premium realizzata per una software house.
-Design glassmorphism con animazioni GSAP fluide, ottimizzazione SEO completa
-e performance Lighthouse 95+. Mobile-first, accessibile, e velocissima.`,
-    description_en: `Premium landing page built for a software house.
-Glassmorphism design with smooth GSAP animations, full SEO optimisation,
-and Lighthouse 95+ performance. Mobile-first, accessible, and blazing fast.`,
+    id: 'pirrons',
+    name: 'I Love Pirrons',
+    tag_it: 'Web · Artista Musicale',  tag_en: 'Web · Music Artist',
+    shortDesc_it: 'Sito per una delle artiste più interessanti del panorama italiano.',
+    shortDesc_en: 'Website for one of Italy\'s most interesting music artists.',
+    icon: '🎵',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    description_it: `Sito web ideato e sviluppato interamente da me per Pirrons, una delle artiste musicali più interessanti e originali del panorama italiano.
+Un progetto completo dalla concept alla messa online: ho curato l'identità visiva, il design, lo sviluppo e l'esperienza utente, costruendo un sito che rispecchia l'unicità artistica di Pirrons.`,
+    description_en: `Website entirely conceived and developed by me for Pirrons, one of the most interesting and original music artists in the Italian scene.
+A complete project from concept to launch: I handled the visual identity, design, development and user experience, building a site that reflects the artistic uniqueness of Pirrons.`,
     features_it: [
-      'Animazioni GSAP custom',
-      'Glassmorphism design',
-      'Lighthouse score 95+',
+      'Concept e design ideati interamente da me',
+      'Identità visiva coerente con l\'artista',
+      'Esperienza utente curata nei dettagli',
       'Fully responsive',
-      'WCAG 2.1 accessibile',
+      'Performance ottimizzate',
     ],
     features_en: [
-      'Custom GSAP animations',
-      'Glassmorphism design',
-      'Lighthouse score 95+',
+      'Concept and design entirely by me',
+      'Visual identity consistent with the artist',
+      'Detail-focused user experience',
       'Fully responsive',
-      'WCAG 2.1 accessible',
+      'Optimised performance',
     ],
+    website: 'https://ilovepirrons.com',
     appStore: null,
-    github: 'https://github.com/gianlorenzo-t/softhouse-landing',
+    github: null,
   },
 ];
 
@@ -745,11 +745,6 @@ class Terminal {
     cmds['portfolio'] = () => {
       this._blank();
       this._section(this.t('portfolio_title'));
-      this._blank();
-      this._line('<span class="out-dim">🚀 Lavori in corso... Torna presto! / Work in progress... Check back soon!</span>');
-      this._blank();
-      return; // TODO: Remove this block when projects are ready
-      
       this._line(this.t('portfolio_hint'), 'out-dim');
       this._blank();
 
@@ -926,6 +921,7 @@ class Terminal {
     const techHtml = p.tech.map(t => `<span class="tech-chip">${t}</span>`).join('');
 
     let linksHtml = '';
+    if (p.website)  linksHtml += `<a class="store-link" href="${p.website}" target="_blank" rel="noopener">${t.modal_website}</a>`;
     if (p.appStore) linksHtml += `<a class="store-link" href="${p.appStore}" target="_blank" rel="noopener">${t.modal_appstore}</a>`;
     if (p.github)   linksHtml += `<a class="store-link secondary" href="${p.github}" target="_blank" rel="noopener">${t.modal_github}</a>`;
 
