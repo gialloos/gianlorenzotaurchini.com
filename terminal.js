@@ -645,7 +645,7 @@ class Terminal {
       if (handler) {
         handler(args);
       } else {
-        this._line(this.t('cmd_not_found', raw), 'out-red');
+        this._line(this.t('cmd_not_found', this._esc(raw)), 'out-red');
       }
     }
 
@@ -921,9 +921,9 @@ class Terminal {
     const techHtml = p.tech.map(t => `<span class="tech-chip">${t}</span>`).join('');
 
     let linksHtml = '';
-    if (p.website)  linksHtml += `<a class="store-link" href="${p.website}" target="_blank" rel="noopener">${t.modal_website}</a>`;
-    if (p.appStore) linksHtml += `<a class="store-link" href="${p.appStore}" target="_blank" rel="noopener">${t.modal_appstore}</a>`;
-    if (p.github)   linksHtml += `<a class="store-link secondary" href="${p.github}" target="_blank" rel="noopener">${t.modal_github}</a>`;
+    if (p.website)  linksHtml += `<a class="store-link" href="${p.website}" target="_blank" rel="noopener noreferrer">${t.modal_website}</a>`;
+    if (p.appStore) linksHtml += `<a class="store-link" href="${p.appStore}" target="_blank" rel="noopener noreferrer">${t.modal_appstore}</a>`;
+    if (p.github)   linksHtml += `<a class="store-link secondary" href="${p.github}" target="_blank" rel="noopener noreferrer">${t.modal_github}</a>`;
 
     content.innerHTML = `
       <div class="m-tag">${p[`tag_${L}`]}</div>
