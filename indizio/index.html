@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indizio! — Il gioco di parole da fare in compagnia</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Indizio! è il party game di parole italiane, 100% offline: fai indovinare la parola con indizi prima che scada il tempo. Senza pubblicità, senza account, senza raccolta dati. Per iOS e Android." />
+  <meta name="author" content="Gianlorenzo Taurchini" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gianlorenzotaurchini.com/indizio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gianlorenzotaurchini.com/indizio/" />
+  <meta property="og:title" content="Indizio! — Il gioco di parole da fare in compagnia" />
+  <meta property="og:description" content="Il party game di parole italiane, 100% offline. Fai indovinare la parola con indizi prima che scada il tempo." />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/favicon.png" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="Indizio!" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Indizio! — Il gioco di parole da fare in compagnia" />
+  <meta name="twitter:description" content="Il party game di parole italiane, 100% offline." />
+
+  <!-- Theme & icons -->
+  <meta name="theme-color" content="#5B4BFF" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+
+  <!-- Security -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Indizio!",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "iOS, Android",
+    "inLanguage": "it",
+    "description": "Party game di parole italiane, 100% offline. Fai indovinare la parola con indizi prima che scada il tempo.",
+    "author": {
+      "@type": "Person",
+      "name": "Gianlorenzo Taurchini",
+      "url": "https://gianlorenzotaurchini.com"
+    },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --indigo: #5B4BFF;
+      --indigo-dark: #4334d6;
+      --amber: #FFB020;
+      --ink: #1a1730;
+      --muted: #5d5a78;
+      --bg: #f5f4ff;
+      --card: #ffffff;
+      --border: #e7e4ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--indigo); }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(120% 120% at 50% -10%, #6c5cff 0%, var(--indigo) 45%, var(--indigo-dark) 100%);
+      color: #fff;
+      text-align: center;
+      padding: 88px 24px 96px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -1px;
+      height: 48px;
+      background: var(--bg);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(48px, 12vw, 84px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .hero h1 .dot { color: var(--amber); }
+    .hero .subtitle {
+      font-size: clamp(18px, 4vw, 22px);
+      font-weight: 600;
+      margin-top: 16px;
+      color: rgba(255,255,255,0.92);
+    }
+    .stores {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+    .store-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 10px 20px;
+      border-radius: 999px;
+    }
+
+    /* Sections */
+    .section { padding: 56px 0; }
+    .section h2 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .lead {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 60ch;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .feature .ico {
+      width: 42px; height: 42px;
+      display: grid; place-items: center;
+      border-radius: 12px;
+      background: rgba(91,75,255,0.1);
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .feature h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .feature p { font-size: 15px; color: var(--muted); }
+
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .pill {
+      font-size: 14px; font-weight: 600;
+      background: rgba(255,176,32,0.16);
+      color: #8a5a00;
+      border: 1px solid rgba(255,176,32,0.35);
+      padding: 7px 14px; border-radius: 999px;
+    }
+
+    /* Support card */
+    .support {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 36px;
+      text-align: center;
+      box-shadow: 0 16px 40px -24px rgba(91,75,255,0.4);
+    }
+    .support h2 { margin-bottom: 10px; }
+    .support p { color: var(--muted); font-size: 17px; }
+    .mail-btn {
+      display: inline-block;
+      margin-top: 22px;
+      background: var(--indigo);
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 14px;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+    .mail-btn:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 24px 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { font-weight: 600; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .disclaimer {
+      max-width: 56ch;
+      margin: 18px auto 0;
+      font-size: 13px;
+      color: #8d8aa6;
+    }
+    .sep { margin: 0 8px; color: var(--border); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <span class="badge">Party game · iOS &amp; Android</span>
+    <h1>Indizio<span class="dot">!</span></h1>
+    <p class="subtitle">Il gioco di parole da fare in compagnia.</p>
+    <div class="stores">
+      <span class="store-pill">🍎 App Store</span>
+      <span class="store-pill">🤖 Google Play</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="section wrap">
+      <h2>Come si gioca</h2>
+      <p class="lead">
+        Fai indovinare la parola al tuo compagno con indizi, senza mai dirla,
+        prima che scada il tempo. Semplice da imparare, impossibile da smettere.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="ico">🎯</div>
+          <h3>Tre modalità</h3>
+          <p>Classica, Crescente e Sfida a squadre per ogni tipo di serata.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">📚</div>
+          <h3>Centinaia di parole</h3>
+          <p>Un ricco dizionario di parole italiane, sempre nuove.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">✏️</div>
+          <h3>Liste personalizzate</h3>
+          <p>Crea le tue liste di parole su misura per il gruppo.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🏆</div>
+          <h3>Statistiche e record</h3>
+          <p>Tieni traccia delle partite e batti i tuoi primati.</p>
+        </div>
+      </div>
+
+      <div class="pills">
+        <span class="pill">100% offline</span>
+        <span class="pill">Senza pubblicità</span>
+        <span class="pill">Senza account</span>
+        <span class="pill">Nessuna raccolta dati</span>
+      </div>
+    </section>
+
+    <section class="section wrap" id="assistenza">
+      <div class="support">
+        <h2>Assistenza</h2>
+        <p>Per assistenza o domande, scrivici. Rispondiamo a tutti.</p>
+        <a class="mail-btn" href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="privacy/">Informativa sulla privacy</a>
+    <span class="sep">·</span>
+    <a href="mailto:gianlorenzotaurchini@gmail.com">Contatto</a>
+    <p class="disclaimer">
+      Indizio! è un gioco di parole originale e indipendente. Non è affiliato,
+      associato, autorizzato o sponsorizzato da alcuna emittente televisiva o programma TV.
+    </p>
+  </footer>
+</body>
+</html>
