@@ -280,6 +280,38 @@ Every army, every attack, every alliance — in the palm of your hand.`,
     github: null,
   },
   {
+    id: 'indizio',
+    name: 'Indizio!',
+    tag_it: 'iOS & Android · Party Game',  tag_en: 'iOS & Android · Party Game',
+    shortDesc_it: 'Il gioco di parole da fare in compagnia — 100% offline.',
+    shortDesc_en: 'The word party game to play with friends — 100% offline.',
+    icon: '💡',
+    tech: ['iOS', 'Android', 'Mobile', 'Game Design', 'UI/UX'],
+    description_it: `Indizio! è un party game di parole italiane: fai indovinare la parola al tuo compagno con indizi, senza mai dirla, prima che scada il tempo.
+Un gioco originale e indipendente, pensato per le serate in compagnia, con tre modalità di gioco, centinaia di parole e liste personalizzabili.
+È completamente offline: niente account, niente pubblicità, nessuna raccolta di dati.`,
+    description_en: `Indizio! is a word party game in Italian: make your teammate guess the word with clues, without ever saying it, before time runs out.
+An original, independent game made for evenings with friends, with three game modes, hundreds of words and custom lists.
+It is completely offline: no accounts, no ads, no data collection.`,
+    features_it: [
+      'Modalità Classica, Crescente e Sfida a squadre',
+      'Centinaia di parole italiane',
+      'Liste di parole personalizzate',
+      'Statistiche e record di gioco',
+      '100% offline, senza pubblicità né account',
+    ],
+    features_en: [
+      'Classic, Increasing and Team Challenge modes',
+      'Hundreds of Italian words',
+      'Custom word lists',
+      'Game statistics and records',
+      '100% offline, no ads, no account',
+    ],
+    website: 'https://gianlorenzotaurchini.com/indizio/',
+    appStore: null,
+    github: null,
+  },
+  {
     id: 'drew',
     name: 'Drew Clothing',
     tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',
