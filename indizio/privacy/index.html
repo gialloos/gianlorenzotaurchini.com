@@ -10,6 +10,13 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://gianlorenzotaurchini.com/indizio/privacy/" />
 
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://gianlorenzotaurchini.com/indizio/privacy/" />
+  <meta property="og:title" content="Informativa sulla Privacy — Indizio!" />
+  <meta property="og:description" content="Indizio! non raccoglie alcun dato personale. 100% offline." />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/indizio/img/og.png" />
+  <meta name="twitter:card" content="summary" />
+
   <meta name="theme-color" content="#5B4BFF" />
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
   <link rel="icon" type="image/png" href="../../favicon.png" />
@@ -18,104 +25,71 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --indigo: #5B4BFF;
-      --indigo-dark: #4334d6;
-      --amber: #FFB020;
-      --ink: #1a1730;
-      --muted: #5d5a78;
-      --bg: #f5f4ff;
-      --card: #ffffff;
-      --border: #e7e4ff;
+      --brand-primary:#5B4BFF; --brand-accent:#FFB020; --success:#2BB673; --danger:#E5484D;
+      --bg:#F7F6FB; --surface:#FFFFFF; --surface-variant:#F0EEF8;
+      --text:#1A1828; --text-secondary:#6B6880; --border:#E3E0F0;
+      --shadow-soft:0 8px 26px -16px rgba(26,24,40,0.30);
+      --font-title:'Fredoka',system-ui,-apple-system,sans-serif; --font-body:'Figtree',system-ui,-apple-system,sans-serif;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+    @media (prefers-color-scheme: dark) {
+      :root { --brand-primary:#8B7DFF; --brand-accent:#FFC04D; --bg:#14131C; --surface:#1F1D2E; --surface-variant:#262338; --text:#F3F1FB; --text-secondary:#A7A3BE; --border:#322E47; --shadow-soft:0 8px 26px -16px rgba(0,0,0,0.6); }
     }
-    a { color: var(--indigo); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:var(--font-body); color:var(--text); background:var(--bg); line-height:1.7; -webkit-font-smoothing:antialiased; }
+    a { color:var(--brand-primary); }
+    h1,h2 { font-family:var(--font-title); font-weight:600; line-height:1.15; }
+    :focus-visible { outline:3px solid var(--brand-accent); outline-offset:2px; border-radius:6px; }
 
-    .topbar {
-      background: var(--indigo);
-      color: #fff;
-      padding: 18px 24px;
-    }
-    .topbar .inner {
-      max-width: 720px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .topbar a { color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; opacity: 0.9; }
-    .topbar a:hover { opacity: 1; }
-    .topbar .brand { font-weight: 900; font-size: 18px; letter-spacing: -0.02em; }
-    .topbar .brand .dot { color: var(--amber); }
+    .topbar { background:var(--surface); border-bottom:1px solid var(--border); }
+    .topbar .inner { max-width:720px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .logo { display:inline-flex; align-items:center; gap:11px; text-decoration:none; color:var(--text); }
+    .logo .name { font-family:var(--font-title); font-weight:700; font-size:19px; }
+    .topbar .back { color:var(--text-secondary); text-decoration:none; font-size:14px; font-weight:600; }
+    .topbar .back:hover { color:var(--brand-primary); }
 
-    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 72px; }
-
-    h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
-    .updated { color: var(--muted); font-size: 15px; margin-top: 6px; margin-bottom: 28px; }
-
-    .intro { font-size: 17px; margin-bottom: 8px; }
-
-    h2 {
-      font-size: 20px; font-weight: 700;
-      margin-top: 36px; margin-bottom: 8px;
-      letter-spacing: -0.01em;
-    }
-    p { margin-bottom: 12px; }
-    ul { margin: 4px 0 12px; padding-left: 22px; }
-    li { margin-bottom: 6px; }
-
-    .nodata {
-      background: rgba(91,75,255,0.06);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--indigo);
-      border-radius: 12px;
-      padding: 18px 20px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .disclaimer {
-      margin-top: 40px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .back {
-      display: inline-block;
-      margin-top: 36px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .back:hover { text-decoration: underline; }
+    main { max-width:720px; margin:0 auto; padding:44px 24px 80px; }
+    h1 { font-size:clamp(28px,6vw,38px); font-weight:700; letter-spacing:-0.01em; margin-bottom:6px; }
+    .updated { color:var(--text-secondary); font-size:14px; margin-bottom:24px; }
+    .intro { font-size:18px; margin-bottom:6px; }
+    h2 { font-size:21px; margin:32px 0 8px; }
+    p { margin-bottom:12px; }
+    ul { margin:6px 0 12px; padding-left:22px; }
+    li { margin-bottom:7px; }
+    .nodata { display:inline-flex; align-items:center; gap:8px; background:var(--surface-variant); border:1px solid var(--border); border-left:4px solid var(--brand-primary); border-radius:12px; padding:14px 18px; font-weight:600; font-family:var(--font-title); font-size:18px; margin-bottom:8px; }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px 22px; box-shadow:var(--shadow-soft); }
+    .disclaimer { margin-top:38px; padding-top:22px; border-top:1px solid var(--border); color:var(--text-secondary); font-size:14px; }
+    .back-link { display:inline-block; margin-top:32px; font-weight:600; text-decoration:none; }
+    .back-link:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="inner">
-      <span class="brand">Indizio<span class="dot">!</span></span>
-      <a href="../">← Torna all'app</a>
+      <a class="logo" href="../" aria-label="Indizio!">
+        <svg width="30" height="30" viewBox="0 0 96 96" role="img" aria-label="Indizio!">
+          <rect x="2" y="2" width="92" height="92" rx="24" fill="var(--brand-primary)"/>
+          <path d="M30 28h28a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H44l-12 9v-9h-2a10 10 0 0 1-10-10V38a10 10 0 0 1 10-10Z" fill="#fff"/>
+          <circle cx="71" cy="25" r="9" fill="var(--brand-accent)"/>
+        </svg>
+        <span class="name">Indizio!</span>
+      </a>
+      <a class="back" href="../">← Torna all'app</a>
     </div>
   </div>
 
-  <main class="wrap">
+  <main>
     <h1>Informativa sulla Privacy — Indizio!</h1>
-    <p class="updated">Ultimo aggiornamento: 23 giugno 2026</p>
+    <p class="updated">Ultimo aggiornamento: 22 giugno 2026</p>
 
     <p class="intro">Indizio! è un gioco di parole da fare in compagnia, completamente offline.</p>
 
     <h2>Dati raccolti</h2>
-    <div class="nodata">Nessuno.</div>
-    <p>
-      L'app non raccoglie, non trasmette e non condivide alcun dato personale.
-      Non ci sono account, login, tracciamento, pubblicità o analytics.
-    </p>
+    <p class="nodata">Nessuno.</p>
+    <p>L'app non raccoglie, non trasmette e non condivide alcun dato personale. Non ci sono account, login, tracciamento, pubblicità o analytics.</p>
 
     <h2>Dati salvati sul dispositivo</h2>
     <p>Per funzionare, l'app salva solo localmente sul tuo dispositivo (e mai altrove):</p>
@@ -124,26 +98,22 @@
       <li>Le tue statistiche di gioco (partite giocate, parole indovinate, record).</li>
       <li>Le liste di parole personalizzate che crei.</li>
     </ul>
-    <p>
-      Questi dati non lasciano mai il dispositivo e vengono eliminati disinstallando
-      l'app. Nessuna connessione di rete è necessaria per giocare.
-    </p>
+    <p>Questi dati non lasciano mai il dispositivo e vengono eliminati disinstallando l'app. Nessuna connessione di rete è necessaria per giocare.</p>
 
-    <p>
-      L'app non richiede permessi sensibili (niente fotocamera, posizione, contatti,
-      microfono o rete).
-    </p>
-    <p>
-      Per domande su questa informativa:
-      <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
-    </p>
+    <h2>Permessi</h2>
+    <p>L'app non richiede permessi sensibili (niente fotocamera, posizione, contatti, microfono o rete).</p>
 
-    <p class="disclaimer">
-      Questa app è un gioco di parole originale e indipendente. Non è affiliata,
-      associata, autorizzata o sponsorizzata da alcuna emittente televisiva o programma TV.
-    </p>
+    <h2>Minori</h2>
+    <p>L'app è adatta a tutte le età e non raccoglie dati, quindi è idonea anche ai minori.</p>
 
-    <a class="back" href="../">← Torna alla pagina di Indizio!</a>
+    <h2>Contatti</h2>
+    <div class="card">
+      <p style="margin:0">Per domande su questa informativa scrivi a <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a></p>
+    </div>
+
+    <p class="disclaimer">Questa app è un gioco di parole originale e indipendente. Non è affiliata, associata, autorizzata o sponsorizzata da alcuna emittente televisiva o programma TV.</p>
+
+    <a class="back-link" href="../">← Torna alla pagina di Indizio!</a>
   </main>
 </body>
 </html>

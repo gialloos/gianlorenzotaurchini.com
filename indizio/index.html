@@ -6,7 +6,7 @@
   <title>Indizio! — Il gioco di parole da fare in compagnia</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Indizio! è il party game di parole italiane, 100% offline: fai indovinare la parola con indizi prima che scada il tempo. Senza pubblicità, senza account, senza raccolta dati. Per iOS e Android." />
+  <meta name="description" content="Indizio! è il party game di parole italiane, 100% offline: fai indovinare la parola con indizi, sinonimi e gesti prima che scada il tempo. Senza pubblicità, senza account, senza raccolta dati. Per iOS e Android." />
   <meta name="author" content="Gianlorenzo Taurchini" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://gianlorenzotaurchini.com/indizio/" />
@@ -16,292 +16,336 @@
   <meta property="og:url" content="https://gianlorenzotaurchini.com/indizio/" />
   <meta property="og:title" content="Indizio! — Il gioco di parole da fare in compagnia" />
   <meta property="og:description" content="Il party game di parole italiane, 100% offline. Fai indovinare la parola con indizi prima che scada il tempo." />
-  <meta property="og:image" content="https://gianlorenzotaurchini.com/favicon.png" />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/indizio/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="it_IT" />
   <meta property="og:site_name" content="Indizio!" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Indizio! — Il gioco di parole da fare in compagnia" />
   <meta name="twitter:description" content="Il party game di parole italiane, 100% offline." />
+  <meta name="twitter:image" content="https://gianlorenzotaurchini.com/indizio/img/og.png" />
 
   <!-- Theme & icons -->
   <meta name="theme-color" content="#5B4BFF" />
   <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
   <link rel="icon" type="image/png" href="../favicon.png" />
   <link rel="apple-touch-icon" href="../favicon.png" />
-
-  <!-- Security -->
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "MobileApplication",
     "name": "Indizio!",
     "applicationCategory": "GameApplication",
     "operatingSystem": "iOS, Android",
     "inLanguage": "it",
-    "description": "Party game di parole italiane, 100% offline. Fai indovinare la parola con indizi prima che scada il tempo.",
-    "author": {
-      "@type": "Person",
-      "name": "Gianlorenzo Taurchini",
-      "url": "https://gianlorenzotaurchini.com"
-    },
+    "description": "Party game di parole italiane, 100% offline. Fai indovinare la parola con indizi, sinonimi e gesti prima che scada il tempo.",
+    "author": { "@type": "Person", "name": "Gianlorenzo Taurchini", "url": "https://gianlorenzotaurchini.com" },
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
   }
   </script>
 
   <style>
     :root {
-      --indigo: #5B4BFF;
-      --indigo-dark: #4334d6;
-      --amber: #FFB020;
-      --ink: #1a1730;
-      --muted: #5d5a78;
-      --bg: #f5f4ff;
-      --card: #ffffff;
-      --border: #e7e4ff;
+      --brand-primary:   #5B4BFF;
+      --brand-accent:    #FFB020;
+      --success:         #2BB673;
+      --danger:          #E5484D;
+      --bg:              #F7F6FB;
+      --surface:         #FFFFFF;
+      --surface-variant: #F0EEF8;
+      --text:            #1A1828;
+      --text-secondary:  #6B6880;
+      --border:          #E3E0F0;
+      --shadow:          0 18px 40px -22px rgba(91,75,255,0.40);
+      --shadow-soft:     0 8px 26px -16px rgba(26,24,40,0.30);
+      --font-title: 'Fredoka', system-ui, -apple-system, sans-serif;
+      --font-body:  'Figtree', system-ui, -apple-system, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --brand-primary: #8B7DFF;
+        --brand-accent:  #FFC04D;
+        --bg:            #14131C;
+        --surface:       #1F1D2E;
+        --surface-variant:#262338;
+        --text:          #F3F1FB;
+        --text-secondary:#A7A3BE;
+        --border:        #322E47;
+        --shadow:        0 18px 40px -22px rgba(0,0,0,0.7);
+        --shadow-soft:   0 8px 26px -16px rgba(0,0,0,0.6);
+      }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      color: var(--ink);
+      font-family: var(--font-body);
+      color: var(--text);
       background: var(--bg);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
-    a { color: var(--indigo); }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    a { color: var(--brand-primary); }
+    h1, h2, h3 { font-family: var(--font-title); font-weight: 600; line-height: 1.1; }
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    :focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 2px; border-radius: 6px; }
+
+    /* Logo mark */
+    .logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+    .logo .name { font-family: var(--font-title); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
+
+    /* Buttons */
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:9px; font-family: var(--font-body); font-weight:600; font-size:16px; text-decoration:none; cursor:pointer; padding:14px 26px; border-radius:16px; border:2px solid transparent; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; }
+    .btn-primary { background: var(--brand-primary); color: #fff; box-shadow: var(--shadow); }
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    /* Store badges (ricreati inline, CSP-safe) */
+    .stores { display:flex; gap:14px; flex-wrap:wrap; }
+    .store-badge { display:inline-flex; align-items:center; gap:11px; background:#000; color:#fff; text-decoration:none; padding:11px 18px; border-radius:14px; min-width:188px; transition: transform .15s ease, opacity .15s ease; box-shadow: var(--shadow-soft); }
+    .store-badge:hover { transform: translateY(-2px); }
+    .store-badge svg { flex:0 0 auto; }
+    .store-badge .txt { display:flex; flex-direction:column; line-height:1.05; }
+    .store-badge .txt small { font-size:11px; font-weight:400; opacity:.92; }
+    .store-badge .txt b { font-size:19px; font-weight:600; font-family: var(--font-body); letter-spacing:.01em; }
+    .store-badge[data-coming-soon] { opacity:.55; }
+    .store-badge[data-coming-soon]::after { content:"Presto"; margin-left:6px; align-self:flex-start; font-size:9px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; background:var(--brand-accent); color:#1A1828; padding:2px 6px; border-radius:999px; }
+
+    /* Soft background bubbles */
+    .bubbles { position:absolute; inset:0; overflow:hidden; z-index:0; pointer-events:none; }
+    .bubbles i { position:absolute; border-radius:50%; filter: blur(8px); opacity:.5; }
+    .b1 { width:280px;height:280px; background:rgba(91,75,255,0.18); top:-80px; left:-60px; }
+    .b2 { width:200px;height:200px; background:rgba(255,176,32,0.22); top:40px; right:-40px; }
+    .b3 { width:160px;height:160px; background:rgba(43,182,115,0.16); bottom:-30px; left:30%; }
 
     /* Hero */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(120% 120% at 50% -10%, #6c5cff 0%, var(--indigo) 45%, var(--indigo-dark) 100%);
-      color: #fff;
-      text-align: center;
-      padding: 88px 24px 96px;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0; bottom: -1px;
-      height: 48px;
-      background: var(--bg);
-      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--amber);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: clamp(48px, 12vw, 84px);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-    .hero h1 .dot { color: var(--amber); }
-    .hero .subtitle {
-      font-size: clamp(18px, 4vw, 22px);
-      font-weight: 600;
-      margin-top: 16px;
-      color: rgba(255,255,255,0.92);
-    }
-    .stores {
-      margin-top: 32px;
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
-    }
-    .store-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.22);
-      color: #fff;
-      font-weight: 600;
-      font-size: 15px;
-      padding: 10px 20px;
-      border-radius: 999px;
-    }
+    .hero { position:relative; text-align:center; padding:72px 24px 64px; }
+    .hero .inner { position:relative; z-index:1; }
+    .hero-logo { width:96px; height:96px; margin:0 auto 22px; display:block; filter: drop-shadow(var(--shadow)); }
+    .hero h1 { font-size: clamp(44px, 11vw, 78px); font-weight:700; letter-spacing:-0.02em; }
+    .hero h1 .dot { color: var(--brand-accent); }
+    .hero .tagline { font-family: var(--font-title); font-weight:500; font-size: clamp(18px,4vw,24px); color: var(--text); margin-top:10px; }
+    .hero .lead { color: var(--text-secondary); font-size:18px; max-width:44ch; margin:16px auto 0; }
+    .hero .stores { justify-content:center; margin-top:30px; }
 
-    /* Sections */
-    .section { padding: 56px 0; }
-    .section h2 {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-    }
-    .lead {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 60ch;
-    }
+    /* Section */
+    section { padding: 52px 0; position:relative; }
+    .eyebrow { display:inline-block; font-weight:700; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color: var(--brand-primary); background: var(--surface-variant); padding:6px 13px; border-radius:999px; margin-bottom:14px; }
+    .sec-title { font-size: clamp(28px, 5vw, 38px); letter-spacing:-0.01em; }
+    .center { text-align:center; }
+    .center .eyebrow { margin-left:auto; margin-right:auto; }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 32px;
-    }
-    .feature {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px;
-    }
-    .feature .ico {
-      width: 42px; height: 42px;
-      display: grid; place-items: center;
-      border-radius: 12px;
-      background: rgba(91,75,255,0.1);
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-    .feature h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
-    .feature p { font-size: 15px; color: var(--muted); }
+    /* Cos'è */
+    .about { background: var(--surface); border:1px solid var(--border); border-radius:28px; padding: clamp(28px, 5vw, 48px); box-shadow: var(--shadow-soft); }
+    .about p { font-size: clamp(18px, 3vw, 22px); color: var(--text); max-width: 38ch; margin:0 auto; line-height:1.45; }
+    .about .big { color: var(--brand-primary); font-family: var(--font-title); font-weight:600; }
 
-    .pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-    .pill {
-      font-size: 14px; font-weight: 600;
-      background: rgba(255,176,32,0.16);
-      color: #8a5a00;
-      border: 1px solid rgba(255,176,32,0.35);
-      padding: 7px 14px; border-radius: 999px;
-    }
+    /* Modalità */
+    .modes { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:32px; }
+    @media (max-width:760px){ .modes { grid-template-columns:1fr; } }
+    .mode { background: var(--surface); border:1px solid var(--border); border-radius:22px; padding:26px; box-shadow: var(--shadow-soft); }
+    .mode .pill { display:inline-flex; align-items:center; justify-content:center; width:48px;height:48px; border-radius:14px; font-size:24px; margin-bottom:16px; }
+    .mode h3 { font-size:21px; margin-bottom:6px; }
+    .mode p { color: var(--text-secondary); font-size:15.5px; }
 
-    /* Support card */
-    .support {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 36px;
-      text-align: center;
-      box-shadow: 0 16px 40px -24px rgba(91,75,255,0.4);
-    }
-    .support h2 { margin-bottom: 10px; }
-    .support p { color: var(--muted); font-size: 17px; }
-    .mail-btn {
-      display: inline-block;
-      margin-top: 22px;
-      background: var(--indigo);
-      color: #fff;
-      font-weight: 700;
-      font-size: 16px;
-      text-decoration: none;
-      padding: 14px 30px;
-      border-radius: 14px;
-      transition: background 0.15s ease, transform 0.15s ease;
-    }
-    .mail-btn:hover { background: var(--indigo-dark); transform: translateY(-1px); }
+    /* Caratteristiche */
+    .features { display:grid; grid-template-columns: repeat(2,1fr); gap:16px 28px; margin-top:30px; }
+    @media (max-width:680px){ .features { grid-template-columns:1fr; } }
+    .feat { display:flex; gap:14px; align-items:flex-start; }
+    .feat .ic { flex:0 0 auto; width:40px; height:40px; border-radius:12px; background: var(--surface-variant); color: var(--brand-primary); display:grid; place-items:center; }
+    .feat h3 { font-size:17px; margin-bottom:2px; }
+    .feat p { color: var(--text-secondary); font-size:14.5px; }
+
+    /* Screenshots */
+    .gallery { display:grid; grid-auto-flow:column; grid-auto-columns: 210px; gap:18px; overflow-x:auto; padding:6px 2px 16px; scroll-snap-type:x mandatory; }
+    .shot { scroll-snap-align:center; }
+    .phone { aspect-ratio: 9 / 19.5; border-radius:28px; overflow:hidden; background: var(--surface-variant); border:1px solid var(--border); box-shadow: var(--shadow-soft); }
+    .phone img { width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* CTA */
+    .cta { text-align:center; background: var(--brand-primary); border-radius:28px; padding: clamp(32px,6vw,56px) 24px; position:relative; overflow:hidden; }
+    .cta h2 { color:#fff; font-size: clamp(26px,5vw,36px); }
+    .cta p { color: rgba(255,255,255,.9); margin-top:8px; font-size:17px; }
+    .cta .stores { justify-content:center; margin-top:26px; position:relative; z-index:1; }
+    .cta .bub { position:absolute; border-radius:50%; background: rgba(255,255,255,.10); }
+    .cta .bub.x1 { width:220px;height:220px; top:-90px; left:-50px; }
+    .cta .bub.x2 { width:160px;height:160px; bottom:-70px; right:-30px; background: rgba(255,176,32,.22); }
 
     /* Footer */
-    footer {
-      text-align: center;
-      padding: 40px 24px 56px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    footer a { font-weight: 600; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-    .disclaimer {
-      max-width: 56ch;
-      margin: 18px auto 0;
-      font-size: 13px;
-      color: #8d8aa6;
-    }
-    .sep { margin: 0 8px; color: var(--border); }
+    footer { padding:44px 0 60px; border-top:1px solid var(--border); margin-top:48px; }
+    .foot { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
+    .foot nav { display:flex; gap:22px; flex-wrap:wrap; }
+    .foot a { color: var(--text-secondary); text-decoration:none; font-size:15px; }
+    .foot a:hover { color: var(--brand-primary); }
+    .foot .disc { width:100%; color: var(--text-secondary); font-size:13px; max-width:60ch; margin-top:6px; }
   </style>
 </head>
 <body>
+  <!-- HERO -->
   <header class="hero">
-    <span class="badge">Party game · iOS &amp; Android</span>
-    <h1>Indizio<span class="dot">!</span></h1>
-    <p class="subtitle">Il gioco di parole da fare in compagnia.</p>
-    <div class="stores">
-      <span class="store-pill">🍎 App Store</span>
-      <span class="store-pill">🤖 Google Play</span>
+    <div class="bubbles" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+    <div class="inner wrap">
+      <!-- Logo mark: quadrato viola, forma bianca a fumetto, puntino ambra = "!" -->
+      <svg class="hero-logo" viewBox="0 0 96 96" role="img" aria-label="Logo Indizio!">
+        <rect x="2" y="2" width="92" height="92" rx="24" fill="var(--brand-primary)"/>
+        <path d="M30 28h28a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H44l-12 9v-9h-2a10 10 0 0 1-10-10V38a10 10 0 0 1 10-10Z" fill="#fff"/>
+        <circle cx="71" cy="25" r="9" fill="var(--brand-accent)"/>
+      </svg>
+      <h1>Indizio<span class="dot">!</span></h1>
+      <p class="tagline">Il gioco di parole da fare in compagnia</p>
+      <p class="lead">Fai indovinare la parola ai tuoi compagni con indizi, sinonimi e gesti — senza mai pronunciarla, prima che scada il tempo.</p>
+      <div class="stores" role="group" aria-label="Scarica l'app">
+        <a class="store-badge" data-coming-soon href="https://apps.apple.com/app/id6782953543" aria-label="Scarica su App Store">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.36 1.43c.05 1.06-.34 2.09-1 2.86-.69.8-1.83 1.42-2.93 1.33-.07-1.02.41-2.08 1.04-2.78.71-.79 1.94-1.37 2.89-1.41ZM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.32C-.06 16.99-.36 11.9 1.31 9.2c1.18-1.92 3.04-3.04 4.79-3.04 1.78 0 2.9 1 4.37 1 1.43 0 2.3-1 4.36-1 1.56 0 3.21.85 4.39 2.32-3.86 2.12-3.23 7.63 1.28 8.72Z"/></svg>
+          <span class="txt"><small>Scarica su</small><b>App Store</b></span>
+        </a>
+        <a class="store-badge" data-coming-soon href="https://play.google.com/store/apps/details?id=com.indizio.indizio" aria-label="Disponibile su Google Play">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.36-.2-.6-.58-.6-1.05V2.85c0-.47.24-.85.6-1.05Z" fill="#34A853"/><path d="M16.9 8.4 5.3 1.7l-.1-.06 9.6 10 2.1-3.24Z" fill="#EA4335"/><path d="m16.9 15.6-2.1-3.24-9.6 10 .1-.06 11.6-6.7Z" fill="#FBBC04"/><path d="M20.3 10.5c.7.4 1.1 1 1.1 1.5s-.4 1.1-1.1 1.5l-3.4 2-2.3-3.5 2.3-3.5 3.4 2Z" fill="#4285F4"/></svg>
+          <span class="txt"><small>Disponibile su</small><b>Google Play</b></span>
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="section wrap">
-      <h2>Come si gioca</h2>
-      <p class="lead">
-        Fai indovinare la parola al tuo compagno con indizi, senza mai dirla,
-        prima che scada il tempo. Semplice da imparare, impossibile da smettere.
-      </p>
-
-      <div class="features">
-        <div class="feature">
-          <div class="ico">🎯</div>
-          <h3>Tre modalità</h3>
-          <p>Classica, Crescente e Sfida a squadre per ogni tipo di serata.</p>
+    <!-- COS'È -->
+    <section>
+      <div class="wrap center">
+        <span class="eyebrow">Come funziona</span>
+        <div class="about">
+          <p>Un giocatore guarda la parola e la fa indovinare ai compagni con <span class="big">indizi, sinonimi e gesti</span>, senza mai pronunciarla! Quante ne indovinate prima che scada il tempo?</p>
         </div>
-        <div class="feature">
-          <div class="ico">📚</div>
-          <h3>Centinaia di parole</h3>
-          <p>Un ricco dizionario di parole italiane, sempre nuove.</p>
-        </div>
-        <div class="feature">
-          <div class="ico">✏️</div>
-          <h3>Liste personalizzate</h3>
-          <p>Crea le tue liste di parole su misura per il gruppo.</p>
-        </div>
-        <div class="feature">
-          <div class="ico">🏆</div>
-          <h3>Statistiche e record</h3>
-          <p>Tieni traccia delle partite e batti i tuoi primati.</p>
-        </div>
-      </div>
-
-      <div class="pills">
-        <span class="pill">100% offline</span>
-        <span class="pill">Senza pubblicità</span>
-        <span class="pill">Senza account</span>
-        <span class="pill">Nessuna raccolta dati</span>
       </div>
     </section>
 
-    <section class="section wrap" id="assistenza">
-      <div class="support">
-        <h2>Assistenza</h2>
-        <p>Per assistenza o domande, scrivici. Rispondiamo a tutti.</p>
-        <a class="mail-btn" href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+    <!-- MODALITÀ -->
+    <section>
+      <div class="wrap center">
+        <span class="eyebrow">Modalità</span>
+        <h2 class="sec-title">Tre modi di giocare</h2>
+      </div>
+      <div class="wrap">
+        <div class="modes">
+          <div class="mode">
+            <span class="pill" style="background:var(--surface-variant)">⏱️</span>
+            <h3>Classica</h3>
+            <p>Gioca contro il tempo e batti il tuo record personale.</p>
+          </div>
+          <div class="mode">
+            <span class="pill" style="background:var(--surface-variant)">📈</span>
+            <h3>Crescente</h3>
+            <p>Si parte facile e la difficoltà sale partita dopo partita.</p>
+          </div>
+          <div class="mode">
+            <span class="pill" style="background:var(--surface-variant)">🏆</span>
+            <h3>Sfida a squadre</h3>
+            <p>Fino a 6 squadre, a turno, con classifica finale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARATTERISTICHE -->
+    <section>
+      <div class="wrap">
+        <span class="eyebrow">Caratteristiche</span>
+        <h2 class="sec-title">Tutto quello che serve per giocare</h2>
+        <div class="features">
+          <div class="feat">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
+            <div><h3>Centinaia di parole</h3><p>Parole italiane in più categorie e 3 livelli di difficoltà.</p></div>
+          </div>
+          <div class="feat">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>
+            <div><h3>Liste personalizzate</h3><p>Crea le tue liste di parole su misura per il gruppo.</p></div>
+          </div>
+          <div class="feat">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+            <div><h3>Statistiche e record</h3><p>Partite, parole indovinate e primati salvati sul dispositivo.</p></div>
+          </div>
+          <div class="feat">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg></span>
+            <div><h3>Suoni e vibrazione</h3><p>Configurabili a piacere per ogni partita.</p></div>
+          </div>
+          <div class="feat">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/><line x1="2" y1="2" x2="22" y2="22"/></svg></span>
+            <div><h3>100% offline</h3><p>Senza pubblicità, senza account, senza raccolta di dati.</p></div>
+          </div>
+          <div class="feat">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div><h3>Da fare in compagnia</h3><p>Pensato per le serate con amici e famiglia.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOT -->
+    <section>
+      <div class="wrap center">
+        <span class="eyebrow">Screenshot</span>
+        <h2 class="sec-title">Dai un'occhiata</h2>
+      </div>
+      <div class="wrap">
+        <div class="gallery">
+          <div class="shot"><div class="phone"><img src="img/screenshot-01.png" alt="Schermata principale di Indizio!" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/screenshot-02.png" alt="Partita in corso in Indizio!" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/screenshot-03.png" alt="Scelta della modalità di gioco" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/screenshot-04.png" alt="Liste di parole personalizzate" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/screenshot-05.png" alt="Statistiche e record di gioco" loading="lazy" width="360" height="780" /></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <span class="bub x1" aria-hidden="true"></span><span class="bub x2" aria-hidden="true"></span>
+          <h2>Pronti a giocare?</h2>
+          <p>Scarica Indizio! e fai indovinare la prima parola.</p>
+          <div class="stores" role="group" aria-label="Scarica l'app">
+            <a class="store-badge" data-coming-soon href="https://apps.apple.com/app/id6782953543" aria-label="Scarica su App Store">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.36 1.43c.05 1.06-.34 2.09-1 2.86-.69.8-1.83 1.42-2.93 1.33-.07-1.02.41-2.08 1.04-2.78.71-.79 1.94-1.37 2.89-1.41ZM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.32C-.06 16.99-.36 11.9 1.31 9.2c1.18-1.92 3.04-3.04 4.79-3.04 1.78 0 2.9 1 4.37 1 1.43 0 2.3-1 4.36-1 1.56 0 3.21.85 4.39 2.32-3.86 2.12-3.23 7.63 1.28 8.72Z"/></svg>
+              <span class="txt"><small>Scarica su</small><b>App Store</b></span>
+            </a>
+            <a class="store-badge" data-coming-soon href="https://play.google.com/store/apps/details?id=com.indizio.indizio" aria-label="Disponibile su Google Play">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.36-.2-.6-.58-.6-1.05V2.85c0-.47.24-.85.6-1.05Z" fill="#34A853"/><path d="M16.9 8.4 5.3 1.7l-.1-.06 9.6 10 2.1-3.24Z" fill="#EA4335"/><path d="m16.9 15.6-2.1-3.24-9.6 10 .1-.06 11.6-6.7Z" fill="#FBBC04"/><path d="M20.3 10.5c.7.4 1.1 1 1.1 1.5s-.4 1.1-1.1 1.5l-3.4 2-2.3-3.5 2.3-3.5 3.4 2Z" fill="#4285F4"/></svg>
+              <span class="txt"><small>Disponibile su</small><b>Google Play</b></span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <a href="privacy/">Informativa sulla privacy</a>
-    <span class="sep">·</span>
-    <a href="mailto:gianlorenzotaurchini@gmail.com">Contatto</a>
-    <p class="disclaimer">
-      Indizio! è un gioco di parole originale e indipendente. Non è affiliato,
-      associato, autorizzato o sponsorizzato da alcuna emittente televisiva o programma TV.
-    </p>
+    <div class="wrap foot">
+      <a class="logo" href="./">
+        <svg width="34" height="34" viewBox="0 0 96 96" role="img" aria-label="Indizio!">
+          <rect x="2" y="2" width="92" height="92" rx="24" fill="var(--brand-primary)"/>
+          <path d="M30 28h28a10 10 0 0 1 10 10v14a10 10 0 0 1-10 10H44l-12 9v-9h-2a10 10 0 0 1-10-10V38a10 10 0 0 1 10-10Z" fill="#fff"/>
+          <circle cx="71" cy="25" r="9" fill="var(--brand-accent)"/>
+        </svg>
+        <span class="name">Indizio!</span>
+      </a>
+      <nav>
+        <a href="privacy/">Privacy</a>
+        <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+        <a href="https://gianlorenzotaurchini.com">gianlorenzotaurchini.com</a>
+      </nav>
+      <p class="disc">Indizio! è un gioco di parole originale e indipendente. Non è affiliato, associato, autorizzato o sponsorizzato da alcuna emittente televisiva o programma TV.</p>
+    </div>
   </footer>
 </body>
 </html>
