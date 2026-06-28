@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flagmondo — Bandiere, mappe e quiz</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Flagmondo è una raccolta di 11 minigiochi di geografia: bandiere, mappe, sagome, confini, capitali e altro. Offline, senza pubblicità, senza account, gratis. Italiano e inglese. Per iOS e Android." />
+  <meta name="author" content="Gianlorenzo Taurchini" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gianlorenzotaurchini.com/flagmondo/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gianlorenzotaurchini.com/flagmondo/" />
+  <meta property="og:title" content="Flagmondo — Bandiere, mappe e quiz" />
+  <meta property="og:description" content="11 minigiochi di geografia. Timbra il mondo, gioco dopo gioco. Offline, senza pubblicità, senza account, gratis." />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/flagmondo/img/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="Flagmondo" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flagmondo — Bandiere, mappe e quiz" />
+  <meta name="twitter:description" content="11 minigiochi di geografia. Timbra il mondo, gioco dopo gioco." />
+  <meta name="twitter:image" content="https://gianlorenzotaurchini.com/flagmondo/img/og.png" />
+
+  <!-- Theme & icons -->
+  <meta name="theme-color" content="#F3E9D6" />
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="apple-touch-icon" href="img/og.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Fonts (incl. Material Symbols Rounded) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Flagmondo",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "iOS, Android",
+    "inLanguage": ["it", "en"],
+    "description": "Raccolta di 11 minigiochi di geografia: bandiere, mappe, sagome, confini, capitali, popolazione ed esportazioni. Offline, senza pubblicità, senza account.",
+    "author": { "@type": "Person", "name": "Gianlorenzo Taurchini", "url": "https://gianlorenzotaurchini.com" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <style>
+    /* ===== Flagmondo — stile isolato sotto .flagmondo ===== */
+    .flagmondo {
+      --paper:#F3E9D6; --surface:#FFFAF1;
+      --ink:#241C12; --ink-2:#6B6052; --ink-soft:#9A8F7C;
+      --line:#C9BDA2; --teal:#0E7C73; --coral:#F2643C; --navy:#234E8C; --ok:#1E9D6A;
+      --heat:linear-gradient(90deg,#3A4FC4,#1FA59A,#EFC53E,#F2843C,#E64323);
+      --font-display:'Bricolage Grotesque', system-ui, sans-serif;
+      --font-body:'Hanken Grotesk', system-ui, sans-serif;
+      --font-mono:'Space Mono', ui-monospace, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      .flagmondo {
+        --paper:#17140F; --surface:#211C16;
+        --ink:#F3E9D6; --ink-2:#C7BBA4; --ink-soft:#9A8F7C;
+        --line:#46402F; --teal:#2BB6A8; --coral:#F47A56;
+      }
+    }
+    .flagmondo * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body.flagmondo {
+      font-family:var(--font-body); color:var(--ink); background:var(--paper);
+      line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    }
+    .flagmondo a { color:var(--teal); }
+    .flagmondo h1,.flagmondo h2,.flagmondo h3 { font-family:var(--font-display); font-weight:800; line-height:1.02; letter-spacing:-0.015em; }
+    .flagmondo .wrap { width:100%; max-width:1080px; margin:0 auto; padding:0 24px; }
+    .flagmondo :focus-visible { outline:3px solid var(--coral); outline-offset:3px; border-radius:8px; }
+    .flagmondo .material-symbols-rounded { font-family:'Material Symbols Rounded'; font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal; text-transform:none; display:inline-block; white-space:nowrap; word-wrap:normal; direction:ltr; -webkit-font-feature-settings:'liga'; -webkit-font-smoothing:antialiased; font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+
+    /* Kicker mono */
+    .flagmondo .kicker { font-family:var(--font-mono); font-weight:700; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-2); }
+
+    /* Stamp */
+    .flagmondo .stamp { display:inline-grid; place-items:center; width:84px; height:84px; border-radius:50%; border:2px solid var(--coral); color:var(--coral); transform:rotate(-8deg); font-family:var(--font-mono); text-align:center; }
+    .flagmondo .stamp b { font-size:20px; font-weight:700; line-height:1; }
+    .flagmondo .stamp small { font-size:8px; letter-spacing:.14em; text-transform:uppercase; display:block; margin-top:3px; }
+
+    /* Perforation */
+    .flagmondo .perf { height:0; border-top:2px dashed var(--line); margin:0; }
+
+    /* Buttons / store badges */
+    .flagmondo .stores { display:flex; gap:14px; flex-wrap:wrap; }
+    .flagmondo .badge { display:inline-flex; align-items:center; gap:11px; background:var(--ink); color:var(--paper); text-decoration:none; padding:12px 20px; border-radius:999px; transition:transform .15s ease, opacity .15s ease; }
+    .flagmondo .badge:hover { transform:translateY(-2px); }
+    .flagmondo .badge .txt { display:flex; flex-direction:column; line-height:1.05; text-align:left; }
+    .flagmondo .badge .txt small { font-size:10px; opacity:.85; font-family:var(--font-mono); letter-spacing:.04em; }
+    .flagmondo .badge .txt b { font-size:18px; font-weight:700; font-family:var(--font-body); }
+    .flagmondo .badge[data-coming-soon] { opacity:.55; }
+    .flagmondo .badge[data-coming-soon]::after { content:"Presto"; align-self:flex-start; font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:var(--coral); color:var(--paper); padding:2px 7px; border-radius:999px; }
+
+    /* Hero */
+    .flagmondo .hero { position:relative; padding:52px 0 0; }
+    .flagmondo .hero-top { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; }
+    .flagmondo .hero h1 { font-size:clamp(64px,18vw,150px); letter-spacing:-0.03em; margin:18px 0 0; }
+    .flagmondo .hero .subtitle { font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.12em; font-size:14px; color:var(--ink-2); margin-top:6px; }
+    .flagmondo .hero .tagline { font-family:var(--font-display); font-weight:700; font-size:clamp(20px,4vw,28px); margin-top:18px; max-width:18ch; }
+    .flagmondo .hero .stores { margin-top:26px; }
+    .flagmondo .hero-shot { margin:36px auto 0; max-width:230px; }
+    .flagmondo .phone { aspect-ratio:9/19.5; border-radius:28px; overflow:hidden; background:var(--surface); border:1.5px dashed var(--line); }
+    .flagmondo .phone img { width:100%; height:100%; object-fit:cover; display:block; }
+    .flagmondo .hero-perf { margin-top:44px; }
+
+    /* Sections */
+    .flagmondo section { padding:56px 0; }
+    .flagmondo .sec-kicker { font-family:var(--font-mono); font-weight:700; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--coral); }
+    .flagmondo .sec-title { font-size:clamp(30px,6vw,48px); margin-top:8px; }
+    .flagmondo .sec-sub { color:var(--ink-2); margin-top:8px; max-width:54ch; }
+
+    /* Games grid */
+    .flagmondo .games { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:32px; }
+    @media (max-width:860px){ .flagmondo .games { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:540px){ .flagmondo .games { grid-template-columns:1fr; } }
+    .flagmondo .game { background:var(--surface); border:1.5px dashed var(--accent); border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:10px; }
+    .flagmondo .game .row { display:flex; align-items:center; gap:12px; }
+    .flagmondo .game .ic { flex:0 0 auto; width:46px; height:46px; border-radius:50%; border:1.5px solid var(--accent); color:var(--accent); display:grid; place-items:center; }
+    .flagmondo .game .ic .material-symbols-rounded { font-size:24px; }
+    .flagmondo .game .coord { font-family:var(--font-mono); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+    .flagmondo .game h3 { font-size:20px; }
+    .flagmondo .game p { color:var(--ink-2); font-size:14.5px; }
+
+    /* Why */
+    .flagmondo .why { background:var(--surface); border:1.5px dashed var(--line); border-radius:22px; padding:clamp(26px,5vw,44px); margin-top:32px; }
+    .flagmondo .why ul { list-style:none; display:grid; grid-template-columns:repeat(2,1fr); gap:14px 28px; }
+    @media (max-width:600px){ .flagmondo .why ul { grid-template-columns:1fr; } }
+    .flagmondo .why li { display:flex; align-items:center; gap:12px; font-weight:600; font-size:16px; }
+    .flagmondo .why li .chk { flex:0 0 auto; width:30px; height:30px; border-radius:50%; border:1.5px solid var(--ok); color:var(--ok); display:grid; place-items:center; }
+    .flagmondo .why li .chk .material-symbols-rounded { font-size:18px; }
+
+    /* Screenshot strip */
+    .flagmondo .gallery { display:grid; grid-auto-flow:column; grid-auto-columns:180px; gap:16px; overflow-x:auto; padding:18px 2px 14px; scroll-snap-type:x mandatory; }
+    .flagmondo .gallery .shot { scroll-snap-align:center; }
+    .flagmondo .todo { background:rgba(242,100,60,0.10); border:1.5px dashed var(--coral); border-radius:14px; padding:14px 18px; font-weight:600; font-size:14px; margin-top:14px; }
+    .flagmondo .todo code { font-family:var(--font-mono); font-size:12.5px; }
+
+    /* Footer */
+    .flagmondo footer { padding:44px 0 60px; }
+    .flagmondo .footperf { margin-bottom:30px; }
+    .flagmondo .foot { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
+    .flagmondo .foot .brand { font-family:var(--font-display); font-weight:800; font-size:22px; }
+    .flagmondo .foot nav { display:flex; gap:22px; flex-wrap:wrap; }
+    .flagmondo .foot a { color:var(--ink-2); text-decoration:none; font-weight:600; font-size:15px; }
+    .flagmondo .foot a:hover { color:var(--coral); }
+    .flagmondo .foot .copy { width:100%; color:var(--ink-soft); font-family:var(--font-mono); font-size:12px; letter-spacing:.04em; }
+  </style>
+</head>
+<body class="flagmondo">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <span class="kicker">PASSAPORTO · GEOGRAFICO</span>
+        <span class="stamp" aria-hidden="true"><span><b>FM</b><small>'26</small></span></span>
+      </div>
+      <h1>FLAGMONDO</h1>
+      <p class="subtitle">Bandiere, mappe e quiz</p>
+      <p class="tagline">Timbra il mondo, gioco dopo gioco.</p>
+      <div class="stores" role="group" aria-label="Scarica l'app">
+        <a class="badge" data-coming-soon href="https://apps.apple.com/app/id6784209767" aria-label="Scarica su App Store">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.36 1.43c.05 1.06-.34 2.09-1 2.86-.69.8-1.83 1.42-2.93 1.33-.07-1.02.41-2.08 1.04-2.78.71-.79 1.94-1.37 2.89-1.41ZM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.32C-.06 16.99-.36 11.9 1.31 9.2c1.18-1.92 3.04-3.04 4.79-3.04 1.78 0 2.9 1 4.37 1 1.43 0 2.3-1 4.36-1 1.56 0 3.21.85 4.39 2.32-3.86 2.12-3.23 7.63 1.28 8.72Z"/></svg>
+          <span class="txt"><small>SCARICA SU</small><b>App Store</b></span>
+        </a>
+        <a class="badge" data-coming-soon href="#" aria-label="Disponibile su Google Play">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.36-.2-.6-.58-.6-1.05V2.85c0-.47.24-.85.6-1.05Z" fill="#34A853"/><path d="M16.9 8.4 5.3 1.7l-.1-.06 9.6 10 2.1-3.24Z" fill="#EA4335"/><path d="m16.9 15.6-2.1-3.24-9.6 10 .1-.06 11.6-6.7Z" fill="#FBBC04"/><path d="M20.3 10.5c.7.4 1.1 1 1.1 1.5s-.4 1.1-1.1 1.5l-3.4 2-2.3-3.5 2.3-3.5 3.4 2Z" fill="#4285F4"/></svg>
+          <span class="txt"><small>DISPONIBILE SU</small><b>Google Play</b></span>
+        </a>
+      </div>
+      <div class="hero-shot">
+        <div class="phone"><img src="img/01_home.png" alt="Schermata principale di Flagmondo" width="360" height="780" /></div>
+      </div>
+    </div>
+    <div class="wrap hero-perf"><div class="perf"></div></div>
+  </header>
+
+  <main>
+    <!-- 11 GIOCHI -->
+    <section>
+      <div class="wrap">
+        <span class="sec-kicker">// 11 TIMBRI DA COLLEZIONARE</span>
+        <h2 class="sec-title">Undici giochi di geografia</h2>
+        <p class="sec-sub">Bandiere, mappe, sagome, confini, capitali, popolazione ed esportazioni. Uno per ogni modo di scoprire il mondo.</p>
+        <div class="games">
+          <div class="game" style="--accent:#C05A36"><div class="row"><span class="ic"><span class="material-symbols-rounded">flag</span></span><span class="coord">G·01 · Flagle</span></div><h3>Flagle</h3><p>Indovina la bandiera, una tessera alla volta.</p></div>
+          <div class="game" style="--accent:#2F6FAE"><div class="row"><span class="ic"><span class="material-symbols-rounded">quiz</span></span><span class="coord">G·02 · Quiz</span></div><h3>Quiz</h3><p>Scegli il paese della bandiera.</p></div>
+          <div class="game" style="--accent:#7E57C2"><div class="row"><span class="ic"><span class="material-symbols-rounded">location_city</span></span><span class="coord">G·03 · Capitali</span></div><h3>Capitali</h3><p>Indovina la capitale.</p></div>
+          <div class="game" style="--accent:#E08A2B"><div class="row"><span class="ic"><span class="material-symbols-rounded">timer</span></span><span class="coord">G·04 · Time Attack</span></div><h3>Time Attack</h3><p>Più bandiere possibili in 60 secondi.</p></div>
+          <div class="game" style="--accent:#C2497E"><div class="row"><span class="ic"><span class="material-symbols-rounded">grid_view</span></span><span class="coord">G·05 · Memoria</span></div><h3>Memoria</h3><p>Abbina bandiera e paese.</p></div>
+          <div class="game" style="--accent:#3E8E5A"><div class="row"><span class="ic"><span class="material-symbols-rounded">public</span></span><span class="coord">G·06 · Mappa</span></div><h3>Mappa</h3><p>Tocca il paese sulla mappa.</p></div>
+          <div class="game" style="--accent:#B9892E"><div class="row"><span class="ic"><span class="material-symbols-rounded">route</span></span><span class="coord">G·07 · Travle</span></div><h3>Travle</h3><p>Collega i paesi confinanti fino alla meta.</p></div>
+          <div class="game" style="--accent:#4F63B5"><div class="row"><span class="ic"><span class="material-symbols-rounded">pentagon</span></span><span class="coord">G·08 · Worldle</span></div><h3>Worldle</h3><p>Indovina il paese dalla sagoma.</p></div>
+          <div class="game" style="--accent:#2A8E8E"><div class="row"><span class="ic"><span class="material-symbols-rounded">device_thermostat</span></span><span class="coord">G·09 · Globle</span></div><h3>Globle</h3><p>Più caldo = più vicino.</p></div>
+          <div class="game" style="--accent:#B05772"><div class="row"><span class="ic"><span class="material-symbols-rounded">swap_vert</span></span><span class="coord">G·10 · Più o Meno</span></div><h3>Più o Meno</h3><p>Quale paese ha il valore più alto?</p></div>
+          <div class="game" style="--accent:#7C6A3E"><div class="row"><span class="ic"><span class="material-symbols-rounded">local_shipping</span></span><span class="coord">G·11 · Tradle</span></div><h3>Tradle</h3><p>Indovina il paese dalle esportazioni.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERCHÉ -->
+    <section>
+      <div class="wrap">
+        <span class="sec-kicker">// VISTO D'INGRESSO</span>
+        <h2 class="sec-title">Perché Flagmondo</h2>
+        <div class="why">
+          <ul>
+            <li><span class="chk"><span class="material-symbols-rounded">check</span></span>Funziona offline</li>
+            <li><span class="chk"><span class="material-symbols-rounded">check</span></span>Niente pubblicità</li>
+            <li><span class="chk"><span class="material-symbols-rounded">check</span></span>Niente account</li>
+            <li><span class="chk"><span class="material-symbols-rounded">check</span></span>Nessun dato raccolto</li>
+            <li><span class="chk"><span class="material-symbols-rounded">check</span></span>Partite illimitate, gratis</li>
+            <li><span class="chk"><span class="material-symbols-rounded">check</span></span>Italiano e inglese</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOT -->
+    <section>
+      <div class="wrap">
+        <span class="sec-kicker">// PAGINE DEL PASSAPORTO</span>
+        <h2 class="sec-title">Dentro l'app</h2>
+        <div class="gallery">
+          <div class="shot"><div class="phone"><img src="img/02_flagle.png" alt="Gioco Flagle" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/03_quiz.png" alt="Gioco Quiz" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/04_map.png" alt="Gioco Mappa" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/05_shape.png" alt="Gioco Worldle (sagoma)" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/06_globle.png" alt="Gioco Globle" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/07_tradle.png" alt="Gioco Tradle" loading="lazy" width="360" height="780" /></div></div>
+          <div class="shot"><div class="phone"><img src="img/08_piuomeno.png" alt="Gioco Più o Meno" loading="lazy" width="360" height="780" /></div></div>
+        </div>
+        <p class="todo">TODO — Sostituisci i placeholder in <code>flagmondo/img/</code> con gli 8 screenshot reali (verticali ~9:19.5), mantenendo i nomi: <code>01_home, 02_flagle, 03_quiz, 04_map, 05_shape, 06_globle, 07_tradle, 08_piuomeno</code> (.png).</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap footperf"><div class="perf"></div></div>
+    <div class="wrap foot">
+      <span class="brand">FLAGMONDO</span>
+      <nav>
+        <a href="privacy/">Privacy</a>
+        <a href="support/">Supporto</a>
+        <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+        <a href="https://gianlorenzotaurchini.com">gianlorenzotaurchini.com</a>
+      </nav>
+      <p class="copy">FM '26 · BANDIERE · MAPPE · QUIZ — © 2026 GIANLORENZO TAURCHINI</p>
+    </div>
+  </footer>
+</body>
+</html>

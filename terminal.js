@@ -344,6 +344,68 @@ Highlights: an AI Spymaster that lets you play with odd numbers or solo, online 
     github: null,
   },
   {
+    id: 'impostore',
+    name: 'Impostore',
+    tag_it: 'iOS · Party Game',  tag_en: 'iOS · Party Game',
+    shortDesc_it: 'Trova la spia — party game pass-and-play, offline.',
+    shortDesc_en: 'Find the spy — pass-and-play party game, offline.',
+    icon: '🎭',
+    tech: ['iOS', 'Swift', 'Mobile', 'Game Design', 'UI/UX'],
+    description_it: `Impostore è un party game "trova la spia" per le serate tra amici: tutti conoscono la parola segreta… tranne l'impostore.
+Si gioca tutti su un solo telefono (pass-and-play), completamente offline e senza account. Categorie incluse in italiano, categorie personalizzate condivisibili con un codice, numero di impostori configurabile e timer di discussione opzionale.`,
+    description_en: `Impostore is a "find the spy" party game for nights out with friends: everyone knows the secret word… except the impostor.
+You all play on a single phone (pass-and-play), fully offline and without an account. Built-in Italian categories, custom shareable categories via a code, a configurable number of impostors and an optional discussion timer.`,
+    features_it: [
+      'Un solo telefono, offline, senza account',
+      'Tante categorie incluse in italiano',
+      'Categorie personalizzate condivisibili con un codice',
+      'Due varianti: impostore senza parola o con parola simile',
+      'Numero di impostori e timer di discussione configurabili',
+    ],
+    features_en: [
+      'Single phone, offline, no account',
+      'Plenty of built-in Italian categories',
+      'Custom categories shareable via a code',
+      'Two variants: impostor with no word or a similar one',
+      'Configurable impostor count and discussion timer',
+    ],
+    website: '/impostore/',
+    appStore: null,
+    github: null,
+  },
+  {
+    id: 'flagmondo',
+    name: 'Flagmondo',
+    tag_it: 'iOS & Android · Geografia',  tag_en: 'iOS & Android · Geography',
+    shortDesc_it: '11 minigiochi di geografia — bandiere, mappe e quiz.',
+    shortDesc_en: '11 geography minigames — flags, maps and quizzes.',
+    icon: '🌍',
+    tech: ['iOS', 'Android', 'Swift', 'Mobile', 'Game Design', 'UI/UX'],
+    description_it: `Flagmondo è una raccolta di 11 minigiochi di geografia: bandiere, mappe, sagome, confini, capitali, popolazione ed esportazioni.
+Estetica "passaporto / atlante" editoriale, con un gioco per ogni modo di scoprire il mondo — da Flagle a Worldle, da Globle a Tradle.
+È offline, senza pubblicità, senza acquisti in-app, senza account e non raccoglie alcun dato; gratis, partite illimitate, in italiano e inglese.`,
+    description_en: `Flagmondo is a collection of 11 geography minigames: flags, maps, shapes, borders, capitals, population and exports.
+An editorial "passport / atlas" aesthetic, with one game for every way to explore the world — from Flagle to Worldle, Globle to Tradle.
+It is offline, with no ads, no in-app purchases, no account and collects no data; free, unlimited play, in Italian and English.`,
+    features_it: [
+      '11 minigiochi di geografia',
+      'Bandiere, mappe, sagome, capitali ed esportazioni',
+      'Offline, senza pubblicità né acquisti in-app',
+      'Senza account, nessun dato raccolto',
+      'Gratis, partite illimitate, italiano e inglese',
+    ],
+    features_en: [
+      '11 geography minigames',
+      'Flags, maps, shapes, capitals and exports',
+      'Offline, no ads or in-app purchases',
+      'No account, no data collected',
+      'Free, unlimited play, Italian and English',
+    ],
+    website: '/flagmondo/',
+    appStore: null,
+    github: null,
+  },
+  {
     id: 'drew',
     name: 'Drew Clothing',
     tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',
