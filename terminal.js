@@ -312,6 +312,38 @@ It is completely offline: no accounts, no ads, no data collection.`,
     github: null,
   },
   {
+    id: 'spygrid',
+    name: 'Spygrid',
+    tag_it: 'iOS & Android · Party Game',  tag_en: 'iOS & Android · Party Game',
+    shortDesc_it: 'Spie, indizi e deduzione — gioco di parole a squadre online.',
+    shortDesc_en: 'Spies, clues and deduction — online team word game.',
+    icon: '🕵️',
+    tech: ['iOS', 'Android', 'Firebase', 'Realtime', 'Claude API', 'Game Design'],
+    description_it: `Spygrid è un gioco di parole a squadre, online e in tempo reale: due squadre — rossa e blu — si sfidano su una griglia di 25 parole.
+Il capospia di ogni squadra conosce le parole dei propri agenti e dà un indizio (una parola e un numero); gli agenti devono indovinare evitando le parole avversarie, le neutre e soprattutto l'assassino, che fa perdere all'istante.
+Tra i tratti distintivi: un Capospia AI che permette di giocare anche in dispari o da soli, partite online con codice stanza e supporto multilingua IT/EN.`,
+    description_en: `Spygrid is an online, real-time team word game: two teams — red and blue — face off over a grid of 25 words.
+Each team's spymaster knows their agents' words and gives a clue (one word and a number); agents must guess while avoiding the rival words, the neutral ones and above all the assassin, which loses the game instantly.
+Highlights: an AI Spymaster that lets you play with odd numbers or solo, online matches with a room code, and IT/EN multilingual support.`,
+    features_it: [
+      'Due squadre su una griglia di 25 parole',
+      'Ruoli capospia e agenti',
+      'Capospia AI per giocare in dispari o da soli',
+      'Online in tempo reale con codice stanza',
+      'Multilingua italiano / inglese',
+    ],
+    features_en: [
+      'Two teams over a 25-word grid',
+      'Spymaster and agent roles',
+      'AI Spymaster to play odd-numbered or solo',
+      'Real-time online with room code',
+      'Italian / English multilingual',
+    ],
+    website: '/spygrid/',
+    appStore: null,
+    github: null,
+  },
+  {
     id: 'drew',
     name: 'Drew Clothing',
     tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',

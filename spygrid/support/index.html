@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supporto — Spygrid</title>
+
+  <meta name="description" content="Supporto e domande frequenti su Spygrid: come creare o entrare in una stanza, il Capospia AI, lingua di gioco, segnalazione bug e cancellazione dati." />
+  <meta name="author" content="Gianlorenzo Taurchini" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gianlorenzotaurchini.com/spygrid/support/" />
+
+  <meta name="theme-color" content="#0D0D11" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="icon" type="image/png" href="../../favicon.png" />
+  <link rel="apple-touch-icon" href="../../favicon.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#0D0D11; --bg-overlay: radial-gradient(125% 90% at 50% -8%, #1C1C26 0%, #0D0D11 56%);
+      --surface:#16161D; --border:rgba(255,255,255,0.09); --border-strong:rgba(255,255,255,0.18);
+      --cta:#ECE6D6; --cta-ink:#16151A; --text:#F2EFE6; --muted:#8A887E; --muted-2:#9A988F; --muted-3:#7C7A70;
+      --red:#D9534F; --blue:#4A90D9;
+      --font-display:'Space Grotesk',system-ui,sans-serif; --font-ui:'IBM Plex Sans',system-ui,sans-serif; --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:var(--font-ui); color:var(--text); background:var(--bg); background-image:var(--bg-overlay); background-attachment:fixed; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    .topbar { border-bottom:1px solid var(--border); }
+    .topbar .inner { max-width:720px; margin:0 auto; padding:18px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .mini-mark { width:26px; height:32px; position:relative; flex:0 0 auto; }
+    .mini-mark i { position:absolute; width:18px; height:26px; border-radius:4px; border:2px solid var(--cta); }
+    .mini-mark .b { left:0; top:3px; background:var(--cta); transform:rotate(-11deg); }
+    .mini-mark .f { left:6px; top:0; transform:rotate(9deg); background:linear-gradient(135deg,var(--red) 0 50%,var(--blue) 50% 100%); }
+    .brand .name { font-family:var(--font-display); font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:17px; }
+    .topbar .back { font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted-2); }
+
+    main { max-width:720px; margin:0 auto; padding:44px 24px 80px; }
+    .label { font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.12em; font-size:12px; color:var(--muted-2); }
+    h1 { font-family:var(--font-display); font-weight:700; font-size:clamp(28px,6vw,38px); letter-spacing:.02em; text-transform:uppercase; margin:10px 0 12px; }
+    .lead { color:var(--muted-2); font-size:17px; margin-bottom:18px; }
+
+    .contact-card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-bottom:36px; }
+    .contact-card .t { font-family:var(--font-display); font-weight:600; text-transform:uppercase; letter-spacing:.02em; font-size:16px; }
+    .contact-card p { color:var(--muted-2); font-size:14px; margin-top:4px; }
+    .btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--cta); color:var(--cta-ink); font-weight:600; font-size:15px; padding:12px 20px; border-radius:13px; text-decoration:none; }
+    .btn-primary:hover { text-decoration:none; transform:translateY(-1px); }
+
+    h2.section { font-family:var(--font-display); font-weight:600; font-size:20px; letter-spacing:.02em; text-transform:uppercase; margin:0 0 14px; }
+    details { background:var(--surface); border:1px solid var(--border); border-radius:13px; padding:0 18px; margin-bottom:10px; }
+    details summary { list-style:none; cursor:pointer; padding:16px 0; font-weight:600; font-size:16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    details summary::-webkit-details-marker { display:none; }
+    details summary .chev { transition:transform .2s ease; color:var(--muted-2); flex:0 0 auto; }
+    details[open] summary .chev { transform:rotate(45deg); }
+    details .ans { padding:0 0 18px; color:#dedacf; }
+    details .ans a { color:var(--blue); }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a class="brand" href="../" aria-label="Spygrid">
+        <span class="mini-mark" aria-hidden="true"><i class="b"></i><i class="f"></i></span>
+        <span class="name">Spygrid</span>
+      </a>
+      <a class="back" href="../">← Torna al gioco</a>
+    </div>
+  </div>
+
+  <main>
+    <span class="label">// Centro assistenza</span>
+    <h1>Supporto</h1>
+    <p class="lead">Hai bisogno di aiuto con Spygrid? Scrivici: rispondiamo a ogni richiesta. Qui sotto trovi anche le domande più frequenti.</p>
+
+    <div class="contact-card">
+      <div>
+        <div class="t">Contatta il supporto</div>
+        <p>Per qualsiasi domanda, segnalazione o richiesta sui tuoi dati.</p>
+      </div>
+      <a class="btn-primary" href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+    </div>
+
+    <h2 class="section">Domande frequenti</h2>
+
+    <details>
+      <summary>Come creo o entro in una stanza?<span class="chev">+</span></summary>
+      <div class="ans">Dalla schermata principale puoi <strong>creare una stanza</strong>: riceverai un codice da condividere con gli altri giocatori. Per unirti, scegli <strong>entra in una stanza</strong> e inserisci il codice ricevuto. Una volta nella lobby, scegliete le squadre (rossa o blu) e i ruoli (capospia o agente), poi si parte.</div>
+    </details>
+
+    <details>
+      <summary>Cos'è il Capospia AI?<span class="chev">+</span></summary>
+      <div class="ans">Il <strong>Capospia AI</strong> è un'intelligenza artificiale che può ricoprire il ruolo di capospia al posto di un giocatore. È utile quando siete in numero dispari o volete giocare da soli: l'IA osserva le parole della squadra e genera gli indizi (parola + numero). Per farlo, al solo momento dell'indizio vengono inviate ad Anthropic le parole sul tabellone e i loro colori — nessun dato personale. Dettagli nell'<a href="../privacy/">informativa sulla privacy</a>.</div>
+    </details>
+
+    <details>
+      <summary>Posso giocare in inglese?<span class="chev">+</span></summary>
+      <div class="ans">Sì. Spygrid è <strong>multilingua (italiano e inglese)</strong>: puoi cambiare la lingua dell'interfaccia e scegliere la lingua dei mazzi di parole per la partita.</div>
+    </details>
+
+    <details>
+      <summary>Ho trovato un bug, come lo segnalo?<span class="chev">+</span></summary>
+      <div class="ans">Scrivici a <a href="mailto:gianlorenzotaurchini@gmail.com?subject=Spygrid%20%E2%80%93%20Segnalazione%20bug">gianlorenzotaurchini@gmail.com</a>. Indica il modello del telefono, il sistema operativo e i passaggi per riprodurre il problema: ci aiuterà a risolverlo più in fretta.</div>
+    </details>
+
+    <details>
+      <summary>Come cancello i miei dati?<span class="chev">+</span></summary>
+      <div class="ans">L'account è anonimo e i dati di partita sono transitori. Per richiedere la cancellazione dei dati associati al tuo identificativo, scrivi a <a href="mailto:gianlorenzotaurchini@gmail.com?subject=Spygrid%20%E2%80%93%20Cancellazione%20dati">gianlorenzotaurchini@gmail.com</a>. Trovi tutti i dettagli nell'<a href="../privacy/">informativa sulla privacy</a>.</div>
+    </details>
+  </main>
+</body>
+</html>

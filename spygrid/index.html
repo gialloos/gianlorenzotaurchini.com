@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spygrid — gioco di parole a squadre</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Spygrid è un gioco di parole a squadre, online e in tempo reale per Android e iOS. Due squadre, 25 parole, indizi del capospia: trova le tue spie, evita l'assassino, vinci. Con Capospia AI e multilingua IT/EN." />
+  <meta name="author" content="Gianlorenzo Taurchini" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gianlorenzotaurchini.com/spygrid/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gianlorenzotaurchini.com/spygrid/" />
+  <meta property="og:title" content="Spygrid — gioco di parole a squadre" />
+  <meta property="og:description" content="Online, in tempo reale. Due squadre, 25 parole, un assassino. Trova le tue spie ed evita l'assassino. Con Capospia AI e multilingua IT/EN." />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/favicon.png" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="Spygrid" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Spygrid — gioco di parole a squadre" />
+  <meta name="twitter:description" content="Online, in tempo reale. Trova le tue spie, evita l'assassino, vinci." />
+
+  <!-- Theme & icons -->
+  <meta name="theme-color" content="#0D0D11" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Spygrid",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Android, iOS",
+    "inLanguage": ["it", "en"],
+    "gamePlatform": ["Android", "iOS"],
+    "description": "Gioco di parole a squadre, online e in tempo reale. Due squadre si sfidano su una griglia di 25 parole con indizi del capospia. Con Capospia AI e multilingua IT/EN.",
+    "author": { "@type": "Person", "name": "Gianlorenzo Taurchini", "url": "https://gianlorenzotaurchini.com" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:        #0D0D11;
+      --bg-overlay: radial-gradient(125% 90% at 50% -8%, #1C1C26 0%, #0D0D11 56%);
+      --surface:   #16161D;
+      --border:    rgba(255,255,255,0.09);
+      --border-strong: rgba(255,255,255,0.18);
+      --cta:       #ECE6D6;
+      --cta-ink:   #16151A;
+      --text:      #F2EFE6;
+      --muted:     #8A887E;
+      --muted-2:   #9A988F;
+      --muted-3:   #7C7A70;
+      --red:       #D9534F;
+      --blue:      #4A90D9;
+      --neutral:   #E8DCC0;
+      --assassin:  #2B2B2B;
+      --font-display: 'Space Grotesk', system-ui, sans-serif;
+      --font-ui:   'IBM Plex Sans', system-ui, sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-ui);
+      color: var(--text);
+      background: var(--bg);
+      background-image: var(--bg-overlay);
+      background-attachment: fixed;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    .wrap { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+    /* Mono label */
+    .label {
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: var(--muted-2);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: var(--font-ui); font-weight: 600; font-size: 15px;
+      text-decoration: none; cursor: pointer;
+      padding: 13px 22px; border-radius: 14px;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn-primary { background: var(--cta); color: var(--cta-ink); border: 1px solid var(--cta); box-shadow: 0 12px 30px -12px rgba(0,0,0,0.6); }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border-strong); }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.4); transform: translateY(-2px); }
+    .btn small { display:block; font-family: var(--font-mono); font-size: 10px; letter-spacing: .08em; opacity: .7; line-height: 1; }
+    .btn .big { font-size: 15px; line-height: 1.1; }
+
+    /* ── Hero ───────────────────────────── */
+    .hero { position: relative; text-align: center; padding: 84px 24px 72px; }
+    .logo-mark { width: 132px; height: 150px; margin: 0 auto 30px; position: relative; }
+    .card3d {
+      position: absolute; width: 92px; height: 128px; border-radius: 12px;
+      border: 3px solid var(--cta);
+      box-shadow: 0 18px 40px -14px rgba(0,0,0,0.8);
+    }
+    .card-back  { left: 8px;  top: 14px; background: var(--cta); transform: rotate(-11deg); }
+    .card-front { left: 30px; top: 4px;  transform: rotate(8deg);
+      background: linear-gradient(135deg, var(--red) 0 50%, var(--blue) 50% 100%); }
+    .card-front::after {
+      content: ""; position: absolute; inset: 0; border-radius: 9px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+    }
+    .wordmark {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(44px, 11vw, 86px); letter-spacing: 0.08em;
+      line-height: 0.95; text-transform: uppercase;
+    }
+    .hero .sub { margin-top: 16px; }
+    .hero .claim {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: clamp(18px, 4vw, 24px); color: var(--text);
+      margin: 20px auto 0; max-width: 22ch; letter-spacing: 0.01em;
+    }
+    .hero .claim .red  { color: var(--red); }
+    .hero .claim .blue { color: var(--blue); }
+    .stores { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+
+    /* ── Section scaffolding ───────────────── */
+    section.block { padding: 56px 0; }
+    .sec-head { margin-bottom: 30px; }
+    .sec-head h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(26px, 5vw, 34px); letter-spacing: 0.02em;
+      text-transform: uppercase; margin-top: 8px;
+    }
+    .sec-head p { color: var(--muted-2); max-width: 62ch; margin-top: 10px; font-size: 16px; }
+
+    /* How to play */
+    .howto { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; }
+    @media (max-width: 820px) { .howto { grid-template-columns: 1fr; gap: 32px; } }
+    .steps { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+    .steps li { display: flex; gap: 14px; }
+    .steps .n {
+      flex: 0 0 auto; width: 30px; height: 30px; border-radius: 9px;
+      display: grid; place-items: center; font-family: var(--font-mono);
+      font-size: 13px; background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    }
+    .steps b { font-weight: 600; }
+    .steps span.t { color: var(--muted-2); font-size: 15px; }
+
+    .board {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px;
+      padding: 14px; border-radius: 18px; background: var(--surface); border: 1px solid var(--border);
+    }
+    .tile {
+      aspect-ratio: 1 / 0.66; border-radius: 8px;
+      display: grid; place-items: center; text-align: center;
+      font-family: var(--font-mono); font-size: 9.5px; text-transform: uppercase;
+      letter-spacing: 0.04em; padding: 2px; line-height: 1.1;
+    }
+    .tile.covered { background: linear-gradient(180deg, #F6F3EA, #E9E2D1); color: #2A2722; }
+    .tile.red     { background: var(--red);     color: #fff; font-weight: 600; }
+    .tile.blue    { background: var(--blue);    color: #fff; font-weight: 600; }
+    .tile.neutral { background: var(--neutral); color: #2A2722; }
+    .tile.assassin{ background: var(--assassin);color: #d9534f; font-weight: 600; border: 1px solid #3a3a3a; }
+    .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+    .legend span { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-2); }
+    .swatch { width: 13px; height: 13px; border-radius: 4px; display: inline-block; }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .fcard { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; }
+    .fcard .ico { width: 42px; height: 42px; border-radius: 11px; display: grid; place-items: center; margin-bottom: 14px; border: 1px solid var(--border); }
+    .fcard h3 { font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: .02em; text-transform: uppercase; margin-bottom: 6px; }
+    .fcard p { color: var(--muted-2); font-size: 14.5px; }
+
+    /* Gallery */
+    .gallery { display: grid; grid-auto-flow: column; grid-auto-columns: 200px; gap: 16px; overflow-x: auto; padding-bottom: 12px; scroll-snap-type: x mandatory; }
+    .shot { scroll-snap-align: start; }
+    .phone {
+      aspect-ratio: 9 / 19.5; border-radius: 26px; background: var(--surface);
+      border: 1px solid var(--border); position: relative; overflow: hidden;
+      display: grid; place-items: center;
+    }
+    .phone::before { content: ""; position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 46px; height: 5px; border-radius: 4px; background: rgba(255,255,255,0.14); }
+    .phone .ph-label { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted-3); padding: 0 10px; text-align: center; }
+    .shot .cap { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted-2); margin-top: 10px; text-align: center; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 40px 0 56px; }
+    .foot { display: flex; flex-wrap: wrap; gap: 18px 28px; align-items: center; justify-content: space-between; }
+    .foot nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    .foot a { color: var(--muted-2); text-decoration: none; font-size: 14px; }
+    .foot a:hover { color: var(--text); }
+    .foot .mk { display: flex; align-items: center; gap: 10px; }
+    .foot .mk .name { font-family: var(--font-display); font-weight: 700; letter-spacing: .1em; font-size: 15px; }
+    .foot .copy { color: var(--muted-3); font-size: 13px; width: 100%; }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="logo-mark" aria-hidden="true">
+        <div class="card3d card-back"></div>
+        <div class="card3d card-front"></div>
+      </div>
+      <h1 class="wordmark">Spygrid</h1>
+      <div class="sub"><span class="label">Spie · Indizi · Deduzione</span></div>
+      <p class="claim">Trova le tue spie. Evita <span class="red">l'assassino</span>. <span class="blue">Vinci</span>.</p>
+      <div class="stores">
+        <a class="btn btn-primary" href="#" aria-label="Scarica su App Store">
+          <span> Scarica su <span class="big">App Store</span></span>
+        </a>
+        <a class="btn btn-outline" href="#" aria-label="Scarica su Google Play">
+          <span><small>DISPONIBILE SU</small><span class="big">Google Play</span></span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- COME SI GIOCA -->
+    <section class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="label">// Briefing</span>
+          <h2>Come si gioca</h2>
+          <p>Due squadre — rossa e blu — si sfidano su una griglia di 25 parole. Il capospia conosce le parole dei propri agenti e dà un indizio: una parola e un numero. Gli agenti indovinano evitando le parole avversarie, quelle neutre e soprattutto l'assassino, che fa perdere all'istante.</p>
+        </div>
+        <div class="howto">
+          <ol class="steps">
+            <li><span class="n">1</span><span><b>25 parole, due squadre.</b><br><span class="t">Una griglia 5×5. Ogni parola appartiene alla squadra rossa, alla blu, è neutra o è l'assassino.</span></span></li>
+            <li><span class="n">2</span><span><b>Il capospia dà l'indizio.</b><br><span class="t">Solo lui vede i colori. Dice una parola e un numero, es. "MARE 2".</span></span></li>
+            <li><span class="n">3</span><span><b>Gli agenti deducono.</b><br><span class="t">Toccano le parole che collegano all'indizio, una alla volta.</span></span></li>
+            <li><span class="n">4</span><span><b>Attenzione all'assassino.</b><br><span class="t">Sceglierlo fa perdere la partita sul colpo. Chi svela tutte le proprie parole vince.</span></span></li>
+          </ol>
+          <div>
+            <div class="board" role="img" aria-label="Griglia illustrativa 5 per 5 con parole delle squadre, parole neutre e l'assassino">
+              <div class="tile red">Roma</div>
+              <div class="tile covered">Luna</div>
+              <div class="tile blue">Onda</div>
+              <div class="tile covered">Ponte</div>
+              <div class="tile neutral">Carta</div>
+              <div class="tile covered">Fuoco</div>
+              <div class="tile blue">Nord</div>
+              <div class="tile covered">Tigre</div>
+              <div class="tile red">Banca</div>
+              <div class="tile covered">Vela</div>
+              <div class="tile covered">Pianta</div>
+              <div class="tile neutral">Sasso</div>
+              <div class="tile assassin">Assassino</div>
+              <div class="tile red">Mare</div>
+              <div class="tile covered">Stella</div>
+              <div class="tile blue">Ghiaccio</div>
+              <div class="tile covered">Treno</div>
+              <div class="tile red">Spia</div>
+              <div class="tile covered">Corda</div>
+              <div class="tile neutral">Forno</div>
+              <div class="tile covered">Velo</div>
+              <div class="tile blue">Codice</div>
+              <div class="tile covered">Lampo</div>
+              <div class="tile red">Ombra</div>
+              <div class="tile covered">Porto</div>
+            </div>
+            <div class="legend">
+              <span><i class="swatch" style="background:var(--red)"></i>Squadra rossa</span>
+              <span><i class="swatch" style="background:var(--blue)"></i>Squadra blu</span>
+              <span><i class="swatch" style="background:var(--neutral)"></i>Neutro</span>
+              <span><i class="swatch" style="background:var(--assassin);border:1px solid #3a3a3a"></i>Assassino</span>
+              <span><i class="swatch" style="background:linear-gradient(180deg,#F6F3EA,#E9E2D1)"></i>Coperta</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COSA LO RENDE DIVERSO -->
+    <section class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="label">// Dossier</span>
+          <h2>Cosa lo rende diverso</h2>
+        </div>
+        <div class="features">
+          <div class="fcard">
+            <div class="ico" style="color:var(--cta)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4v1a4 4 0 0 1-8 0V7a4 4 0 0 1 4-4Z"/><path d="M5 21a7 7 0 0 1 14 0"/><circle cx="12" cy="11" r="0.5"/></svg>
+            </div>
+            <h3>Capospia AI</h3>
+            <p>Un'intelligenza artificiale può fare da capospia: gioca anche in numero dispari, o da solo.</p>
+          </div>
+          <div class="fcard">
+            <div class="ico" style="color:var(--blue)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a7 7 0 0 1 14 0"/><path d="M2 9a11 11 0 0 1 20 0"/><circle cx="12" cy="17" r="1.5"/></svg>
+            </div>
+            <h3>Online in tempo reale</h3>
+            <p>Crea una stanza, condividi il codice e gioca con gli amici ovunque, in diretta.</p>
+          </div>
+          <div class="fcard">
+            <div class="ico" style="color:var(--red)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18Z"/></svg>
+            </div>
+            <h3>Multilingua IT/EN</h3>
+            <p>Interfaccia e mazzi di parole in italiano e inglese, scegli la lingua della partita.</p>
+          </div>
+          <div class="fcard">
+            <div class="ico" style="color:var(--neutral)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>
+            </div>
+            <h3>Veloce e responsive</h3>
+            <p>Partite rapide, interfaccia fluida e ottimizzata sia per telefono che per tablet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERIA -->
+    <section class="block">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="label">// Screenshot</span>
+          <h2>Dentro la partita</h2>
+        </div>
+        <div class="gallery">
+          <div class="shot"><div class="phone"><span class="ph-label">Home</span></div><div class="cap">Home</div></div>
+          <div class="shot"><div class="phone"><span class="ph-label">Tabellone operativo</span></div><div class="cap">Tabellone operativo</div></div>
+          <div class="shot"><div class="phone"><span class="ph-label">Tabellone spymaster</span></div><div class="cap">Tabellone spymaster</div></div>
+          <div class="shot"><div class="phone"><span class="ph-label">Lobby</span></div><div class="cap">Lobby</div></div>
+          <div class="shot"><div class="phone"><span class="ph-label">Fine partita</span></div><div class="cap">Fine partita</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot">
+      <div class="mk">
+        <span class="label">Spie · Indizi · Deduzione</span>
+      </div>
+      <nav>
+        <a href="privacy/">Privacy</a>
+        <a href="support/">Supporto</a>
+        <a href="mailto:gianlorenzotaurchini@gmail.com">Contatto</a>
+        <a href="https://gianlorenzotaurchini.com">gianlorenzotaurchini.com</a>
+      </nav>
+      <p class="copy">Spygrid — gioco di parole a squadre. Sviluppato da Gianlorenzo Taurchini.</p>
+    </div>
+  </footer>
+</body>
+</html>
