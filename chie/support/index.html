@@ -22,81 +22,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg:#0A1410; --surface:#11201A; --surface-2:#0E1B16;
-      --hair:rgba(255,255,255,0.08); --hair-strong:rgba(255,255,255,0.16);
-      --text:#EAF3EE; --text2:#AFC2B8; --text3:#7E938A;
-      --accent:#7C5CFC; --on-accent:#FFFFFF;
-      --font-title:'Anton',system-ui,sans-serif; --font-body:'Archivo',system-ui,sans-serif;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
+    :root{--bg:#0A1410;--surface:#11201A;--hair:rgba(255,255,255,0.08);--hair-strong:rgba(255,255,255,0.16);
+      --text:#EAF3EE;--text2:#AFC2B8;--text3:#7E938A;--accent:#7C5CFC;--on-accent:#FFFFFF;
+      --font-title:'Anton',system-ui,sans-serif;--font-body:'Archivo',system-ui,sans-serif;}
+    *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
     body{font-family:var(--font-body);color:var(--text);background:var(--bg);
-      background-image:radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,0.05), transparent 60%);
+      background-image:radial-gradient(120% 90% at 50% -10%,rgba(255,255,255,0.05),transparent 60%);
       background-attachment:fixed;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    a{color:var(--accent)}
-    h1,h2,h3{font-family:var(--font-title);font-weight:400;letter-spacing:.01em;line-height:1.04}
+    a{color:var(--accent)}h1,h2,h3{font-family:var(--font-title);font-weight:400;letter-spacing:.01em;line-height:1.04}
     .wrap{width:100%;max-width:1000px;margin:0 auto;padding:0 24px}
     :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
-    .label{font-family:var(--font-body);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+    .label{font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
     .mark{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--accent);color:var(--on-accent);font-family:var(--font-title);font-size:13px;line-height:1}
     .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
     .brand .nm{font-family:var(--font-title);font-size:22px;letter-spacing:.02em}
     .badge{display:inline-flex;align-items:center;gap:11px;background:#000;color:#fff;text-decoration:none;padding:12px 20px;border-radius:14px;border:1px solid var(--hair-strong);transition:transform .15s ease,opacity .15s ease}
-    .badge:hover{transform:translateY(-2px)}
-    .badge .txt{display:flex;flex-direction:column;line-height:1.05;text-align:left}
-    .badge .txt small{font-size:10px;opacity:.85}
-    .badge .txt b{font-size:18px;font-weight:700}
+    .badge:hover{transform:translateY(-2px)}.badge .txt{display:flex;flex-direction:column;line-height:1.05;text-align:left}
+    .badge .txt small{font-size:10px;opacity:.85}.badge .txt b{font-size:18px;font-weight:700}
     .badge[data-coming-soon]{opacity:.55}
     .badge[data-coming-soon]::after{content:"Presto";align-self:flex-start;font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);padding:2px 7px;border-radius:999px}
-    /* hero */
-    .hero{text-align:center;padding:84px 24px 56px;position:relative}
-    .hero .mark{margin-bottom:24px}
+    .hero{text-align:center;padding:84px 24px 56px}.hero .mark{margin-bottom:24px}
     .hero h1{font-size:clamp(56px,15vw,120px);letter-spacing:.02em}
     .hero .sub{color:var(--text2);font-size:clamp(17px,3.4vw,22px);margin-top:12px;font-weight:600}
-    .hero .lead{color:var(--text3);max-width:46ch;margin:14px auto 0}
+    .hero .lead{color:var(--text3);max-width:48ch;margin:14px auto 0}
     .hero .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-    /* sections */
-    section{padding:48px 0}
-    .sec-title{font-size:clamp(26px,5vw,40px);margin-top:8px}
+    section{padding:48px 0}.sec-title{font-size:clamp(26px,5vw,40px);margin-top:8px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-    @media(max-width:760px){.grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:520px){.grid{grid-template-columns:1fr}}
+    @media(max-width:760px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.grid{grid-template-columns:1fr}}
     .card{background:var(--surface);border:1px solid var(--hair);border-radius:16px;padding:22px}
-    .card .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.05);color:var(--accent);margin-bottom:14px}
-    .card h3{font-family:var(--font-body);font-weight:700;font-size:16px;margin-bottom:5px}
+    .card .n{font-family:var(--font-title);color:var(--accent);font-size:13px;letter-spacing:.1em}
+    .card h3{font-family:var(--font-body);font-weight:700;font-size:17px;margin:6px 0 5px}
     .card p{color:var(--text2);font-size:14.5px}
-    /* footer */
     footer{border-top:1px solid var(--hair);margin-top:40px;padding:40px 0 60px}
     .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
-    .foot nav{display:flex;gap:22px;flex-wrap:wrap}
-    .foot a{color:var(--text2);text-decoration:none;font-weight:600;font-size:15px}
-    .foot a:hover{color:var(--accent)}
-    .foot .copy{width:100%;color:var(--text3);font-size:13px}
-    /* doc pages */
+    .foot nav{display:flex;gap:22px;flex-wrap:wrap}.foot a{color:var(--text2);text-decoration:none;font-weight:600;font-size:15px}
+    .foot a:hover{color:var(--accent)}.foot .copy{width:100%;color:var(--text3);font-size:13px}
     .topbar{border-bottom:1px solid var(--hair)}
-    .topbar .inner{max-width:720px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .topbar .back{color:var(--text2);text-decoration:none;font-weight:600;font-size:14px}
-    .topbar .back:hover{color:var(--accent)}
-    .doc{max-width:720px;margin:0 auto;padding:44px 24px 80px}
-    .doc h1{font-size:clamp(30px,6vw,42px);margin:8px 0 6px}
+    .topbar .inner{max-width:760px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .topbar .back{color:var(--text2);text-decoration:none;font-weight:600;font-size:14px}.topbar .back:hover{color:var(--accent)}
+    .doc{max-width:760px;margin:0 auto;padding:44px 24px 80px}.doc h1{font-size:clamp(30px,6vw,42px);margin:8px 0 6px}
     .updated{color:var(--text3);font-size:13px;margin-bottom:8px}
-    .doc h2{font-family:var(--font-body);font-weight:700;font-size:20px;margin:30px 0 8px}
-    .doc p{margin-bottom:12px;color:var(--text2)}
-    .doc .lead{font-size:17px;color:var(--text);margin-bottom:14px}
-    .doc ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:6px 0 12px}
-    .doc li{display:flex;gap:11px}
-    .doc li .dot{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px}
-    .doc li b{color:var(--text);font-weight:700}
+    .doc h3{font-family:var(--font-body);font-weight:700;font-size:16px;margin:18px 0 6px;color:var(--text)}
+    .doc p{margin-bottom:10px;color:var(--text2)}.doc .lead{font-size:17px;color:var(--text);margin-bottom:8px}
     .panel{background:var(--surface);border:1px solid var(--hair);border-radius:16px;padding:clamp(22px,4vw,30px);margin-bottom:20px}
     .panel .tag{font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-    .nodata{display:inline-block;background:rgba(255,255,255,.05);border:1px solid var(--hair);border-left:4px solid var(--accent);border-radius:12px;padding:12px 16px;font-family:var(--font-title);font-size:18px;margin-bottom:6px}
+    .nodata{display:inline-block;background:rgba(255,255,255,.05);border:1px solid var(--hair);border-left:4px solid var(--accent);border-radius:12px;padding:12px 16px;font-family:var(--font-title);font-size:18px;margin:6px 0}
     .faq{background:var(--surface);border:1px solid var(--hair);border-radius:13px;padding:0 20px;margin-bottom:10px}
     .faq summary{list-style:none;cursor:pointer;padding:17px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:12px}
-    .faq summary::-webkit-details-marker{display:none}
-    .faq summary .pm{color:var(--accent);transition:transform .2s ease}
-    .faq[open] summary .pm{transform:rotate(45deg)}
-    .faq .ans{padding:0 0 17px;color:var(--text2)}
+    .faq summary::-webkit-details-marker{display:none}.faq summary .pm{color:var(--accent);transition:transform .2s ease}
+    .faq[open] summary .pm{transform:rotate(45deg)}.faq .ans{padding:0 0 17px;color:var(--text2)}
     .contact{background:var(--surface);border:1px solid var(--hair);border-radius:16px;padding:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin:24px 0 32px}
     .mail{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--on-accent);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px}
     .back-link{display:inline-block;margin-top:30px;font-weight:700;text-decoration:none}
@@ -115,11 +89,11 @@
       <div><div style="font-family:var(--font-title);font-size:18px">Contatta il supporto</div><p style="color:var(--text2);font-size:14px;margin-top:4px">Per domande, segnalazioni o richieste.</p></div>
       <a class="mail" href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
     </div>
-    <h2 style="font-family:var(--font-title);font-weight:400;font-size:24px;margin:0 0 14px">Domande frequenti</h2>
-    <details class="faq"><summary>Come azzero le statistiche?<span class="pm">+</span></summary><div class="ans">Apri le Impostazioni dell'app e usa l'opzione di reset: le statistiche e le preferenze salvate sul dispositivo vengono cancellate.</div></details>
-    <details class="faq"><summary>Serve un account?<span class="pm">+</span></summary><div class="ans">No. Chi È? non richiede registrazione né account: si apre e si gioca.</div></details>
-    <details class="faq"><summary>I miei dati sono salvati da qualche parte?<span class="pm">+</span></summary><div class="ans">Solo in locale sul tuo dispositivo. Nessun dato viene trasmesso o condiviso. Dettagli nell'<a href="../privacy/">informativa sulla privacy</a>.</div></details>
-    <details class="faq"><summary>Come segnalo un bug?<span class="pm">+</span></summary><div class="ans">Scrivici a <a href="mailto:gianlorenzotaurchini@gmail.com?subject=Chi È?%20%E2%80%93%20Bug">gianlorenzotaurchini@gmail.com</a> indicando dispositivo e cosa è successo.</div></details>
+    <h2 style="font-size:24px;margin:0 0 14px">Domande frequenti</h2>
+    <details class="faq"><summary>Come azzero le statistiche?<span class="pm">+</span></summary><div class="ans">Apri Impostazioni → “Azzera statistiche”: streak e record salvati sul dispositivo vengono cancellati.</div></details>
+    <details class="faq"><summary>Serve un account?<span class="pm">+</span></summary><div class="ans">No. Chi È? è a giocatore singolo, senza account e senza online.</div></details>
+    <details class="faq"><summary>I miei dati sono online?<span class="pm">+</span></summary><div class="ans">No: tutto resta solo sul tuo dispositivo.</div></details>
+    <details class="faq"><summary>Come segnalo un bug?<span class="pm">+</span></summary><div class="ans">Scrivici via email indicando dispositivo e cosa è successo.</div></details>
     <p style="color:var(--text3);font-size:13px;margin-top:20px">Versione app: 1.0.0</p>
     <p style="margin-top:6px"><a href="../privacy/">Leggi la Privacy Policy sul web →</a></p>
     <a class="back-link" href="../">← Torna a Chi È?</a>
