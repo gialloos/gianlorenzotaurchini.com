@@ -70,4 +70,40 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/undici/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/undici/privacy/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/undici/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/chie/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/chie/privacy/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/chie/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/incrocio/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/incrocio/privacy/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/incrocio/support/</loc>
+    <lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
 </urlset>
