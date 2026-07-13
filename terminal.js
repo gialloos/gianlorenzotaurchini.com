@@ -248,6 +248,38 @@ const ME = {
 
 const PROJECTS = [
   {
+    id: 'calottina',
+    name: 'Calottina',
+    tag_it: 'iOS App · Sport & Brand Identity',  tag_en: 'iOS App · Sports & Brand Identity',
+    shortDesc_it: 'La pallanuoto italiana in tasca — risultati, classifiche e referti live.',
+    shortDesc_en: 'Italian water polo in your pocket — live scores, standings and reports.',
+    icon: '🤽',
+    tech: ['Swift', 'SwiftUI', 'Supabase', 'RevenueCat', 'AdMob', 'Push', 'Brand Identity'],
+    description_it: `Calottina porta tutta la pallanuoto italiana su iPhone: calendari, risultati e classifiche sempre aggiornati di Serie A1, A2 e B — maschili e femminili — fino ai campionati giovanili e regionali.
+I risultati arrivano anche da un sistema crowd-sourced di referti caricati dagli utenti, con stati di verifica che vanno da "provvisorio" a "ufficiale".
+Ho curato l'intero progetto: brand identity, sito e app, con un abbonamento Pro che sblocca notifiche live, statistiche avanzate e rimuove la pubblicità.`,
+    description_en: `Calottina brings all of Italian water polo to iPhone: always-updated fixtures, scores and standings for Serie A1, A2 and B — men's and women's — down to youth and regional leagues.
+Results also come from a crowd-sourced system of match reports uploaded by users, with verification states ranging from "provisional" to "official".
+I handled the whole project: brand identity, website and app, with a Pro subscription that unlocks live notifications, advanced stats and removes ads.`,
+    features_it: [
+      'Calendari, risultati e classifiche di A1, A2, B (M/F)',
+      'Campionati giovanili e regionali',
+      'Referti caricati dalla community con stati di verifica',
+      'Notifiche live sui parziali (Pro)',
+      'Statistiche avanzate e archivio storico (Pro)',
+    ],
+    features_en: [
+      'Fixtures, scores and standings for A1, A2, B (M/W)',
+      'Youth and regional leagues',
+      'Community-uploaded match reports with verification states',
+      'Live period notifications (Pro)',
+      'Advanced stats and historical archive (Pro)',
+    ],
+    website: '/calottina/',
+    appStore: 'https://apps.apple.com/app/id6789084698',
+    github: null,
+  },
+  {
     id: 'risikino',
     name: 'Risikino',
     tag_it: 'iOS App · Brand Identity',  tag_en: 'iOS App · Brand Identity',
