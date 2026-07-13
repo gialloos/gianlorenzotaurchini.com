@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs><linearGradient id="aqua" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#18B4D2"/><stop offset="1" stop-color="#0B7C97"/></linearGradient></defs>
+  <rect width="1024" height="1024" fill="url(#aqua)"/>
+  <g transform="translate(512,512) scale(8.5333) translate(-62,-63)">
+    <path d="M54 84 C52 91 50 97 47 103" fill="none" stroke="#F4FAFC" stroke-width="6" stroke-linecap="round"/>
+    <path d="M38 36 C47 24 74 22 88 37 C98 48 98 67 90 81 C84 90 71 93 62 88 C57 85 54 81 51 77 C48 72 44 70 39 71 C32 63 31 47 38 36 Z" fill="#16305C" stroke="#F4FAFC" stroke-width="3" stroke-linejoin="round"/>
+    <text x="63" y="51" text-anchor="middle" font-family="Saira Condensed" font-weight="800" font-size="32" letter-spacing="-2" fill="#F4FAFC">11</text>
+    <ellipse cx="57" cy="72" rx="11" ry="14" fill="#DDE7EB" stroke="#F4FAFC" stroke-width="2.5"/>
+    <circle cx="57" cy="72" r="2.1" fill="#16305C"/><circle cx="57" cy="65" r="2.1" fill="#16305C"/><circle cx="57" cy="79" r="2.1" fill="#16305C"/><circle cx="52" cy="68.5" r="2.1" fill="#16305C"/><circle cx="62" cy="68.5" r="2.1" fill="#16305C"/><circle cx="52" cy="75.5" r="2.1" fill="#16305C"/><circle cx="62" cy="75.5" r="2.1" fill="#16305C"/>
+  </g>
+</svg>
