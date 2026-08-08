@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Informativa sulla Privacy — Impostore</title>
 
-  <meta name="description" content="Informativa sulla privacy di Impostore: l'app non raccoglie alcun dato personale. Funziona interamente sul tuo dispositivo, offline." />
+  <meta name="description" content="Privacy policy di Impostore: nessun account richiesto; pubblicità di Google AdMob (con consenso/ATT) e acquisto in-app Impostore Pro gestito da Apple e RevenueCat. IT + EN." />
   <meta name="author" content="Gian Lorenzo Taurchini" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://gianlorenzotaurchini.com/impostore/privacy/" />
@@ -13,8 +13,9 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://gianlorenzotaurchini.com/impostore/privacy/" />
   <meta property="og:title" content="Informativa sulla Privacy — Impostore" />
-  <meta property="og:description" content="Impostore non raccoglie alcun dato personale. Funziona offline, sul tuo dispositivo." />
+  <meta property="og:description" content="Privacy policy di Impostore: nessun account richiesto; pubblicità di Google AdMob (con consenso/ATT) e acquisto in-app Impostore Pro gestito da Apple e RevenueCat. IT + EN." />
   <meta property="og:image" content="https://gianlorenzotaurchini.com/impostore/img/og.png" />
+  <meta property="og:locale" content="it_IT" />
   <meta name="twitter:card" content="summary" />
 
   <meta name="theme-color" content="#FF6B4A" />
@@ -24,7 +25,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -40,26 +41,33 @@
     * { box-sizing:border-box; margin:0; padding:0; }
     body { font-family:var(--font-body); color:var(--ink); background:var(--bg); line-height:1.7; -webkit-font-smoothing:antialiased; }
     a { color:var(--coral); }
-    h1,h2 { font-family:var(--font-title); font-weight:800; line-height:1.12; letter-spacing:-0.01em; }
+    h1,h2,h3 { font-family:var(--font-title); font-weight:800; line-height:1.12; letter-spacing:-0.01em; }
     :focus-visible { outline:3px solid var(--coral); outline-offset:3px; border-radius:8px; }
 
     .topbar { background: var(--coral-grad); color: var(--on-coral); }
-    .topbar .inner { max-width:720px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .topbar .inner { max-width:760px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
     .logo { display:inline-flex; align-items:center; gap:11px; text-decoration:none; color:var(--on-coral); }
     .logo svg { display:block; }
     .logo .name { font-family:var(--font-title); font-weight:800; font-size:19px; }
     .topbar .back { color:var(--on-coral); text-decoration:none; font-weight:700; font-size:14px; opacity:.92; }
     .topbar .back:hover { opacity:1; }
 
-    main { max-width:720px; margin:0 auto; padding:44px 24px 80px; }
+    main { max-width:760px; margin:0 auto; padding:44px 24px 80px; }
     h1 { font-size:clamp(28px,6vw,38px); margin-bottom:6px; }
-    .updated { color:var(--muted); font-size:14px; font-weight:700; margin-bottom:24px; }
-    .intro { font-size:18px; margin-bottom:6px; }
-    h2 { font-size:21px; margin:30px 0 8px; }
+    .updated { color:var(--muted); font-size:14px; font-weight:700; margin-bottom:28px; }
     p { margin-bottom:12px; }
-    .nodata { display:inline-flex; align-items:center; gap:8px; background: rgba(255,107,74,0.10); border:1px solid var(--border); border-left:4px solid var(--coral); border-radius:14px; padding:14px 18px; font-family:var(--font-title); font-weight:800; font-size:18px; margin-bottom:8px; }
-    .card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px 22px; box-shadow:var(--shadow); }
-    .back-link { display:inline-block; margin-top:32px; font-weight:700; text-decoration:none; }
+
+    .panel { background:var(--surface); border:1px solid var(--border); border-radius:20px; box-shadow:var(--shadow); padding:clamp(22px,4vw,30px); margin-bottom:22px; }
+    .panel .tag { display:inline-block; font-family:var(--font-body); font-weight:800; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--coral); margin-bottom:10px; }
+    .panel h2 { font-size:19px; margin:22px 0 8px; }
+    .panel h2:first-of-type { margin-top:4px; }
+    .panel .lead { font-size:16px; margin-bottom:4px; }
+    .nodata { display:inline-flex; align-items:center; gap:8px; background: rgba(255,107,74,0.10); border:1px solid var(--border); border-left:4px solid var(--coral); border-radius:14px; padding:12px 16px; font-family:var(--font-title); font-weight:800; font-size:17px; margin-bottom:10px; }
+    .panel ul { margin:0 0 12px 20px; }
+    .panel li { margin-bottom:4px; }
+
+    .card { background: rgba(255,107,74,0.06); border:1px solid var(--border); border-radius:14px; padding:16px 18px; margin-top:4px; }
+    .back-link { display:inline-block; margin-top:10px; font-weight:700; text-decoration:none; }
     .back-link:hover { text-decoration:underline; }
   </style>
 </head>
@@ -80,32 +88,76 @@
 
   <main>
     <h1>Informativa sulla Privacy — Impostore</h1>
-    <p class="updated">Ultimo aggiornamento: 28 giugno 2026</p>
+    <p class="updated">Ultimo aggiornamento: 9 luglio 2026 · Last updated: 9 July 2026</p>
 
-    <p class="intro">Impostore è un gioco pensato per funzionare interamente sul tuo dispositivo. L'app è progettata per non raccogliere alcun dato personale.</p>
+    <div class="panel" lang="it">
+      <span class="tag">Italiano</span>
+      <p class="lead">Impostore ("l'app") è un gioco da fare in compagnia che funziona principalmente sul tuo dispositivo. L'app è gratuita e, per sostenerne lo sviluppo, mostra pubblicità tramite Google AdMob: di seguito spieghiamo quali dati sono interessati e come puoi controllarli.</p>
 
-    <h2>Dati che raccogliamo</h2>
-    <p class="nodata">Nessuno.</p>
-    <p>L'app non raccoglie, non memorizza su server e non condivide alcun dato personale. Nessun account, nessun nome/email/contatti/posizione/identificatori del dispositivo, nessun analytics, tracciamento o pubblicità, nessun SDK di terze parti per la profilazione.</p>
+      <h2>Dati raccolti direttamente da noi</h2>
+      <p class="nodata">Nessuno.</p>
+      <p>Non chiediamo né creiamo account e non raccogliamo il tuo nome, email, contatti o posizione. Non gestiamo server che ricevono i tuoi dati.</p>
 
-    <h2>Dati sul dispositivo</h2>
-    <p>Le categorie personalizzate e le impostazioni di gioco sono salvate solo localmente sul dispositivo e non lasciano il telefono; disinstallando l'app vengono rimosse.</p>
+      <h2>Pubblicità (Google AdMob)</h2>
+      <p>Per mostrarti gli annunci, il nostro partner <b>Google AdMob</b> può raccogliere e utilizzare <b>identificatori del dispositivo</b> (ad es. l'identificatore pubblicitario/IDFA), <b>dati di utilizzo</b> e <b>dati diagnostici</b>. Questi dati servono a mostrare e misurare gli annunci.</p>
+      <ul>
+        <li>Con il tuo <b>consenso</b>, gli annunci possono essere <b>personalizzati</b>.</li>
+        <li><b>Senza</b> consenso, ti vengono mostrati solo annunci <b>non personalizzati</b>.</li>
+      </ul>
+      <p>Puoi gestire il consenso tramite il messaggio che compare all'avvio (modulo di consenso Google/UMP) e, su iOS, tramite la richiesta di <b>Tracciamento (ATT)</b>; puoi cambiare idea in qualsiasi momento dalle Impostazioni del dispositivo. Per i dettagli su come Google tratta i dati vedi la <a href="https://policies.google.com/privacy" rel="noopener">Privacy Policy di Google</a> e <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">come Google usa i dati</a>.</p>
 
-    <h2>Condivisione di categorie</h2>
-    <p>Se scegli di condividere una categoria, l'app genera un codice testuale che puoi inviare con i normali strumenti del dispositivo. La condivisione avviene solo su tua azione esplicita; l'app non invia nulla automaticamente.</p>
+      <h2>Acquisti in-app (Impostore Pro)</h2>
+      <p>L'acquisto opzionale "Impostore Pro" (rimozione pubblicità e funzioni extra) è gestito interamente da <b>Apple</b> tramite l'App Store. Non riceviamo né conserviamo i tuoi dati di pagamento. Per gestire lo stato dell'acquisto ci avvaliamo del servizio RevenueCat, che tratta un identificatore anonimo dell'acquisto e non riceve dati personali identificativi.</p>
 
-    <h2>Rete</h2>
-    <p>L'app funziona offline e non effettua chiamate a server di terze parti.</p>
+      <h2>Dati sul dispositivo</h2>
+      <p>Le categorie personalizzate che crei e le impostazioni di gioco vengono salvate <b>solo localmente sul tuo dispositivo</b> e non lasciano il telefono. Disinstallando l'app questi dati vengono rimossi.</p>
 
-    <h2>Bambini</h2>
-    <p>L'app non raccoglie dati ed è adatta a un pubblico generico (4+).</p>
+      <h2>Condivisione di categorie</h2>
+      <p>Se scegli di condividere una categoria personalizzata, l'app genera un codice testuale che puoi inviare con i normali strumenti del tuo dispositivo. La condivisione avviene solo su tua azione esplicita.</p>
 
-    <h2>Modifiche</h2>
-    <p>Eventuali aggiornamenti saranno pubblicati su questa pagina.</p>
+      <h2>Bambini</h2>
+      <p>L'app ha classificazione 4+ ma, contenendo pubblicità, non è pensata specificamente per i bambini.</p>
 
-    <h2>Contatti</h2>
-    <div class="card">
-      <p style="margin:0">Per domande su questa informativa scrivi a <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a></p>
+      <h2>Modifiche</h2>
+      <p>Eventuali aggiornamenti a questa informativa saranno pubblicati su questa pagina, con la data di aggiornamento in alto.</p>
+
+      <h2>Contatti</h2>
+      <div class="card"><p style="margin:0">Per domande su questa informativa: <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a></p></div>
+    </div>
+
+    <div class="panel" lang="en">
+      <span class="tag">English</span>
+      <p class="lead">Impostore ("the app") is a party game that runs mainly on your device. The app is free and, to support its development, shows ads via Google AdMob. Below we explain what data is involved and how you can control it.</p>
+
+      <h2>Data we collect directly</h2>
+      <p class="nodata">None.</p>
+      <p>We do not require or create accounts and do not collect your name, email, contacts, or location. We run no servers that receive your data.</p>
+
+      <h2>Advertising (Google AdMob)</h2>
+      <p>To show ads, our partner <b>Google AdMob</b> may collect and use <b>device identifiers</b> (e.g. the advertising identifier/IDFA), <b>usage data</b>, and <b>diagnostics</b>. This data is used to serve and measure ads.</p>
+      <ul>
+        <li>With your <b>consent</b>, ads may be <b>personalized</b>.</li>
+        <li><b>Without</b> consent, you are shown only <b>non-personalized</b> ads.</li>
+      </ul>
+      <p>You can manage consent via the prompt shown at launch (Google/UMP consent form) and, on iOS, via the <b>App Tracking Transparency</b> request; you can change your choice anytime in your device Settings. See <a href="https://policies.google.com/privacy" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses data</a>.</p>
+
+      <h2>In-app purchases (Impostore Pro)</h2>
+      <p>The optional "Impostore Pro" purchase (removes ads and unlocks extras) is handled entirely by <b>Apple</b> through the App Store. We do not receive or store your payment data. We use RevenueCat to manage purchase state; it processes an anonymous purchase identifier and receives no personally identifying data.</p>
+
+      <h2>Data stored on your device</h2>
+      <p>Custom categories you create and your game settings are stored <b>only locally on your device</b> and never leave the phone. Uninstalling the app removes this data.</p>
+
+      <h2>Sharing categories</h2>
+      <p>If you choose to share a custom category, the app generates a text code you can send using your device's normal sharing tools. Sharing happens only when you explicitly choose to.</p>
+
+      <h2>Children</h2>
+      <p>The app is rated 4+ but, since it contains ads, it is not specifically directed at children.</p>
+
+      <h2>Changes</h2>
+      <p>Any updates to this policy will be posted on this page, with the updated date at the top.</p>
+
+      <h2>Contact</h2>
+      <div class="card"><p style="margin:0">Questions about this policy: <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a></p></div>
     </div>
 
     <a class="back-link" href="../">← Torna alla pagina di Impostore</a>

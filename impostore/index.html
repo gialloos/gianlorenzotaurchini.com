@@ -142,8 +142,6 @@
     .fcard p { color: var(--muted); font-size:15px; }
 
     /* Gallery */
-    .todo { background: rgba(255,212,94,0.18); border:1px dashed var(--coral); color: var(--ink); border-radius:14px; padding:14px 18px; font-weight:700; font-size:14px; margin-top:18px; }
-    .todo code { font-family: ui-monospace, monospace; background: rgba(29,20,16,0.08); padding:1px 6px; border-radius:6px; }
     .gallery { display:grid; grid-auto-flow:column; grid-auto-columns: 210px; gap:18px; overflow-x:auto; padding:18px 2px 16px; scroll-snap-type:x mandatory; }
     .shot { scroll-snap-align:center; }
     .phone { aspect-ratio: 9 / 19.5; border-radius:30px; overflow:hidden; background: var(--surface); border:3px solid var(--ink); box-shadow: var(--shadow); }
@@ -237,6 +235,11 @@
             <h3>Zero attese</h3>
             <p>Niente registrazioni o configurazioni complicate: si apre e si gioca.</p>
           </div>
+          <div class="fcard">
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+            <h3>Gratis, con Impostore Pro</h3>
+            <p>L'app è gratuita con pubblicità. Con Impostore Pro rimuovi gli annunci e sblocchi categorie illimitate.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -257,7 +260,6 @@
           <div class="shot"><div class="phone"><img src="img/06_risultato.png" alt="Risultato della partita" loading="lazy" width="360" height="780" /></div><p class="cap">Risultato</p></div>
           <div class="shot"><div class="phone"><img src="img/07_categorie.png" alt="Gestione delle categorie" loading="lazy" width="360" height="780" /></div><p class="cap">Categorie</p></div>
         </div>
-        <p class="todo">TODO — Sostituisci i 7 placeholder in <code>impostore/img/</code> con gli screenshot reali (verticali iPhone), mantenendo i nomi: <code>01_home.png</code>, <code>02_setup.png</code>, <code>03_parola.png</code>, <code>04_impostore.png</code>, <code>05_discussione.png</code>, <code>06_risultato.png</code>, <code>07_categorie.png</code>.</p>
       </div>
     </section>
 
