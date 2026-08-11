@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SETTE — Pallanuoto Arcade</title>
+
+  <!-- Primary SEO -->
+  <meta name="description" content="SETTE — Pallanuoto Arcade: gioca i momenti decisivi (tiro, rigore, uomo in più, parata), costruisci il tuo club e scala le divisioni fino alla coppa. iOS e Android, italiano e inglese." />
+  <meta name="author" content="Gian Lorenzo Taurchini" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gianlorenzotaurchini.com/sette/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gianlorenzotaurchini.com/sette/" />
+  <meta property="og:title" content="SETTE — Pallanuoto Arcade" />
+  <meta property="og:description" content="Gioca i momenti decisivi, costruisci il tuo club e scala le divisioni fino alla coppa. Manager di pallanuoto arcade per iOS e Android." />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/sette/img/og.png" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="SETTE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SETTE — Pallanuoto Arcade" />
+  <meta name="twitter:description" content="Gioca i momenti decisivi, costruisci il tuo club e scala le divisioni fino alla coppa." />
+  <meta name="twitter:image" content="https://gianlorenzotaurchini.com/sette/img/og.png" />
+
+  <!-- Theme & icons -->
+  <meta name="theme-color" content="#0B1B2C" />
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
+  <link rel="apple-touch-icon" href="img/icon.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "SETTE — Pallanuoto Arcade",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "iOS, Android",
+    "inLanguage": ["it", "en"],
+    "description": "Manager arcade di pallanuoto: gioca i momenti decisivi, costruisci il tuo club, scala le divisioni e vinci la coppa.",
+    "author": { "@type": "Person", "name": "Gian Lorenzo Taurchini", "url": "https://gianlorenzotaurchini.com" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy:        #0B1B2C;
+      --navy-2:      #0F2438;
+      --surface:     #122A41;
+      --surface-2:   #16324D;
+      --hair:        rgba(226,241,248,0.10);
+      --hair-strong: rgba(226,241,248,0.18);
+      --ink:         #EAF6FB;
+      --muted:       #93ADC0;
+      --muted-2:     #6D8AA0;
+      --cyan:        #22C7EC;
+      --cyan-deep:   #0FA9CC;
+      --amber:       #F5A623;
+      --amber-2:     #FFC65C;
+      --amber-ink:   #2B1A02;
+      --shadow:      0 16px 40px -18px rgba(3,10,18,0.65);
+      --font-title:  'Fredoka', system-ui, -apple-system, sans-serif;
+      --font-body:   'Inter', system-ui, -apple-system, sans-serif;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --navy:      #0B1B2C;
+        --navy-2:    #0F2438;
+        --surface:   #122A41;
+        --surface-2: #16324D;
+        --ink:       #EAF6FB;
+        --muted:     #93ADC0;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--navy);
+      background-image: radial-gradient(120% 70% at 50% -10%, rgba(34,199,236,0.14), transparent 60%);
+      background-attachment: fixed;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--cyan); }
+    h1, h2, h3 { font-family: var(--font-title); font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; }
+    .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; border-radius: 8px; }
+
+    .eyebrow { display:inline-block; font-family: var(--font-title); font-weight:600; font-size:13px; letter-spacing:.09em; text-transform:uppercase; color: var(--cyan); }
+    .sec-title { font-size: clamp(28px,5vw,42px); margin-top:10px; }
+    .center { text-align:center; }
+    section { padding: 60px 0; }
+
+    .logo { display:inline-flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink); }
+    .logo svg { display:block; border-radius:14px; }
+    .logo .name { font-family:var(--font-title); font-weight:700; font-size:21px; letter-spacing:.02em; }
+
+    /* Store badges */
+    .stores { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .badge { position:relative; display:inline-flex; align-items:center; gap:11px; background:#000; color:#fff; text-decoration:none; padding:12px 22px; border-radius:14px; border:1px solid var(--hair-strong); box-shadow: var(--shadow); transition: transform .15s ease; }
+    .badge:hover { transform: translateY(-2px); }
+    @media (prefers-reduced-motion: reduce) { .badge:hover { transform:none; } }
+    .badge .txt { display:flex; flex-direction:column; line-height:1.05; text-align:left; }
+    .badge .txt small { font-size:11px; font-weight:500; opacity:.88; }
+    .badge .txt b { font-size:19px; font-weight:600; font-family:var(--font-body); }
+    .badge[aria-disabled="true"] { opacity:.55; pointer-events:none; cursor:default; }
+    .badge[data-coming-soon]::after { content:"Presto"; position:absolute; top:-9px; right:-8px; font-size:9px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; background: var(--amber); color: var(--amber-ink); padding:3px 8px; border-radius:999px; box-shadow: 0 4px 10px -4px rgba(0,0,0,0.5); }
+
+    /* Hero */
+    .hero { position:relative; text-align:center; padding: 88px 24px 70px; overflow:hidden; }
+    .hero .rings { position:absolute; inset:0; pointer-events:none; opacity:.5; }
+    .hero .rings span { position:absolute; border-radius:50%; border:1px solid var(--hair); }
+    .hero .rings .r1 { width:640px; height:640px; top:-360px; left:50%; transform:translateX(-50%); }
+    .hero .rings .r2 { width:460px; height:460px; top:-260px; left:50%; transform:translateX(-50%); border-color: rgba(34,199,236,0.14); }
+    .hero .inner { position:relative; z-index:1; }
+    .hero-mark { width:96px; height:96px; margin:0 auto 22px; filter: drop-shadow(0 18px 30px rgba(0,0,0,0.45)); }
+    .hero h1 { font-size: clamp(42px, 10vw, 76px); }
+    .hero .tagline { font-family:var(--font-title); font-weight:500; font-size: clamp(19px,4vw,25px); margin-top:10px; color: var(--cyan); }
+    .hero .sub { color: var(--muted); font-size:18px; max-width:52ch; margin:18px auto 0; }
+    .hero .cta { margin-top:32px; }
+    .hero .waterline { margin-top:54px; height:1px; background: linear-gradient(90deg, transparent, var(--hair-strong), transparent); }
+
+    /* Features */
+    .features { display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:34px; }
+    @media (max-width:860px){ .features { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:560px){ .features { grid-template-columns: 1fr; } }
+    .fcard { background: var(--surface); border:1px solid var(--hair); border-radius:18px; padding:24px; box-shadow: var(--shadow); }
+    .fcard .ic { width:44px; height:44px; border-radius:12px; background: rgba(34,199,236,0.14); color: var(--cyan); display:grid; place-items:center; margin-bottom:14px; }
+    .fcard h3 { font-size:17px; margin-bottom:6px; font-weight:600; }
+    .fcard p { color: var(--muted); font-size:14.5px; }
+
+    /* Gallery */
+    .gallery { display:grid; grid-auto-flow:column; grid-auto-columns: min(300px, 78vw); gap:18px; overflow-x:auto; padding:18px 2px 16px; scroll-snap-type:x mandatory; }
+    .shot { scroll-snap-align:center; }
+    .frame { aspect-ratio: 16 / 9; border-radius:16px; overflow:hidden; background: var(--surface); border:1px solid var(--hair-strong); box-shadow: var(--shadow); }
+    .frame img { width:100%; height:100%; object-fit:cover; display:block; }
+    .shot .cap { font-weight:600; font-size:13px; color:var(--muted); margin-top:10px; }
+
+    /* CTA band */
+    .cta-band { position:relative; background: linear-gradient(160deg, var(--surface-2) 0%, var(--navy-2) 100%); border:1px solid var(--hair); border-radius:28px; text-align:center; padding: clamp(36px,6vw,64px) 24px; overflow:hidden; }
+    .cta-band h2 { font-size: clamp(28px,5vw,42px); }
+    .cta-band p { color: var(--muted); margin-top:8px; font-size:17px; }
+    .cta-band .cta { margin-top:28px; }
+    .cta-band .glow { position:absolute; width:360px; height:360px; border-radius:50%; background: radial-gradient(circle, rgba(34,199,236,0.18), transparent 70%); top:-160px; right:-100px; pointer-events:none; }
+
+    /* Support teaser */
+    .links-row { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:30px; }
+    .pill { display:inline-flex; align-items:center; gap:8px; background: var(--surface); border:1px solid var(--hair); color:var(--ink); text-decoration:none; font-weight:600; font-size:14.5px; padding:12px 18px; border-radius:999px; }
+    .pill:hover { border-color: var(--hair-strong); }
+
+    /* Footer */
+    footer { padding: 48px 0 60px; border-top:1px solid var(--hair); margin-top:20px; }
+    .foot { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; }
+    .foot nav { display:flex; gap:22px; flex-wrap:wrap; }
+    .foot a { color: var(--muted); text-decoration:none; font-weight:600; font-size:14.5px; }
+    .foot a:hover { color: var(--cyan); }
+    .foot .copy { width:100%; color: var(--muted-2); font-size:13px; }
+  </style>
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="rings" aria-hidden="true"><span class="r1"></span><span class="r2"></span></div>
+    <div class="inner wrap">
+      <img class="hero-mark" src="img/logo.svg" width="96" height="96" alt="" />
+      <h1>SETTE</h1>
+      <p class="tagline">Manager di pallanuoto, momenti da giocare</p>
+      <p class="sub">Gioca i momenti decisivi — tiro, rigore, uomo in più, parata — e costruisci il tuo club: rosa, tattiche, mercato. Scala le divisioni e vinci la coppa.</p>
+      <div class="cta">
+        <div class="stores" role="group" aria-label="Scarica l'app">
+          <!-- Sostituisci href con l'URL reale su App Store Connect appena disponibile -->
+          <a class="badge" data-coming-soon aria-disabled="true" href="#" aria-label="Scarica su App Store (presto disponibile)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.36 1.43c.05 1.06-.34 2.09-1 2.86-.69.8-1.83 1.42-2.93 1.33-.07-1.02.41-2.08 1.04-2.78.71-.79 1.94-1.37 2.89-1.41ZM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.32C-.06 16.99-.36 11.9 1.31 9.2c1.18-1.92 3.04-3.04 4.79-3.04 1.78 0 2.9 1 4.37 1 1.43 0 2.3-1 4.36-1 1.56 0 3.21.85 4.39 2.32-3.86 2.12-3.23 7.63 1.28 8.72Z"/></svg>
+            <span class="txt"><small>Scarica su</small><b>App Store</b></span>
+          </a>
+          <a class="badge" data-coming-soon href="https://play.google.com/store/apps/details?id=com.sette.pallanuoto" aria-label="Disponibile su Google Play (presto)">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.36-.2-.6-.58-.6-1.05V2.85c0-.47.24-.85.6-1.05Z" fill="#34A853"/><path d="M16.9 8.4 5.3 1.7l-.1-.06 9.6 10 2.1-3.24Z" fill="#EA4335"/><path d="m16.9 15.6-2.1-3.24-9.6 10 .1-.06 11.6-6.7Z" fill="#FBBC04"/><path d="M20.3 10.5c.7.4 1.1 1 1.1 1.5s-.4 1.1-1.1 1.5l-3.4 2-2.3-3.5 2.3-3.5 3.4 2Z" fill="#4285F4"/></svg>
+            <span class="txt"><small>Disponibile su</small><b>Google Play</b></span>
+          </a>
+        </div>
+      </div>
+      <div class="waterline" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- IL GIOCO -->
+    <section>
+      <div class="wrap center">
+        <span class="eyebrow">Il gioco</span>
+        <h2 class="sec-title">Veloce da giocare, profondo da gestire</h2>
+        <p class="sub" style="margin-top:16px">SETTE è un gioco arcade di pallanuoto: colleziona e potenzia i giocatori, scegli le tattiche, studia l'avversario, scala le divisioni e vinci la coppa. Ogni partita si vive nei suoi momenti chiave — il resto lo gestisci tu, dal tuo club.</p>
+      </div>
+    </section>
+
+    <!-- CARATTERISTICHE -->
+    <section>
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Caratteristiche</span>
+          <h2 class="sec-title">Cosa trovi in SETTE</h2>
+        </div>
+        <div class="features">
+          <div class="fcard">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 11 4.6-2.3 8-6 8-11V5l-8-3Z"/></svg></span>
+            <h3>Costruisci il tuo club</h3>
+            <p>Nome, città, colori e stemma: crea un club che è tutto tuo e gestiscilo stagione dopo stagione.</p>
+          </div>
+          <div class="fcard">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.6" fill="currentColor"/></svg></span>
+            <h3>Partite e momenti decisivi</h3>
+            <p>Tiro, rigore, uomo in più, parata: quattro momenti giocati veri e reattivi, dentro un motore di partita autentico con tempi e superiorità numerica.</p>
+          </div>
+          <div class="fcard">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 9 11 13 15 21 7"/><path d="M15 7h6v6"/></svg></span>
+            <h3>Fai crescere la squadra</h3>
+            <p>Mercato, contratti, allenamento e scouting: potenzia la rosa e prepara le tattiche giusta partita dopo partita.</p>
+          </div>
+          <div class="fcard">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M6 4h12l-1 6a5 5 0 0 1-10 0L6 4Z"/><path d="M6 4H3v2a4 4 0 0 0 4 4M18 4h3v2a4 4 0 0 1-4 4"/></svg></span>
+            <h3>Divisioni e coppa</h3>
+            <p>Scala il campionato con promozioni tra le divisioni e punta alla coppa a eliminazione diretta.</p>
+          </div>
+          <div class="fcard">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.6 6.6L21 11l-6.4 2.4L12 20l-2.6-6.6L3 11l6.4-2.4Z"/></svg></span>
+            <h3>Gemme opzionali</h3>
+            <p>Pacchetti di gemme in-app per accelerare la crescita del club — mai indispensabili per giocare o vincere.</p>
+          </div>
+          <div class="fcard">
+            <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="10 8 16 12 10 16 10 8"/><circle cx="12" cy="12" r="9"/></svg></span>
+            <h3>Pubblicità premiate, mai forzate</h3>
+            <p>Annunci sempre opzionali, avviati da te per un bonus extra: niente interstitial imposti.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERIA -->
+    <section>
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Screenshot</span>
+          <h2 class="sec-title">Dai un'occhiata in vasca</h2>
+        </div>
+        <div class="gallery">
+          <div class="shot"><div class="frame"><img src="img/02-momento-tiro.png" alt="Il momento del tiro: mira e potenza contro il portiere" loading="lazy" width="1600" height="900" /></div><p class="cap">Il momento del tiro</p></div>
+          <div class="shot"><div class="frame"><img src="img/01-hub.png" alt="Hub del club: rosa, stagione, classifica e coppa" loading="lazy" width="1600" height="900" /></div><p class="cap">Il tuo hub</p></div>
+          <div class="shot"><div class="frame"><img src="img/03-partita.png" alt="Partita in diretta con punteggio e telecronaca" loading="lazy" width="1600" height="900" /></div><p class="cap">Partita in diretta</p></div>
+          <div class="shot"><div class="frame"><img src="img/06-club.png" alt="Personalizzazione del club: nome, città, colori e stemma" loading="lazy" width="1600" height="900" /></div><p class="cap">Il tuo club</p></div>
+          <div class="shot"><div class="frame"><img src="img/05-mercato.png" alt="Mercato: offerte e ingaggi dei giocatori" loading="lazy" width="1600" height="900" /></div><p class="cap">Mercato</p></div>
+          <div class="shot"><div class="frame"><img src="img/04-coppa.png" alt="Tabellone della coppa a eliminazione diretta" loading="lazy" width="1600" height="900" /></div><p class="cap">Coppa</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="wrap">
+        <div class="cta-band">
+          <span class="glow" aria-hidden="true"></span>
+          <h2>Pronto a scendere in vasca?</h2>
+          <p>Costruisci il tuo club e scala le divisioni. In arrivo su iOS e Android.</p>
+          <div class="cta">
+            <div class="stores" role="group" aria-label="Scarica l'app">
+              <a class="badge" data-coming-soon aria-disabled="true" href="#" aria-label="Scarica su App Store (presto disponibile)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.36 1.43c.05 1.06-.34 2.09-1 2.86-.69.8-1.83 1.42-2.93 1.33-.07-1.02.41-2.08 1.04-2.78.71-.79 1.94-1.37 2.89-1.41ZM20.5 17.2c-.55 1.27-.81 1.83-1.52 2.95-.99 1.56-2.39 3.5-4.12 3.51-1.54.02-1.93-1-4.02-.99-2.09.01-2.52 1.01-4.06.99-1.73-.02-3.05-1.77-4.04-3.32C-.06 16.99-.36 11.9 1.31 9.2c1.18-1.92 3.04-3.04 4.79-3.04 1.78 0 2.9 1 4.37 1 1.43 0 2.3-1 4.36-1 1.56 0 3.21.85 4.39 2.32-3.86 2.12-3.23 7.63 1.28 8.72Z"/></svg>
+                <span class="txt"><small>Scarica su</small><b>App Store</b></span>
+              </a>
+              <a class="badge" data-coming-soon href="https://play.google.com/store/apps/details?id=com.sette.pallanuoto" aria-label="Disponibile su Google Play (presto)">
+                <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12 3.6 22.2c-.36-.2-.6-.58-.6-1.05V2.85c0-.47.24-.85.6-1.05Z" fill="#34A853"/><path d="M16.9 8.4 5.3 1.7l-.1-.06 9.6 10 2.1-3.24Z" fill="#EA4335"/><path d="m16.9 15.6-2.1-3.24-9.6 10 .1-.06 11.6-6.7Z" fill="#FBBC04"/><path d="M20.3 10.5c.7.4 1.1 1 1.1 1.5s-.4 1.1-1.1 1.5l-3.4 2-2.3-3.5 2.3-3.5 3.4 2Z" fill="#4285F4"/></svg>
+                <span class="txt"><small>Disponibile su</small><b>Google Play</b></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORTO -->
+    <section>
+      <div class="wrap center">
+        <span class="eyebrow">Serve aiuto?</span>
+        <h2 class="sec-title">Assistenza e documenti</h2>
+        <p class="sub" style="margin-top:14px">Domande, problemi con acquisti o segnalazioni: siamo qui.</p>
+        <div class="links-row">
+          <a class="pill" href="support/">Supporto e FAQ</a>
+          <a class="pill" href="privacy/">Privacy Policy</a>
+          <a class="pill" href="terms/">Termini di utilizzo</a>
+          <a class="pill" href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap foot">
+      <a class="logo" href="./">
+        <img src="img/logo.svg" width="34" height="34" alt="" />
+        <span class="name">SETTE</span>
+      </a>
+      <nav>
+        <a href="privacy/">Privacy</a>
+        <a href="terms/">Termini</a>
+        <a href="support/">Supporto</a>
+        <a href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+        <a href="https://gianlorenzotaurchini.com">gianlorenzotaurchini.com</a>
+      </nav>
+      <p class="copy">© 2026 Gian Lorenzo Taurchini · SETTE — Pallanuoto Arcade</p>
+    </div>
+  </footer>
+</body>
+</html>

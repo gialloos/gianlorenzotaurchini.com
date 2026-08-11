@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SETTE — Supporto</title>
+
+  <meta name="description" content="Supporto e domande frequenti per SETTE — Pallanuoto Arcade: acquisti e ripristino, annunci premiati, salvataggi e compatibilità. Contatto: gianlorenzotaurchini@gmail.com" />
+  <meta name="author" content="Gian Lorenzo Taurchini" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gianlorenzotaurchini.com/sette/support/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gianlorenzotaurchini.com/sette/support/" />
+  <meta property="og:title" content="SETTE — Supporto" />
+  <meta property="og:description" content="Supporto e domande frequenti per SETTE — Pallanuoto Arcade." />
+  <meta property="og:image" content="https://gianlorenzotaurchini.com/sette/img/og.png" />
+  <meta property="og:locale" content="it_IT" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#0B1B2C" />
+  <link rel="icon" type="image/svg+xml" href="../img/logo.svg" />
+  <link rel="apple-touch-icon" href="../img/icon.png" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:#0B1B2C; --surface:#122A41; --hair:rgba(226,241,248,0.10); --hair-strong:rgba(226,241,248,0.18);
+      --ink:#EAF6FB; --muted:#93ADC0; --muted-2:#6D8AA0; --cyan:#22C7EC; --amber:#F5A623; --amber-ink:#2B1A02;
+      --shadow:0 16px 40px -18px rgba(3,10,18,0.65);
+      --font-title:'Fredoka',system-ui,-apple-system,sans-serif; --font-body:'Inter',system-ui,-apple-system,sans-serif;
+    }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:var(--font-body); color:var(--ink); background:var(--navy); background-image: radial-gradient(120% 70% at 50% -10%, rgba(34,199,236,0.12), transparent 60%); background-attachment:fixed; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    a { color:var(--cyan); }
+    h1,h2 { font-family:var(--font-title); font-weight:600; line-height:1.1; letter-spacing:-0.01em; }
+    :focus-visible { outline:3px solid var(--cyan); outline-offset:3px; border-radius:8px; }
+
+    .topbar { border-bottom:1px solid var(--hair); }
+    .topbar .inner { max-width:780px; margin:0 auto; padding:16px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .logo { display:inline-flex; align-items:center; gap:11px; text-decoration:none; color:var(--ink); }
+    .logo img { display:block; border-radius:9px; }
+    .logo .name { font-family:var(--font-title); font-weight:700; font-size:18px; }
+    .topbar .back { color:var(--muted); text-decoration:none; font-weight:600; font-size:14px; }
+    .topbar .back:hover { color:var(--cyan); }
+
+    main { max-width:780px; margin:0 auto; padding:44px 24px 80px; }
+    .label { font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); }
+    h1 { font-size:clamp(30px,6vw,42px); margin:8px 0 10px; }
+    .lead { font-size:17px; color: var(--ink); margin-bottom:8px; }
+
+    .contact { background:var(--surface); border:1px solid var(--hair); border-radius:16px; padding:22px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin:24px 0 34px; }
+    .contact .t { font-family:var(--font-title); font-size:18px; font-weight:600; }
+    .contact .d { color:var(--muted); font-size:14px; margin-top:4px; }
+    .mail { display:inline-flex; align-items:center; gap:8px; background: var(--amber); color: var(--amber-ink); font-weight:700; text-decoration:none; padding:12px 20px; border-radius:999px; white-space:nowrap; }
+
+    h2.sec { font-size:23px; margin:0 0 14px; }
+    .faq { background:var(--surface); border:1px solid var(--hair); border-radius:13px; padding:0 20px; margin-bottom:10px; }
+    .faq summary { list-style:none; cursor:pointer; padding:17px 0; font-weight:600; font-size:15.5px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .faq summary::-webkit-details-marker { display:none; }
+    .faq summary .pm { color:var(--cyan); font-family:var(--font-title); font-size:18px; transition: transform .2s ease; flex:0 0 auto; }
+    .faq[open] summary .pm { transform: rotate(45deg); }
+    .faq .ans { padding:0 0 17px; color:var(--muted); font-size:14.5px; }
+
+    .also { color: var(--muted-2); font-size:14px; margin-top:24px; }
+    .back-link { display:inline-block; margin-top:16px; font-weight:700; text-decoration:none; }
+    .back-link:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <a class="logo" href="../" aria-label="SETTE">
+        <img src="../img/logo.svg" width="30" height="30" alt="" />
+        <span class="name">SETTE</span>
+      </a>
+      <a class="back" href="../">← Torna all'app</a>
+    </div>
+  </div>
+
+  <main>
+    <span class="label">// Supporto</span>
+    <h1>Supporto</h1>
+    <p class="lead">Hai una domanda o un problema con SETTE? Scrivici: rispondiamo a tutti.</p>
+
+    <div class="contact">
+      <div>
+        <div class="t">Contatta il supporto</div>
+        <div class="d">Per domande, segnalazioni o richieste su acquisti e account.</div>
+      </div>
+      <a class="mail" href="mailto:gianlorenzotaurchini@gmail.com">gianlorenzotaurchini@gmail.com</a>
+    </div>
+
+    <h2 class="sec">Domande frequenti</h2>
+
+    <details class="faq">
+      <summary>Ho comprato le gemme ma non le vedo: come le recupero?<span class="pm">+</span></summary>
+      <div class="ans">Apri SETTE → Impostazioni → "Ripristina acquisti". Gli acquisti sono verificati tramite il tuo account App Store o Google Play, quindi assicurati di essere connesso a internet e loggato con lo stesso account usato per l'acquisto originale.</div>
+    </details>
+    <details class="faq">
+      <summary>Voglio un rimborso per le gemme acquistate: come faccio?<span class="pm">+</span></summary>
+      <div class="ans">Gli acquisti sono gestiti da Apple o Google: i rimborsi vanno richiesti direttamente dallo store (su iOS: reportaproblem.apple.com; su Android: dalla cronologia ordini di Google Play). Non possiamo elaborare rimborsi direttamente noi.</div>
+    </details>
+    <details class="faq">
+      <summary>Gli annunci premiati sono obbligatori?<span class="pm">+</span></summary>
+      <div class="ans">No. In SETTE tutti gli annunci sono premiati e opzionali: parti sempre tu, per ricevere un bonus extra. Non ci sono interstitial forzati né pubblicità che interrompe il gioco senza il tuo consenso.</div>
+    </details>
+    <details class="faq">
+      <summary>Ho cambiato telefono e ho perso i progressi: si può recuperare?<span class="pm">+</span></summary>
+      <div class="ans">I progressi di gioco (club, rosa, stagione) sono salvati solo localmente sul dispositivo: al momento non offriamo backup o sincronizzazione cloud. Prima di cambiare telefono, verifica il backup generale del dispositivo (iCloud o Google), che può includere i dati dell'app. Gli acquisti in-app restano invece recuperabili con "Ripristina acquisti".</div>
+    </details>
+    <details class="faq">
+      <summary>Che dispositivi e versioni sono supportati?<span class="pm">+</span></summary>
+      <div class="ans">SETTE è pensato per le versioni recenti di iOS e Android. Ti consigliamo di mantenere l'app aggiornata dallo store per avere sempre le ultime correzioni e novità di gioco.</div>
+    </details>
+    <details class="faq">
+      <summary>Come segnalo un bug o do un suggerimento?<span class="pm">+</span></summary>
+      <div class="ans">Scrivici via email indicando dispositivo, versione dell'app e cosa è successo (screenshot o video aiutano molto). Leggiamo tutti i messaggi.</div>
+    </details>
+
+    <p class="also">Vedi anche: <a href="../privacy/">Privacy Policy</a> · <a href="../terms/">Termini di utilizzo</a></p>
+    <a class="back-link" href="../">← Torna a SETTE</a>
+  </main>
+</body>
+</html>

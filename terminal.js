@@ -528,6 +528,36 @@ Built in Flutter with a bundled players database. No ads, no tracking, no data l
     github: null,
   },
   {
+    id: 'sette',
+    name: 'SETTE',
+    tag_it: 'iOS & Android · Arcade Sportivo',  tag_en: 'iOS & Android · Sports Arcade',
+    shortDesc_it: 'Manager di pallanuoto, momenti da giocare.',
+    shortDesc_en: 'Water polo manager, moments to play.',
+    icon: '🤽',
+    tech: ['Phaser', 'TypeScript', 'Capacitor', 'iOS', 'Android', 'Game Design'],
+    description_it: `SETTE è un gioco arcade di pallanuoto: giochi i momenti decisivi — tiro, rigore, uomo in più, parata — e costruisci il tuo club.
+Colleziona e potenzia i giocatori, scegli le tattiche, studia l'avversario, scala le divisioni, vinci la coppa. Gemme opzionali e pubblicità solo premiate; italiano e inglese.`,
+    description_en: `SETTE is an arcade water polo game: play the decisive moments — shot, penalty, power play, save — and build your club.
+Collect and upgrade players, pick tactics, scout opponents, climb the divisions, win the cup. Optional gems and rewarded-only ads; Italian and English.`,
+    features_it: [
+      '4 momenti giocati, veri e reattivi',
+      'Motore di partita autentico (tempi, uomo in più, rigori)',
+      'Crea il tuo club: nome, colori, stemma',
+      'Mercato, contratti, tattiche, scouting',
+      'Coppa a eliminazione, campionato con promozioni',
+    ],
+    features_en: [
+      '4 skill-based playable moments',
+      'Authentic match engine (quarters, power play, penalties)',
+      'Create your club: name, colors, crest',
+      'Transfers, contracts, tactics, scouting',
+      'Knockout cup, league with promotions',
+    ],
+    website: '/sette/',
+    appStore: null,
+    github: null,
+  },
+  {
     id: 'drew',
     name: 'Drew Clothing',
     tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',
