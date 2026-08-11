@@ -51,6 +51,12 @@ Ogni pagina avrà title, description, canonical HTTPS e `robots=index,follow`. L
 
 Il deployment seguirà il meccanismo già configurato nel repository GitHub. Prima di dichiararlo completato saranno verificati commit/push e risposte HTTPS 200 delle quattro URL pubbliche senza autenticazione.
 
+## Integrazione nel portfolio
+
+Selenite comparirà nella griglia portfolio della home seguendo lo stesso modello dati e lo stesso rendering delle altre app. La card sarà inserita subito dopo SETTE, con categoria, icona, descrizione breve e dettagli bilingue coerenti con la landing.
+
+Il progetto avrà il comando terminale `selenite`; il parser esistente continuerà a supportare anche la forma `/selenite`, rimuovendo lo slash iniziale come già avviene per gli altri comandi progetto. Card e comando apriranno la stessa scheda progetto con collegamento pubblico a `/selenite/`. Non saranno introdotti percorsi di navigazione o componenti speciali per Selenite.
+
 ## Verifica
 
 La consegna richiede:

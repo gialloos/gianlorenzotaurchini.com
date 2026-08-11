@@ -558,6 +558,36 @@ Collect and upgrade players, pick tactics, scout opponents, climb the divisions,
     github: null,
   },
   {
+    id: 'selenite',
+    name: 'Selenite',
+    tag_it: 'iOS & Android · Puzzle Premium',  tag_en: 'iOS & Android · Premium Puzzle',
+    shortDesc_it: 'Piega la luce, trova la via — 32 puzzle offline.',
+    shortDesc_en: 'Fold light, find the path — 32 offline puzzles.',
+    icon: '◇',
+    tech: ['iOS', 'Android', 'Offline', 'Puzzle Design', 'Game Design'],
+    description_it: `Selenite è un puzzle game premium, minimalista e rilassante, basato sulla piega di fogli traslucidi per allineare un percorso.
+Esplora 32 livelli artigianali in quattro capitoli a difficoltà crescente, completamente offline e senza pubblicità, account, tracciamento, abbonamenti o acquisti in-app.`,
+    description_en: `Selenite is a premium, minimalist and relaxing puzzle game about folding translucent sheets to align a path.
+Explore 32 handcrafted levels across four increasingly challenging chapters, fully offline and free from ads, accounts, tracking, subscriptions, or in-app purchases.`,
+    features_it: [
+      '32 puzzle artigianali, completamente offline',
+      'Quattro capitoli a difficoltà crescente',
+      'Progressi salvati sul dispositivo',
+      'Audio ambientale e feedback aptico facoltativi',
+      'Nessuna pubblicità, account o tracciamento',
+    ],
+    features_en: [
+      '32 handcrafted, fully offline puzzles',
+      'Four chapters of increasing difficulty',
+      'Progress saved on the device',
+      'Optional ambient audio and haptic feedback',
+      'No advertising, accounts, or tracking',
+    ],
+    website: '/selenite/',
+    appStore: null,
+    github: null,
+  },
+  {
     id: 'drew',
     name: 'Drew Clothing',
     tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',
@@ -1055,6 +1085,9 @@ class Terminal {
         setTimeout(() => this._showProjectModal(p), 200);
       };
     });
+
+    // URL-style alias requested for the Selenite project command.
+    cmds['/selenite'] = cmds['selenite'];
 
     // SKILLS
     cmds['skills'] = () => {

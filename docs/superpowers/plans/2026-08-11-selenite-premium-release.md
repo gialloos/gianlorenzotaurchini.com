@@ -169,3 +169,34 @@ Expected: all four URLs return 200 and contain their expected Selenite page titl
 - [ ] **Step 5: Report only requested delivery data**
 
 Return the four public URLs, deployment commit identifier, and a brief local-build/HTTP verification result, emphasizing Privacy, Support, and Terms.
+
+### Task 6: Portfolio card and terminal command
+
+**Files:**
+- Modify: `terminal.js`
+- Test: `/tmp/selenite-portfolio-check.sh`
+
+**Interfaces:**
+- Consumes: the existing `PROJECTS` model, project-card renderer, modal renderer, and slash-normalizing command parser.
+- Produces: a Selenite card in the home portfolio and both `selenite` and `/selenite` terminal access to its project modal.
+
+- [ ] **Step 1: Write the failing portfolio contract**
+
+Require a unique project with `id: 'selenite'`, bilingual card and modal copy, `website: '/selenite/'`, placement immediately after SETTE, and confirmation that the command parser strips a leading slash.
+
+- [ ] **Step 2: Run the check and confirm it fails**
+
+Run: `bash /tmp/selenite-portfolio-check.sh`
+Expected: FAIL because `PROJECTS` has no Selenite entry.
+
+- [ ] **Step 3: Add Selenite to the existing project model**
+
+Add one `PROJECTS` object after SETTE using the existing fields exactly: `id`, `name`, `tag_it`, `tag_en`, `shortDesc_it`, `shortDesc_en`, `icon`, `tech`, `description_it`, `description_en`, `features_it`, `features_en`, `website`, `appstore`, and `github`.
+
+- [ ] **Step 4: Verify model, card, modal, and commands**
+
+Run the contract, `node --check terminal.js`, local HTTP checks, and browser interaction for the card plus both command forms. Expected: one visible Selenite card, the project modal opens from all three entry points, `/selenite/` is linked, and the browser console contains no site-origin errors.
+
+- [ ] **Step 5: Commit, push, and verify Cloudflare**
+
+Commit `terminal.js` plus the updated spec and plan, push `main`, then verify that the production home contains the Selenite project data and that `/selenite/` still returns HTTPS 200.
