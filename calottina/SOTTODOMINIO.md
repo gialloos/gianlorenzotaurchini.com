@@ -54,6 +54,6 @@ In questo caso l'URL finale mostrato all'utente è quello del base path (già ca
 altre modifiche necessarie.
 
 ## Nota asset / OG
-`img/og.png` e `img/apple-touch-icon.png` sono referenziati con URL assolute base-path
+`img/og.png` e l'icona App Store centralizzata sono referenziati con URL assolute base-path
 (`https://gianlorenzotaurchini.com/calottina/img/…`): funzionano da entrambi gli host. Se scegli
 l'Opzione A con sottodominio canonico, puoi allinearle al sottodominio insieme ai canonical.

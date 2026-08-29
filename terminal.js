@@ -35,6 +35,7 @@ const TRANSLATIONS = {
       ['help',      'mostra questo menu'],
       ['about',     'chi sono'],
       ['portfolio', 'lista di tutti i progetti'],
+      ['fantacalcio', 'andamento nelle mie leghe'],
       ['skills',    'stack tecnico e skill level'],
       ['contact',   'come contattarmi'],
       ['games',     'mini-giochi 🎮'],
@@ -53,6 +54,12 @@ Amo i progetti che risolvono problemi reali, ma la cosa che più amo è over-ing
     // Portfolio
     portfolio_title: '📦 projects',
     portfolio_hint:  'Clicca su un progetto o digita il comando per saperne di più.',
+
+    // Fantacalcio
+    fantasy_title: '⚽ fantacalcio',
+    fantasy_hint: 'Giornate, squadre e classifiche delle mie leghe.',
+    fantasy_empty_title: 'Leghe in attesa di collegamento',
+    fantasy_empty_text: 'La sezione è pronta. Servono gli URL pubblici delle leghe e il nome delle mie squadre per mostrare i dati corretti.',
 
     // Skills
     skills_title:  '⚡ tech stack & skills',
@@ -147,6 +154,7 @@ Amo i progetti che risolvono problemi reali, ma la cosa che più amo è over-ing
       ['help',      'show this menu'],
       ['about',     'who I am'],
       ['portfolio', 'list all projects'],
+      ['fantacalcio', 'results from my fantasy leagues'],
       ['skills',    'tech stack & skill levels'],
       ['contact',   'how to reach me'],
       ['games',     'mini-games 🎮'],
@@ -165,6 +173,12 @@ I love projects that solve real problems, but what I love most is over-engineeri
     // Portfolio
     portfolio_title: '📦 projects',
     portfolio_hint:  'Click a project card or type its command to learn more.',
+
+    // Fantasy football
+    fantasy_title: '⚽ fantasy football',
+    fantasy_hint: 'Matchdays, teams and standings from my leagues.',
+    fantasy_empty_title: 'Leagues waiting to be connected',
+    fantasy_empty_text: 'The section is ready. Public league URLs and my team names are needed to display the correct data.',
 
     // Skills
     skills_title:  '⚡ tech stack & skills',
@@ -254,6 +268,7 @@ const PROJECTS = [
     shortDesc_it: 'La pallanuoto italiana in tasca — risultati, classifiche e referti live.',
     shortDesc_en: 'Italian water polo in your pocket — live scores, standings and reports.',
     icon: '🤽',
+    iconAsset: '/assets/app-store/6789084698.jpg',
     tech: ['Swift', 'SwiftUI', 'Supabase', 'RevenueCat', 'AdMob', 'Push', 'Brand Identity'],
     description_it: `Calottina porta tutta la pallanuoto italiana su iPhone: calendari, risultati e classifiche sempre aggiornati di Serie A1, A2 e B — maschili e femminili — fino ai campionati giovanili e regionali.
 I risultati arrivano anche da un sistema crowd-sourced di referti caricati dagli utenti, con stati di verifica che vanno da "provvisorio" a "ufficiale".
@@ -286,6 +301,7 @@ I handled the whole project: brand identity, website and app, with a Pro subscri
     shortDesc_it: 'Il Risiko tascabile — app, sito web e brand identity.',
     shortDesc_en: 'Pocket Risiko — app, website and brand identity.',
     icon: '🎲',
+    iconAsset: '/assets/app-store/6766506698.jpg',
     tech: ['Swift', 'SwiftUI', 'Game Center', 'CloudKit', 'HTML', 'CSS', 'JavaScript'],
     description_it: `Risikino è un progetto completo di cui ho curato ogni aspetto: dall'identità visiva del brand — logo, palette colori, tipografia — al sito web di presentazione, fino all'app iOS vera e propria.
 L'app porta la classica esperienza del gioco da tavolo su iPhone con una UI moderna, partite multigiocatore in tempo reale e un sistema di classifiche online.
@@ -318,6 +334,7 @@ Every army, every attack, every alliance — in the palm of your hand.`,
     shortDesc_it: 'Il gioco di parole da fare in compagnia — 100% offline.',
     shortDesc_en: 'The word party game to play with friends — 100% offline.',
     icon: '💡',
+    iconAsset: '/assets/app-store/6782953543.jpg',
     tech: ['iOS', 'Android', 'Mobile', 'Game Design', 'UI/UX'],
     description_it: `Indizio! è un party game di parole italiane: fai indovinare la parola al tuo compagno con indizi, senza mai dirla, prima che scada il tempo.
 Un gioco originale e indipendente, pensato per le serate in compagnia, con tre modalità di gioco, centinaia di parole e liste personalizzabili.
@@ -382,6 +399,7 @@ Highlights: an AI Spymaster that lets you play with odd numbers or solo, online 
     shortDesc_it: 'Trova la spia — party game pass-and-play, offline.',
     shortDesc_en: 'Find the spy — pass-and-play party game, offline.',
     icon: '🎭',
+    iconAsset: '/assets/app-store/6784205436.jpg',
     tech: ['iOS', 'Swift', 'Mobile', 'Game Design', 'UI/UX'],
     description_it: `Impostore è un party game "trova la spia" per le serate tra amici: tutti conoscono la parola segreta… tranne l'impostore.
 Si gioca tutti su un solo telefono (pass-and-play), completamente offline e senza account. Categorie incluse in italiano, categorie personalizzate condivisibili con un codice, numero di impostori configurabile e timer di discussione opzionale.`,
@@ -412,6 +430,7 @@ You all play on a single phone (pass-and-play), fully offline and without an acc
     shortDesc_it: '11 minigiochi di geografia — bandiere, mappe e quiz.',
     shortDesc_en: '11 geography minigames — flags, maps and quizzes.',
     icon: '🌍',
+    iconAsset: '/assets/app-store/6784209767.jpg',
     tech: ['iOS', 'Android', 'Swift', 'Mobile', 'Game Design', 'UI/UX'],
     description_it: `Flagmondo è una raccolta di 11 minigiochi di geografia: bandiere, mappe, sagome, confini, capitali, popolazione ed esportazioni.
 Estetica "passaporto / atlante" editoriale, con un gioco per ogni modo di scoprire il mondo — da Flagle a Worldle, da Globle a Tradle.
@@ -444,6 +463,7 @@ It is offline, with no ads, no in-app purchases, no account and collects no data
     shortDesc_it: 'Il gioco di calcio da fare in compagnia — offline.',
     shortDesc_en: 'The football game to play together — offline.',
     icon: '⚽',
+    iconAsset: '/assets/app-store/6784655683.jpg',
     tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
     description_it: `Undici è un gioco di calcio da fare in compagnia: veloce, offline e senza account.
 Costruito in Flutter con un database di giocatori incluso, è pensato per le serate tra amici. Nessuna pubblicità, nessun tracciamento, nessun dato che lascia il dispositivo; italiano e inglese.`,
@@ -474,6 +494,7 @@ Built in Flutter with a bundled players database, it's made for nights out with 
     shortDesc_it: 'Indovina il giocatore — party game offline.',
     shortDesc_en: 'Guess the player — offline party game.',
     icon: '❓',
+    iconAsset: '/assets/app-store/6784658285.jpg',
     tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
     description_it: `Chi È? è un party game di calcio in cui devi indovinare il giocatore: veloce, offline e senza account.
 Realizzato in Flutter con un database di giocatori incluso. Nessuna pubblicità, nessun tracciamento, nessun dato raccolto; italiano e inglese.`,
@@ -504,6 +525,7 @@ Built in Flutter with a bundled players database. No ads, no tracking, no data c
     shortDesc_it: 'Trova il giocatore all\'incrocio — offline.',
     shortDesc_en: 'Find the player at the crossing — offline.',
     icon: '🔀',
+    iconAsset: '/assets/app-store/6784646425.jpg',
     tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
     description_it: `Incrocio è un gioco di calcio in cui devi trovare il giocatore all'incrocio di due criteri: veloce, offline e senza account.
 Sviluppato in Flutter con un database di giocatori incluso. Nessuna pubblicità, nessun tracciamento, nessun dato che lascia il dispositivo; italiano e inglese.`,
@@ -534,6 +556,7 @@ Built in Flutter with a bundled players database. No ads, no tracking, no data l
     shortDesc_it: 'Manager di pallanuoto, momenti da giocare.',
     shortDesc_en: 'Water polo manager, moments to play.',
     icon: '🤽',
+    iconAsset: '/assets/app-store/6792530461.jpg',
     tech: ['Phaser', 'TypeScript', 'Capacitor', 'iOS', 'Android', 'Game Design'],
     description_it: `SETTE è un gioco arcade di pallanuoto: giochi i momenti decisivi — tiro, rigore, uomo in più, parata — e costruisci il tuo club.
 Colleziona e potenzia i giocatori, scegli le tattiche, studia l'avversario, scala le divisioni, vinci la coppa. Gemme opzionali e pubblicità solo premiate; italiano e inglese.`,
@@ -564,6 +587,7 @@ Collect and upgrade players, pick tactics, scout opponents, climb the divisions,
     shortDesc_it: 'Piega la luce, trova la via — 32 puzzle offline.',
     shortDesc_en: 'Fold light, find the path — 32 offline puzzles.',
     icon: '◇',
+    iconAsset: '/assets/app-store/6800435035.jpg',
     tech: ['iOS', 'Android', 'Offline', 'Puzzle Design', 'Game Design'],
     description_it: `Selenite è un puzzle game premium, minimalista e rilassante, basato sulla piega di fogli traslucidi per allineare un percorso.
 Esplora 32 livelli artigianali in quattro capitoli a difficoltà crescente, completamente offline e senza pubblicità, account, tracciamento, abbonamenti o acquisti in-app.`,
@@ -588,12 +612,48 @@ Explore 32 handcrafted levels across four increasingly challenging chapters, ful
     github: null,
   },
   {
+    id: 'career',
+    name: 'CAREER Football Legend',
+    tag_it: 'iOS · Simulazione calcistica', tag_en: 'iOS · Football Simulation',
+    shortDesc_it: 'Da promessa sedicenne a leggenda del calcio, poi allenatore.',
+    shortDesc_en: 'From sixteen-year-old prospect to football legend, then manager.',
+    icon: '⚽',
+    iconAsset: '/assets/app-store/6796655149.jpg',
+    tech: ['iOS', 'Game Design', 'Simulation', 'Pixel Art'],
+    description_it: `Vivi un'intera carriera calcistica: parti a sedici anni, scegli ruolo e squadra e scala la piramide fino ai top club. Gestisci forma, morale e denaro, affronta eventi imprevedibili e conquista trofei con club e nazionale. Dopo il ritiro, la carriera continua in panchina come allenatore.`,
+    description_en: `Live an entire football career: start at sixteen, choose your role and team, and climb the pyramid to the world's top clubs. Manage form, morale and money, face unpredictable events, and win trophies with club and country. After retirement, continue your career as a manager.`,
+    features_it: ['Carriera da giocatore e allenatore', 'Club e competizioni internazionali', 'Eventi e decisioni di carriera', 'Bacheca trofei e archivio', 'Grafica pixel-art'],
+    features_en: ['Player and manager careers', 'Clubs and international competitions', 'Career events and decisions', 'Trophy cabinet and archive', 'Pixel-art presentation'],
+    website: null,
+    appStore: 'https://apps.apple.com/it/app/career-football-legend/id6796655149',
+    github: null,
+  },
+  {
+    id: 'prospect',
+    name: 'PROSPECT',
+    tag_it: 'iOS · Simulazione basket', tag_en: 'iOS · Basketball Simulation',
+    shortDesc_it: 'Crea il tuo talento e costruisci una leggenda del basket.',
+    shortDesc_en: 'Create your prospect and build a basketball legend.',
+    icon: '🏀',
+    iconAsset: '/assets/app-store/6797554432.jpg',
+    tech: ['iOS', 'Game Design', 'Simulation', 'Pixel Art'],
+    description_it: `PROSPECT è un simulatore di carriera cestistica retro-arcade. Crea il tuo talento, scegli ruolo e nazionalità, firma nei grandi campionati, allena gli attributi e conquista anelli e trofei con club e nazionale. Al ritiro puoi continuare da allenatore.`,
+    description_en: `PROSPECT is a retro-arcade basketball career simulator. Create your talent, choose a role and nationality, sign in the major leagues, train your attributes, and win rings and trophies with club and country. After retirement, continue as a coach.`,
+    features_it: ['Carriera da giocatore e allenatore', 'Campionati americani ed europei', 'Allenamento di sei attributi', 'Trofei con club e nazionale', 'Single-player senza account'],
+    features_en: ['Player and coach careers', 'American and European leagues', 'Six trainable attributes', 'Club and national-team trophies', 'Single-player without an account'],
+    website: null,
+    appStore: 'https://apps.apple.com/it/app/prospect-basketball-legend/id6797554432',
+    github: null,
+  },
+  {
     id: 'drew',
     name: 'Drew Clothing',
     tag_it: 'Web · E-commerce Shopify',  tag_en: 'Web · Shopify E-commerce',
     shortDesc_it: 'E-commerce streetwear realizzato con Shopify.',
     shortDesc_en: 'Streetwear e-commerce built with Shopify.',
     icon: '👕',
+    iconAsset: '/assets/project-icons/drew.png',
+    iconWide: true,
     tech: ['Shopify', 'Liquid', 'CSS', 'JavaScript'],
     description_it: `Sito e-commerce realizzato per un amico che produce e vende streetwear con il brand Drew Clothing Official.
 Ho scelto Shopify per dargli la massima autonomia nella gestione quotidiana del negozio — prodotti, ordini, sconti — senza dipendere da uno sviluppatore per le operazioni di routine.
@@ -626,6 +686,8 @@ The result is a clean, fast shop that he can manage entirely on his own.`,
     shortDesc_it: 'Sono il CTO di Caelus Nuclear, startup nel settore nucleare.',
     shortDesc_en: 'I am CTO of Caelus Nuclear, a nuclear energy startup.',
     icon: '⚛️',
+    iconAsset: '/assets/project-icons/caelus.svg',
+    iconWide: true,
     tech: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Node.js'],
     description_it: `Caelus Nuclear è una startup italiana che opera nel settore dell'energia nucleare pulita, con l'obiettivo di rendere il nucleare una fonte energetica sicura, scalabile e sostenibile per il futuro.
 In questo progetto ricopro il ruolo di CTO: mi occupo dell'architettura tecnologica dell'azienda, della presenza digitale — dal sito istituzionale ai sistemi interni — e guido le scelte tecniche in linea con la visione del team.`,
@@ -680,6 +742,16 @@ A complete project from concept to launch: I handled the visual identity, design
     github: null,
   },
 ];
+
+// Public Leghe Fantacalcio pages will be connected here once their URLs and
+// Gianlorenzo's team names are known. Private credentials never belong here.
+const FANTASY_LEAGUES = [];
+
+function projectIcon(project, extraClass = '') {
+  if (!project.iconAsset) return `<span class="project-icon project-icon--emoji ${extraClass}" aria-hidden="true">${project.icon}</span>`;
+  const wideClass = project.iconWide ? 'project-icon--wide' : '';
+  return `<img class="project-icon ${wideClass} ${extraClass}" src="${project.iconAsset}" alt="" width="28" height="28" loading="lazy">`;
+}
 
 const SKILLS = [
   { label: 'Swift / SwiftUI',  pct: 92, color: 'gold' },
@@ -1064,7 +1136,7 @@ class Terminal {
         card.className = 'project-card';
         card.innerHTML = `
           <div class="pc-tag">${p[`tag_${this.lang}`]}</div>
-          <div class="pc-name">${p.icon} ${p.name}</div>
+          <div class="pc-name">${projectIcon(p)}<span>${p.name}</span></div>
           <div class="pc-desc">${p[`shortDesc_${this.lang}`]}</div>
           <div class="pc-cmd">$ ${p.id}</div>
         `;
@@ -1073,6 +1145,31 @@ class Terminal {
       });
 
       this.output.appendChild(grid);
+      this._blank();
+    };
+
+    // FANTACALCIO
+    cmds['fantacalcio'] = () => {
+      this._blank();
+      this._section(this.t('fantasy_title'));
+      this._line(this.t('fantasy_hint'), 'out-dim');
+      this._blank();
+
+      const section = document.createElement('div');
+      section.className = 'out-line fantasy-grid';
+
+      if (!FANTASY_LEAGUES.length) {
+        section.innerHTML = `
+          <article class="fantasy-empty">
+            <div class="fantasy-ball" aria-hidden="true">⚽</div>
+            <div>
+              <h3>${this.t('fantasy_empty_title')}</h3>
+              <p>${this.t('fantasy_empty_text')}</p>
+            </div>
+          </article>`;
+      }
+
+      this.output.appendChild(section);
       this._blank();
     };
 
@@ -1238,7 +1335,7 @@ class Terminal {
 
     content.innerHTML = `
       <div class="m-tag">${p[`tag_${L}`]}</div>
-      <h2>${p.icon} ${p.name}</h2>
+      <h2>${projectIcon(p, 'project-icon--modal')}<span>${p.name}</span></h2>
       <p>${(p[`description_${L}`] || p.description_it).replace(/\n/g,'<br>')}</p>
       <div class="m-section-label">${t.modal_features}</div>
       <ul style="padding-left:1.2rem;margin-bottom:0.5rem">${featuresHtml}</ul>

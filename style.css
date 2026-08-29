@@ -526,12 +526,45 @@ html, body {
 }
 
 .project-card .pc-name {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--gold);
   margin-bottom: 0.4rem;
   transition: color 0.2s;
   letter-spacing: -0.01em;
+}
+
+.project-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.project-icon--emoji {
+  display: inline-grid;
+  place-items: center;
+  font-size: 1.25rem;
+}
+
+.project-icon--wide {
+  width: 46px;
+  flex-basis: 46px;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.project-icon--modal {
+  width: 36px;
+  height: 36px;
+  flex-basis: 36px;
+  border-radius: 9px;
+  vertical-align: middle;
+  margin-right: 0.45rem;
 }
 
 .project-card .pc-desc {
@@ -546,6 +579,38 @@ html, body {
   font-size: 0.62rem;
   color: var(--gold-dim);
   letter-spacing: 0.03em;
+}
+
+/* Fantasy football */
+.fantasy-grid { margin: 0.4rem 0; }
+.fantasy-empty {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem;
+  border: 1px dashed var(--border-hover);
+  border-radius: var(--radius);
+  background: var(--bg3);
+}
+.fantasy-ball {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.08);
+  font-size: 1.35rem;
+}
+.fantasy-empty h3 {
+  margin: 0 0 0.3rem;
+  color: var(--gold);
+  font: 700 0.84rem var(--font-ui);
+}
+.fantasy-empty p {
+  margin: 0;
+  color: var(--text-dim);
+  font: 0.72rem/1.6 var(--font-ui);
 }
 
 /* Skills section */
@@ -662,6 +727,8 @@ html, body {
 }
 
 .modal-content h2 {
+  display: flex;
+  align-items: center;
   font-size: 1.35rem;
   color: var(--warm-white);
   font-weight: 700;
