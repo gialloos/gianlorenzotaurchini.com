@@ -1,0 +1,128 @@
+{
+  "season": "2026/27",
+  "updatedAt": "2026-08-29T10:55:00.000Z",
+  "leagues": [
+    {
+      "id": "improta-topanato",
+      "name": "Improta Topanato",
+      "competition": "Campionato",
+      "competitionId": 91557,
+      "team": "CAZZATHE",
+      "teamId": 8545304,
+      "platform": "Leghe Fantacalcio",
+      "standings": [
+        { "position": 1, "team": "VAN AC", "played": 1, "wins": 1, "draws": 0, "losses": 0, "goalsFor": 4, "goalsAgainst": 0, "goalDifference": 4, "points": 3, "totalPoints": 86.5 },
+        { "position": 2, "team": "Matanx FC", "played": 1, "wins": 1, "draws": 0, "losses": 0, "goalsFor": 3, "goalsAgainst": 1, "goalDifference": 2, "points": 3, "totalPoints": 78 },
+        { "position": 3, "team": "MESSI MALEN", "played": 1, "wins": 1, "draws": 0, "losses": 0, "goalsFor": 2, "goalsAgainst": 1, "goalDifference": 1, "points": 3, "totalPoints": 74 },
+        { "position": 4, "team": "FC Ocho ar Mocho", "played": 1, "wins": 1, "draws": 0, "losses": 0, "goalsFor": 2, "goalsAgainst": 1, "goalDifference": 1, "points": 3, "totalPoints": 73 },
+        { "position": 5, "team": "Zohran", "played": 1, "wins": 0, "draws": 1, "losses": 0, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "points": 1, "totalPoints": 71 },
+        { "position": 6, "team": "Vannacchester City", "played": 1, "wins": 0, "draws": 1, "losses": 0, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "points": 1, "totalPoints": 70 },
+        { "position": 7, "team": "CAZZATHE", "played": 1, "wins": 0, "draws": 1, "losses": 0, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "points": 1, "totalPoints": 69.5 },
+        { "position": 8, "team": "Rubin Kazon", "played": 1, "wins": 0, "draws": 1, "losses": 0, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "points": 1, "totalPoints": 67.5 },
+        { "position": 9, "team": "BEVERLY INPS", "played": 1, "wins": 0, "draws": 0, "losses": 1, "goalsFor": 1, "goalsAgainst": 3, "goalDifference": -2, "points": 0, "totalPoints": 71.5 },
+        { "position": 10, "team": "RealMigrazione", "played": 1, "wins": 0, "draws": 0, "losses": 1, "goalsFor": 1, "goalsAgainst": 2, "goalDifference": -1, "points": 0, "totalPoints": 69.5 },
+        { "position": 11, "team": "GILA LA RUOTA", "played": 1, "wins": 0, "draws": 0, "losses": 1, "goalsFor": 1, "goalsAgainst": 2, "goalDifference": -1, "points": 0, "totalPoints": 67.5 },
+        { "position": 12, "team": "LAMINchiadura", "played": 1, "wins": 0, "draws": 0, "losses": 1, "goalsFor": 0, "goalsAgainst": 4, "goalDifference": -4, "points": 0, "totalPoints": 50 }
+      ],
+      "myStanding": { "position": 7, "team": "CAZZATHE", "played": 1, "wins": 0, "draws": 1, "losses": 0, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "points": 1, "totalPoints": 69.5 },
+      "matchdays": [
+        { "matchday": 1, "home": "CAZZATHE", "away": "Zohran", "homeGoals": 1, "awayGoals": 1, "homePoints": 69.5, "awayPoints": 71.0, "status": "final" }
+      ]
+    },
+    {
+      "id": "eurolega-topanata",
+      "name": "Eurolega Topanata",
+      "competition": "Campionato 26-27",
+      "competitionId": 7531,
+      "team": "Lele Mosina",
+      "teamId": 548792,
+      "platform": "EuroLeghe Fantacalcio",
+      "standings": [
+        { "position": 1, "team": "Lele Mosina", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 2, "team": "Bomber Simons", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 3, "team": "SESKO E SAMBA", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 4, "team": "YOUNG GIRLS", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 5, "team": "Bombmeister", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 6, "team": "Gaaratasary", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 7, "team": "Luton Down", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 8, "team": "Israele", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 9, "team": "RobbosiLuridiEU", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 10, "team": "KDBeer", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 11, "team": "Peskvaramanzia", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 12, "team": "APEROL WIRTZ", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 13, "team": "Real Madrink FC", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 14, "team": "FC DioKane", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 15, "team": "Curva Saud", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+        { "position": 16, "team": "Fulgur tuscania", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 }
+      ],
+      "myStanding": { "position": 1, "team": "Lele Mosina", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 },
+      "matchdays": [
+        { "matchday": 1, "home": "Lele Mosina", "away": "Luton Down", "homeGoals": 0, "awayGoals": 0, "status": "scheduled" }
+      ]
+    }
+  ],
+  "otherLeagues": [
+    { "id": "fiorucci-league", "name": "Fiorucci League", "team": "AL BEJGOVIC F.C.", "competition": "Mafia League", "competitionId": 159918, "teamId": 10226024, "status": "active", "standings": [
+      { "position": 1, "team": "DIABETICI PELATI", "played": 1, "points": 3, "totalPoints": 84 },
+      { "position": 2, "team": "Fc Crociati", "played": 1, "points": 3, "totalPoints": 77.5 },
+      { "position": 3, "team": "CIOLA IN KOLO", "played": 1, "points": 3, "totalPoints": 76 },
+      { "position": 4, "team": "AL BEJGOVIC F.C.", "played": 1, "points": 3, "totalPoints": 75 },
+      { "position": 5, "team": "FC Ocho ar Mocho", "played": 1, "points": 3, "totalPoints": 72 },
+      { "position": 6, "team": "AL-ASINISTRA", "played": 1, "points": 0, "totalPoints": 76 },
+      { "position": 7, "team": "CAZZATHE", "played": 1, "points": 0, "totalPoints": 71 },
+      { "position": 8, "team": "Gonçalo Rambos FC", "played": 1, "points": 0, "totalPoints": 70.5 },
+      { "position": 9, "team": "FC ETTANERA", "played": 1, "points": 0, "totalPoints": 64.5 },
+      { "position": 10, "team": "AL-DOMORO", "played": 1, "points": 0, "totalPoints": 58.5 }
+    ] },
+    { "id": "campionato-viterbo-22-23", "name": "Campionato Viterbo 22-23", "team": "REAL MIGRAZIONE", "competition": "Serie A 26/27", "teamId": 8231632, "status": "active" },
+    { "id": "il-superfanta", "name": "- IL SUPERFANTA -", "team": "PARMA", "competition": "CAMPIONATO", "competitionId": 306136, "teamId": 14770611, "status": "setup" },
+    { "id": "pel-lega-tti", "name": "Pel Lega Tti", "team": "Paris-saint Roggero", "competition": "Serie A 26/27", "teamId": 3588733, "status": "active" },
+    { "id": "fanta-tuscia-ii-26-27", "name": "FANTA TUSCIA II 26-27", "team": "Giallo", "competition": "Classic", "teamId": 18702039, "status": "setup", "roster": [
+      { "role": "P", "name": "Mascardi" }, { "role": "D", "name": "Bernasconi" }, { "role": "D", "name": "Joao Mario" }, { "role": "D", "name": "Abankwah" }, { "role": "C", "name": "Frattesi" }, { "role": "C", "name": "Cissè A." }, { "role": "C", "name": "Chukwueze" }, { "role": "C", "name": "Loftus-Cheek" }, { "role": "A", "name": "Malen" }, { "role": "A", "name": "Ramos G." }, { "role": "A", "name": "Dybala" }
+    ] },
+    { "id": "sbutterata", "name": "SBUTTERATA", "team": "Real Migrazione", "competition": "SANDRAROFFOFIMONCINI", "teamId": 15622801, "status": "active" },
+    { "id": "nc-viterbo-3", "name": "NC VITERBO 3", "team": "AL BEJGOVIC", "competition": "Classic", "teamId": 18113031, "status": "setup" }
+  ],
+  "cups": [
+    { "league": "Improta Topanato", "name": "COPPA ANDATA", "competitionId": 316355, "team": "CAZZATHE", "position": 2, "played": 0, "points": 0, "status": "in corso" },
+    { "league": "Fiorucci League", "name": "FANTA MAFIA COPPA ANDATA", "team": "AL BEJGOVIC F.C.", "status": "in corso" },
+    { "league": "Fiorucci League", "name": "FANTA MAFIA COPPA RITORNO", "team": "AL BEJGOVIC F.C.", "status": "programmato" }
+  ],
+  "history": [
+    {
+      "capturedAt": "2026-08-29T10:55:00.000Z",
+      "leagues": [
+        { "id": "improta-topanato", "myStanding": { "position": 7, "team": "CAZZATHE", "played": 1, "wins": 0, "draws": 1, "losses": 0, "goalsFor": 1, "goalsAgainst": 1, "goalDifference": 0, "points": 1, "totalPoints": 69.5 }, "matchdays": [{ "matchday": 1, "home": "CAZZATHE", "away": "Zohran", "homeGoals": 1, "awayGoals": 1, "homePoints": 69.5, "awayPoints": 71.0, "status": "final" }] },
+        { "id": "eurolega-topanata", "myStanding": { "position": 1, "team": "Lele Mosina", "played": 0, "wins": 0, "draws": 0, "losses": 0, "goalsFor": 0, "goalsAgainst": 0, "goalDifference": 0, "points": 0, "totalPoints": 0 }, "matchdays": [] }
+      ]
+    }
+  ],
+  "seasons": [
+    {
+      "league": "Improta Topanato",
+      "season": "2025/26",
+      "competition": "Campionato",
+      "winner": "LELE MOSINA",
+      "winnerPoints": 68,
+      "standings": [
+        { "position": 1, "team": "LELE MOSINA", "points": 68 },
+        { "position": 2, "team": "ATLETICO SBURREVOLEZZA", "points": 63 },
+        { "position": 3, "team": "FC Ocho ar Mocho", "points": 57 },
+        { "position": 4, "team": "Matanx FC", "points": 55 },
+        { "position": 5, "team": "FC ETTANERA", "points": 54 },
+        { "position": 6, "team": "012 falliti", "points": 52 },
+        { "position": 7, "team": "Astra Giuggiu", "points": 52 },
+        { "position": 8, "team": "ma si ce ne so tanti", "points": 52 },
+        { "position": 9, "team": "PESCARA MANZIA", "points": 47 },
+        { "position": 10, "team": "JOGA BENITO FC", "points": 43 },
+        { "position": 11, "team": "DO FLAMENGO", "points": 43 },
+        { "position": 12, "team": "Rubin Kazon", "points": 39 }
+      ],
+      "trophies": [
+        { "competition": "Campionato", "winner": "LELE MOSINA" },
+        { "competition": "Champions League", "winner": "ATLETICO SBURREVOLEZZA" },
+        { "competition": "Europa League", "winner": "Astra Giuggiu" }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /* ============================================================
-   terminal.js  —  Personal Portfolio Terminal
+   terminal.js, Personal Portfolio Terminal
    ============================================================ */
 
 'use strict';
@@ -63,7 +63,7 @@ Amo i progetti che risolvono problemi reali, ma la cosa che più amo è over-ing
 
     // Skills
     skills_title:  '⚡ tech stack & skills',
-    skills_footer: '🎓 Sempre in aggiornamento — l\'unica costante è imparare.',
+    skills_footer: '🎓 Sempre in aggiornamento, l\'unica costante è imparare.',
 
     // Contact
     contact_title:  '📬 contact',
@@ -75,7 +75,7 @@ Amo i progetti che risolvono problemi reali, ma la cosa che più amo è over-ing
     // Games
     games_title:   '🎮 mini-games',
     game_snake_desc:  'Il classico senza tempo. Usa le frecce o WASD.',
-    game_ovfl_desc:   'Potenze di 2 — accumula tile finché il sistema va in overflow.',
+    game_ovfl_desc:   'Potenze di 2, accumula tile finché il sistema va in overflow.',
     game_mines_desc:  'Trova le mine prima che esplodano.',
 
     // Misc
@@ -101,7 +101,7 @@ Amo i progetti che risolvono problemi reali, ma la cosa che più amo è over-ing
     mines_flag:     'Flag',
     mines_time:     (s) => `Tempo: ${s}s`,
     mines_instr:    '<strong>Click</strong> per rivelare · <strong>Tasto dx / Flag</strong> per segnalare · Prima mossa sicura',
-    exit_msg1: '😄 Nice try — questo terminale non si chiude!',
+    exit_msg1: '😄 Nice try, questo terminale non si chiude!',
     exit_msg2: 'D\'altra parte, perché vorresti andartene?',
 
     // Lang command
@@ -182,7 +182,7 @@ I love projects that solve real problems, but what I love most is over-engineeri
 
     // Skills
     skills_title:  '⚡ tech stack & skills',
-    skills_footer: '🎓 Always learning — the only constant.',
+    skills_footer: '🎓 Always learning, the only constant.',
 
     // Contact
     contact_title:  '📬 contact',
@@ -194,7 +194,7 @@ I love projects that solve real problems, but what I love most is over-engineeri
     // Games
     games_title:   '🎮 mini-games',
     game_snake_desc:  'The timeless classic. Use arrow keys or WASD.',
-    game_ovfl_desc:   'Powers of 2 — stack tiles until the system overflows.',
+    game_ovfl_desc:   'Powers of 2, stack tiles until the system overflows.',
     game_mines_desc:  'Find the mines before they blow up.',
 
     // Misc
@@ -220,7 +220,7 @@ I love projects that solve real problems, but what I love most is over-engineeri
     mines_flag:     'Flag',
     mines_time:     (s) => `Time: ${s}s`,
     mines_instr:    '<strong>Click</strong> to reveal · <strong>Right-click / Flag</strong> to mark · First move is always safe',
-    exit_msg1: '😄 Nice try — this terminal doesn\'t close!',
+    exit_msg1: '😄 Nice try, this terminal doesn\'t close!',
     exit_msg2: 'Why would you even want to leave?',
 
     // Lang command
@@ -265,15 +265,15 @@ const PROJECTS = [
     id: 'calottina',
     name: 'Calottina',
     tag_it: 'iOS App · Sport & Brand Identity',  tag_en: 'iOS App · Sports & Brand Identity',
-    shortDesc_it: 'La pallanuoto italiana in tasca — risultati, classifiche e referti live.',
-    shortDesc_en: 'Italian water polo in your pocket — live scores, standings and reports.',
+    shortDesc_it: 'La pallanuoto italiana in tasca, risultati, classifiche e referti live.',
+    shortDesc_en: 'Italian water polo in your pocket, live scores, standings and reports.',
     icon: '🤽',
     iconAsset: '/assets/app-store/6789084698.jpg',
     tech: ['Swift', 'SwiftUI', 'Supabase', 'RevenueCat', 'AdMob', 'Push', 'Brand Identity'],
-    description_it: `Calottina porta tutta la pallanuoto italiana su iPhone: calendari, risultati e classifiche sempre aggiornati di Serie A1, A2 e B — maschili e femminili — fino ai campionati giovanili e regionali.
+    description_it: `Calottina porta tutta la pallanuoto italiana su iPhone: calendari, risultati e classifiche sempre aggiornati di Serie A1, A2 e B, maschili e femminili, fino ai campionati giovanili e regionali.
 I risultati arrivano anche da un sistema crowd-sourced di referti caricati dagli utenti, con stati di verifica che vanno da "provvisorio" a "ufficiale".
 Ho curato l'intero progetto: brand identity, sito e app, con un abbonamento Pro che sblocca notifiche live, statistiche avanzate e rimuove la pubblicità.`,
-    description_en: `Calottina brings all of Italian water polo to iPhone: always-updated fixtures, scores and standings for Serie A1, A2 and B — men's and women's — down to youth and regional leagues.
+    description_en: `Calottina brings all of Italian water polo to iPhone: always-updated fixtures, scores and standings for Serie A1, A2 and B, men's and women's, down to youth and regional leagues.
 Results also come from a crowd-sourced system of match reports uploaded by users, with verification states ranging from "provisional" to "official".
 I handled the whole project: brand identity, website and app, with a Pro subscription that unlocks live notifications, advanced stats and removes ads.`,
     features_it: [
@@ -298,17 +298,17 @@ I handled the whole project: brand identity, website and app, with a Pro subscri
     id: 'risikino',
     name: 'Risikino',
     tag_it: 'iOS App · Brand Identity',  tag_en: 'iOS App · Brand Identity',
-    shortDesc_it: 'Il Risiko tascabile — app, sito web e brand identity.',
-    shortDesc_en: 'Pocket Risiko — app, website and brand identity.',
+    shortDesc_it: 'Il Risiko tascabile, app, sito web e brand identity.',
+    shortDesc_en: 'Pocket Risiko, app, website and brand identity.',
     icon: '🎲',
     iconAsset: '/assets/app-store/6766506698.jpg',
     tech: ['Swift', 'SwiftUI', 'Game Center', 'CloudKit', 'HTML', 'CSS', 'JavaScript'],
-    description_it: `Risikino è un progetto completo di cui ho curato ogni aspetto: dall'identità visiva del brand — logo, palette colori, tipografia — al sito web di presentazione, fino all'app iOS vera e propria.
+    description_it: `Risikino è un progetto completo di cui ho curato ogni aspetto: dall'identità visiva del brand, logo, palette colori, tipografia, al sito web di presentazione, fino all'app iOS vera e propria.
 L'app porta la classica esperienza del gioco da tavolo su iPhone con una UI moderna, partite multigiocatore in tempo reale e un sistema di classifiche online.
-Ogni armata, ogni attacco, ogni alleanza — tutto nella tua tasca.`,
-    description_en: `Risikino is a complete project where I handled every aspect: from the brand visual identity — logo, colour palette, typography — to the presentation website, all the way to the iOS app itself.
+Ogni armata, ogni attacco, ogni alleanza, tutto nella tua tasca.`,
+    description_en: `Risikino is a complete project where I handled every aspect: from the brand visual identity, logo, colour palette, typography, to the presentation website, all the way to the iOS app itself.
 The app brings the classic board-game experience to iPhone with a modern UI, real-time multiplayer matches, and an online ranking system.
-Every army, every attack, every alliance — in the palm of your hand.`,
+Every army, every attack, every alliance, in the palm of your hand.`,
     features_it: [
       'Brand identity completa: logo, palette, tipografia',
       'Sito web di presentazione del prodotto',
@@ -331,8 +331,8 @@ Every army, every attack, every alliance — in the palm of your hand.`,
     id: 'indizio',
     name: 'Indizio!',
     tag_it: 'iOS & Android · Party Game',  tag_en: 'iOS & Android · Party Game',
-    shortDesc_it: 'Il gioco di parole da fare in compagnia — 100% offline.',
-    shortDesc_en: 'The word party game to play with friends — 100% offline.',
+    shortDesc_it: 'Il gioco di parole da fare in compagnia, 100% offline.',
+    shortDesc_en: 'The word party game to play with friends, 100% offline.',
     icon: '💡',
     iconAsset: '/assets/app-store/6782953543.jpg',
     tech: ['iOS', 'Android', 'Mobile', 'Game Design', 'UI/UX'],
@@ -364,14 +364,14 @@ It is completely offline: no accounts, no ads, no data collection.`,
     id: 'spygrid',
     name: 'Spygrid',
     tag_it: 'iOS & Android · Party Game',  tag_en: 'iOS & Android · Party Game',
-    shortDesc_it: 'Spie, indizi e deduzione — gioco di parole a squadre online.',
-    shortDesc_en: 'Spies, clues and deduction — online team word game.',
+    shortDesc_it: 'Spie, indizi e deduzione, gioco di parole a squadre online.',
+    shortDesc_en: 'Spies, clues and deduction, online team word game.',
     icon: '🕵️',
     tech: ['iOS', 'Android', 'Firebase', 'Realtime', 'Claude API', 'Game Design'],
-    description_it: `Spygrid è un gioco di parole a squadre, online e in tempo reale: due squadre — rossa e blu — si sfidano su una griglia di 25 parole.
+    description_it: `Spygrid è un gioco di parole a squadre, online e in tempo reale: due squadre, rossa e blu, si sfidano su una griglia di 25 parole.
 Il capospia di ogni squadra conosce le parole dei propri agenti e dà un indizio (una parola e un numero); gli agenti devono indovinare evitando le parole avversarie, le neutre e soprattutto l'assassino, che fa perdere all'istante.
 Tra i tratti distintivi: un Capospia AI che permette di giocare anche in dispari o da soli, partite online con codice stanza e supporto multilingua IT/EN.`,
-    description_en: `Spygrid is an online, real-time team word game: two teams — red and blue — face off over a grid of 25 words.
+    description_en: `Spygrid is an online, real-time team word game: two teams, red and blue, face off over a grid of 25 words.
 Each team's spymaster knows their agents' words and gives a clue (one word and a number); agents must guess while avoiding the rival words, the neutral ones and above all the assassin, which loses the game instantly.
 Highlights: an AI Spymaster that lets you play with odd numbers or solo, online matches with a room code, and IT/EN multilingual support.`,
     features_it: [
@@ -396,8 +396,8 @@ Highlights: an AI Spymaster that lets you play with odd numbers or solo, online 
     id: 'impostore',
     name: 'Impostore',
     tag_it: 'iOS · Party Game',  tag_en: 'iOS · Party Game',
-    shortDesc_it: 'Trova la spia — party game pass-and-play, offline.',
-    shortDesc_en: 'Find the spy — pass-and-play party game, offline.',
+    shortDesc_it: 'Trova la spia, party game pass-and-play, offline.',
+    shortDesc_en: 'Find the spy, pass-and-play party game, offline.',
     icon: '🎭',
     iconAsset: '/assets/app-store/6784205436.jpg',
     tech: ['iOS', 'Swift', 'Mobile', 'Game Design', 'UI/UX'],
@@ -427,16 +427,16 @@ You all play on a single phone (pass-and-play), fully offline and without an acc
     id: 'flagmondo',
     name: 'Flagmondo',
     tag_it: 'iOS & Android · Geografia',  tag_en: 'iOS & Android · Geography',
-    shortDesc_it: '11 minigiochi di geografia — bandiere, mappe e quiz.',
-    shortDesc_en: '11 geography minigames — flags, maps and quizzes.',
+    shortDesc_it: '11 minigiochi di geografia, bandiere, mappe e quiz.',
+    shortDesc_en: '11 geography minigames, flags, maps and quizzes.',
     icon: '🌍',
     iconAsset: '/assets/app-store/6784209767.jpg',
     tech: ['iOS', 'Android', 'Swift', 'Mobile', 'Game Design', 'UI/UX'],
     description_it: `Flagmondo è una raccolta di 11 minigiochi di geografia: bandiere, mappe, sagome, confini, capitali, popolazione ed esportazioni.
-Estetica "passaporto / atlante" editoriale, con un gioco per ogni modo di scoprire il mondo — da Flagle a Worldle, da Globle a Tradle.
+Estetica "passaporto / atlante" editoriale, con un gioco per ogni modo di scoprire il mondo, da Flagle a Worldle, da Globle a Tradle.
 È offline, senza pubblicità, senza acquisti in-app, senza account e non raccoglie alcun dato; gratis, partite illimitate, in italiano e inglese.`,
     description_en: `Flagmondo is a collection of 11 geography minigames: flags, maps, shapes, borders, capitals, population and exports.
-An editorial "passport / atlas" aesthetic, with one game for every way to explore the world — from Flagle to Worldle, Globle to Tradle.
+An editorial "passport / atlas" aesthetic, with one game for every way to explore the world, from Flagle to Worldle, Globle to Tradle.
 It is offline, with no ads, no in-app purchases, no account and collects no data; free, unlimited play, in Italian and English.`,
     features_it: [
       '11 minigiochi di geografia',
@@ -460,8 +460,8 @@ It is offline, with no ads, no in-app purchases, no account and collects no data
     id: 'undici',
     name: 'Undici',
     tag_it: 'iOS & Android · Quiz Calcio',  tag_en: 'iOS & Android · Football Quiz',
-    shortDesc_it: 'Il gioco di calcio da fare in compagnia — offline.',
-    shortDesc_en: 'The football game to play together — offline.',
+    shortDesc_it: 'Il gioco di calcio da fare in compagnia, offline.',
+    shortDesc_en: 'The football game to play together, offline.',
     icon: '⚽',
     iconAsset: '/assets/app-store/6784655683.jpg',
     tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
@@ -491,8 +491,8 @@ Built in Flutter with a bundled players database, it's made for nights out with 
     id: 'chie',
     name: 'Chi È?',
     tag_it: 'iOS & Android · Quiz Calcio',  tag_en: 'iOS & Android · Football Quiz',
-    shortDesc_it: 'Indovina il giocatore — party game offline.',
-    shortDesc_en: 'Guess the player — offline party game.',
+    shortDesc_it: 'Indovina il giocatore, party game offline.',
+    shortDesc_en: 'Guess the player, offline party game.',
     icon: '❓',
     iconAsset: '/assets/app-store/6784658285.jpg',
     tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
@@ -522,8 +522,8 @@ Built in Flutter with a bundled players database. No ads, no tracking, no data c
     id: 'incrocio',
     name: 'Incrocio',
     tag_it: 'iOS & Android · Quiz Calcio',  tag_en: 'iOS & Android · Football Quiz',
-    shortDesc_it: 'Trova il giocatore all\'incrocio — offline.',
-    shortDesc_en: 'Find the player at the crossing — offline.',
+    shortDesc_it: 'Trova il giocatore all\'incrocio, offline.',
+    shortDesc_en: 'Find the player at the crossing, offline.',
     icon: '🔀',
     iconAsset: '/assets/app-store/6784646425.jpg',
     tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
@@ -558,9 +558,9 @@ Built in Flutter with a bundled players database. No ads, no tracking, no data l
     icon: '🤽',
     iconAsset: '/assets/app-store/6792530461.jpg',
     tech: ['Phaser', 'TypeScript', 'Capacitor', 'iOS', 'Android', 'Game Design'],
-    description_it: `SETTE è un gioco arcade di pallanuoto: giochi i momenti decisivi — tiro, rigore, uomo in più, parata — e costruisci il tuo club.
+    description_it: `SETTE è un gioco arcade di pallanuoto: giochi i momenti decisivi, tiro, rigore, uomo in più, parata, e costruisci il tuo club.
 Colleziona e potenzia i giocatori, scegli le tattiche, studia l'avversario, scala le divisioni, vinci la coppa. Gemme opzionali e pubblicità solo premiate; italiano e inglese.`,
-    description_en: `SETTE is an arcade water polo game: play the decisive moments — shot, penalty, power play, save — and build your club.
+    description_en: `SETTE is an arcade water polo game: play the decisive moments, shot, penalty, power play, save, and build your club.
 Collect and upgrade players, pick tactics, scout opponents, climb the divisions, win the cup. Optional gems and rewarded-only ads; Italian and English.`,
     features_it: [
       '4 momenti giocati, veri e reattivi',
@@ -584,8 +584,8 @@ Collect and upgrade players, pick tactics, scout opponents, climb the divisions,
     id: 'selenite',
     name: 'Selenite',
     tag_it: 'iOS & Android · Puzzle Premium',  tag_en: 'iOS & Android · Premium Puzzle',
-    shortDesc_it: 'Piega la luce, trova la via — 32 puzzle offline.',
-    shortDesc_en: 'Fold light, find the path — 32 offline puzzles.',
+    shortDesc_it: 'Piega la luce, trova la via, 32 puzzle offline.',
+    shortDesc_en: 'Fold light, find the path, 32 offline puzzles.',
     icon: '◇',
     iconAsset: '/assets/app-store/6800435035.jpg',
     tech: ['iOS', 'Android', 'Offline', 'Puzzle Design', 'Game Design'],
@@ -656,10 +656,10 @@ Explore 32 handcrafted levels across four increasingly challenging chapters, ful
     iconWide: true,
     tech: ['Shopify', 'Liquid', 'CSS', 'JavaScript'],
     description_it: `Sito e-commerce realizzato per un amico che produce e vende streetwear con il brand Drew Clothing Official.
-Ho scelto Shopify per dargli la massima autonomia nella gestione quotidiana del negozio — prodotti, ordini, sconti — senza dipendere da uno sviluppatore per le operazioni di routine.
+Ho scelto Shopify per dargli la massima autonomia nella gestione quotidiana del negozio, prodotti, ordini, sconti, senza dipendere da uno sviluppatore per le operazioni di routine.
 Il risultato è uno shop pulito, veloce e completamente gestibile in autonomia.`,
     description_en: `E-commerce website built for a friend who produces and sells streetwear under the Drew Clothing Official brand.
-I chose Shopify to give him full autonomy in the day-to-day management of the store — products, orders, discounts — without depending on a developer for routine operations.
+I chose Shopify to give him full autonomy in the day-to-day management of the store, products, orders, discounts, without depending on a developer for routine operations.
 The result is a clean, fast shop that he can manage entirely on his own.`,
     features_it: [
       'Store Shopify personalizzato',
@@ -690,9 +690,9 @@ The result is a clean, fast shop that he can manage entirely on his own.`,
     iconWide: true,
     tech: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Node.js'],
     description_it: `Caelus Nuclear è una startup italiana che opera nel settore dell'energia nucleare pulita, con l'obiettivo di rendere il nucleare una fonte energetica sicura, scalabile e sostenibile per il futuro.
-In questo progetto ricopro il ruolo di CTO: mi occupo dell'architettura tecnologica dell'azienda, della presenza digitale — dal sito istituzionale ai sistemi interni — e guido le scelte tecniche in linea con la visione del team.`,
+In questo progetto ricopro il ruolo di CTO: mi occupo dell'architettura tecnologica dell'azienda, della presenza digitale, dal sito istituzionale ai sistemi interni, e guido le scelte tecniche in linea con la visione del team.`,
     description_en: `Caelus Nuclear is an Italian startup operating in the clean nuclear energy sector, with the goal of making nuclear power a safe, scalable, and sustainable energy source for the future.
-In this project I hold the role of CTO: I handle the company's technology architecture, digital presence — from the institutional website to internal systems — and drive technical decisions aligned with the team's vision.`,
+In this project I hold the role of CTO: I handle the company's technology architecture, digital presence, from the institutional website to internal systems, and drive technical decisions aligned with the team's vision.`,
     features_it: [
       'Ruolo di CTO e responsabile tecnologico',
       'Architettura dei sistemi digitali aziendali',
@@ -742,10 +742,6 @@ A complete project from concept to launch: I handled the visual identity, design
     github: null,
   },
 ];
-
-// Public Leghe Fantacalcio pages will be connected here once their URLs and
-// Gianlorenzo's team names are known. Private credentials never belong here.
-const FANTASY_LEAGUES = [];
 
 function projectIcon(project, extraClass = '') {
   if (!project.iconAsset) return `<span class="project-icon project-icon--emoji ${extraClass}" aria-hidden="true">${project.icon}</span>`;
@@ -1116,8 +1112,8 @@ class Terminal {
       `;
       this.output.appendChild(banner);
       this._blank();
-      this._line(`📂 <span class="out-gold">portfolio</span> <span class="out-dim">— ${this.t('about_hint_portfolio')}</span>`);
-      this._line(`📬 <span class="out-gold">contact</span>   <span class="out-dim">— ${this.t('about_hint_contact')}</span>`);
+      this._line(`📂 <span class="out-gold">portfolio</span> <span class="out-dim">: ${this.t('about_hint_portfolio')}</span>`);
+      this._line(`📬 <span class="out-gold">contact</span>   <span class="out-dim">: ${this.t('about_hint_contact')}</span>`);
       this._blank();
     };
 
@@ -1149,7 +1145,7 @@ class Terminal {
     };
 
     // FANTACALCIO
-    cmds['fantacalcio'] = () => {
+    cmds['fantacalcio'] = async () => {
       this._blank();
       this._section(this.t('fantasy_title'));
       this._line(this.t('fantasy_hint'), 'out-dim');
@@ -1157,19 +1153,102 @@ class Terminal {
 
       const section = document.createElement('div');
       section.className = 'out-line fantasy-grid';
+      section.innerHTML = '<div class="fantasy-loading">Sincronizzazione dati…</div>';
+      this.output.appendChild(section);
 
-      if (!FANTASY_LEAGUES.length) {
+      try {
+        const response = await fetch('/fantacalcio/data/current.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const updated = new Intl.DateTimeFormat(this.lang === 'it' ? 'it-IT' : 'en-GB', {
+          dateStyle: 'medium', timeStyle: 'short'
+        }).format(new Date(data.updatedAt));
+
+        const leagueCards = data.leagues.map(league => {
+          const standing = league.myStanding || {};
+          const form = `${standing.wins ?? 0}V · ${standing.draws ?? 0}N · ${standing.losses ?? 0}P`;
+          const latest = [...(league.matchdays || [])].reverse().find(day => day.status === 'final')
+            || (league.matchdays || [])[0];
+          const hasScore = latest && latest.homeGoals != null && latest.awayGoals != null;
+          const score = hasScore
+            ? `${latest.homeGoals}, ${latest.awayGoals}`
+            : (latest?.rawScore || 'da giocare');
+          const match = latest ? `
+            <div class="fantasy-match">
+              <span>${latest.matchday}ª giornata</span>
+              <strong>${this._esc(latest.home)} ${this._esc(score)} ${this._esc(latest.away)}</strong>
+              ${latest.homePoints != null ? `<small>${latest.homePoints}, ${latest.awayPoints} fantapunti</small>` : '<small>Da giocare</small>'}
+            </div>` : '';
+          const standings = (league.standings || []).map(row => `
+            <tr class="${row.team.toLowerCase() === league.team.toLowerCase() ? 'is-mine' : ''}">
+              <td>${row.position}</td><td>${this._esc(row.team)}</td><td>${row.played}</td><td>${row.points}</td><td>${row.totalPoints}</td>
+            </tr>`).join('');
+          const archived = (data.seasons || []).filter(season => season.league === league.name).map(season => `
+            <details class="fantasy-season"><summary>${this._esc(season.season)} · ${this._esc(season.competition)}</summary>
+              <div class="fantasy-winner"><strong>🏆 ${this._esc(season.winner)}</strong><small>Campione con ${season.winnerPoints} punti</small></div>
+              <ol>${season.standings.map(row => `<li class="${row.position === 1 ? 'is-champion' : ''}"><span>${this._esc(row.team)}</span><b>${row.points} pt</b></li>`).join('')}</ol>
+            </details>`).join('');
+          return `
+            <details class="fantasy-card">
+              <summary class="fantasy-card-head">
+                <div><span>${this._esc(league.platform)}</span><h3>${this._esc(league.name)}</h3></div>
+                <strong>${this._esc(data.season)} · apri</strong>
+              </summary>
+              <div class="fantasy-detail"><div class="fantasy-team">${this._esc(league.team)}</div>
+              <div class="fantasy-stats">
+                <div><strong>${standing.position ?? '–'}ª</strong><span>posizione</span></div>
+                <div><strong>${standing.points ?? '–'}</strong><span>punti</span></div>
+                <div><strong>${standing.totalPoints ?? '–'}</strong><span>fantapunti</span></div>
+                <div><strong>${form}</strong><span>andamento</span></div>
+              </div>
+              ${match}
+              ${standings ? `<div class="fantasy-table-wrap"><table class="fantasy-table"><thead><tr><th>#</th><th>Squadra</th><th>G</th><th>Pt</th><th>Fpt</th></tr></thead><tbody>${standings}</tbody></table></div>` : ''}
+              ${(league.roster || []).length ? `<details class="fantasy-season"><summary>Rosa ${this._esc(data.season)}</summary><div class="fantasy-roster">${league.roster.map(player => `<span><b>${this._esc(player.role)}</b>${this._esc(player.name)}</span>`).join('')}</div></details>` : ''}
+              ${archived ? `<h4 class="fantasy-subtitle">Stagioni precedenti</h4>${archived}` : ''}
+              </div>
+            </details>`;
+        }).join('');
+
+        const otherLeagues = (data.otherLeagues || []).map(league => {
+          const leagueStandings = (league.standings || []).map(row => `
+            <tr class="${row.team.toLowerCase() === league.team.toLowerCase() ? 'is-mine' : ''}"><td>${row.position}</td><td>${this._esc(row.team)}</td><td>${row.played}</td><td>${row.points}</td><td>${row.totalPoints}</td></tr>`).join('');
+          return `
+          <details class="fantasy-mini-card">
+            <summary><span>${this._esc(league.competition)}</span><h3>${this._esc(league.name)}</h3><strong>${this._esc(league.team)}</strong></summary>
+            <div class="fantasy-detail"><small>${league.status === 'setup' ? 'Stagione in configurazione' : 'Stagione attiva'}</small>
+            ${leagueStandings ? `<div class="fantasy-table-wrap"><table class="fantasy-table"><thead><tr><th>#</th><th>Squadra</th><th>G</th><th>Pt</th><th>Fpt</th></tr></thead><tbody>${leagueStandings}</tbody></table></div>` : ''}
+            ${(league.roster || []).length ? `<h4 class="fantasy-subtitle">Rosa attuale</h4><div class="fantasy-roster">${league.roster.map(player => `<span><b>${this._esc(player.role)}</b>${this._esc(player.name)}</span>`).join('')}</div>` : (!leagueStandings ? '<p class="fantasy-unavailable">Classifica e rosa non ancora disponibili su Fantacalcio.</p>' : '')}
+            </div>
+          </details>`;
+        }).join('');
+
+        const cups = (data.cups || []).map(cup => `
+          <div class="fantasy-cup">
+            <span>${this._esc(cup.league)}</span><strong>🏆 ${this._esc(cup.name)}</strong>
+            <small>${this._esc(cup.team)} · ${this._esc(cup.status)}${cup.position ? ` · ${cup.position}ª posizione` : ''}</small>
+          </div>`).join('');
+
+        const seasons = (data.seasons || []).map(season => `
+          <article class="fantasy-history">
+            <div class="fantasy-winner"><span>${this._esc(season.league)} · ${this._esc(season.season)}</span><strong>🏆 ${this._esc(season.winner)}</strong><small>Campione con ${season.winnerPoints} punti</small></div>
+            <details><summary>Classifica finale completa</summary><ol>${season.standings.map(row => `<li class="${row.position === 1 ? 'is-champion' : ''}"><span>${this._esc(row.team)}</span><b>${row.points} pt</b></li>`).join('')}</ol></details>
+            <div class="fantasy-trophies">${season.trophies.map(trophy => `<span><b>${this._esc(trophy.competition)}</b>${this._esc(trophy.winner)}</span>`).join('')}</div>
+          </article>`).join('');
+
+        section.innerHTML = leagueCards
+          + (otherLeagues ? `<section class="fantasy-wide"><h2>Le altre leghe</h2><div class="fantasy-mini-grid">${otherLeagues}</div></section>` : '')
+          + (cups ? `<section class="fantasy-wide"><h2>Coppe</h2><div class="fantasy-cups">${cups}</div></section>` : '')
+          + `<div class="fantasy-updated">Ultimo aggiornamento: ${updated}</div>`;
+      } catch (error) {
         section.innerHTML = `
           <article class="fantasy-empty">
             <div class="fantasy-ball" aria-hidden="true">⚽</div>
             <div>
-              <h3>${this.t('fantasy_empty_title')}</h3>
-              <p>${this.t('fantasy_empty_text')}</p>
+              <h3>Dati temporaneamente non disponibili</h3>
+              <p>Lo snapshot non può essere caricato in questo momento.</p>
             </div>
           </article>`;
       }
-
-      this.output.appendChild(section);
       this._blank();
     };
 

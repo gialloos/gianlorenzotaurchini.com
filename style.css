@@ -582,7 +582,87 @@ html, body {
 }
 
 /* Fantasy football */
-.fantasy-grid { margin: 0.4rem 0; }
+.fantasy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 0.75rem;
+  margin: 0.4rem 0;
+}
+.fantasy-loading, .fantasy-updated {
+  grid-column: 1 / -1;
+  color: var(--text-dim);
+  font: 0.68rem/1.5 var(--font-ui);
+}
+.fantasy-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg3);
+}
+.fantasy-card > summary, .fantasy-mini-card > summary { list-style: none; cursor: pointer; }
+.fantasy-card > summary::-webkit-details-marker, .fantasy-mini-card > summary::-webkit-details-marker { display: none; }
+.fantasy-card[open], .fantasy-mini-card[open] { border-color: var(--gold-dim); }
+.fantasy-detail { margin-top: .65rem; padding-top: .2rem; border-top: 1px solid var(--border); }
+.fantasy-subtitle { margin: .75rem 0 .45rem; color: var(--gold-dim); font: 700 .58rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; }
+.fantasy-unavailable { margin: .55rem 0 0; color: var(--text-dim); font: .56rem var(--font-ui); }
+.fantasy-season { margin-top: .55rem; padding: .55rem; border: 1px solid var(--border); border-radius: 5px; }
+.fantasy-season > summary { color: var(--gold-bright); cursor: pointer; font: .62rem var(--font-mono); }
+.fantasy-season ol { max-height: 260px; overflow: auto; margin: .55rem 0 0; padding: 0; list-style: none; counter-reset: standing; }
+.fantasy-season li { counter-increment: standing; display: flex; justify-content: space-between; padding: .35rem; border-bottom: 1px solid var(--border); font: .57rem var(--font-mono); }
+.fantasy-season li span::before { content: counter(standing) '. '; color: var(--text-dim); }
+.fantasy-season li.is-champion { color: var(--gold-bright); background: rgba(212,175,55,.08); }
+.fantasy-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.fantasy-card-head span { color: var(--text-dim); font: 0.56rem var(--font-mono); text-transform: uppercase; letter-spacing: .12em; }
+.fantasy-card-head h3 { margin: .25rem 0 0; color: var(--warm-white); font: 700 .92rem var(--font-ui); }
+.fantasy-card-head > strong { color: var(--gold-dim); font: .62rem var(--font-mono); }
+.fantasy-team { margin: .9rem 0 .65rem; color: var(--gold); font: 700 .8rem var(--font-ui); }
+.fantasy-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .45rem; }
+.fantasy-stats div { padding: .55rem; border: 1px solid var(--border); border-radius: 6px; }
+.fantasy-stats strong, .fantasy-stats span { display: block; }
+.fantasy-stats strong { color: var(--warm-white); font: 700 .82rem var(--font-mono); }
+.fantasy-stats span { margin-top: .15rem; color: var(--text-dim); font: .56rem var(--font-ui); text-transform: uppercase; }
+.fantasy-match { margin-top: .65rem; padding: .65rem; border-left: 2px solid var(--gold-dim); background: rgba(212,175,55,.035); }
+.fantasy-match span, .fantasy-match strong, .fantasy-match small { display: block; }
+.fantasy-match span { color: var(--text-dim); font: .54rem var(--font-mono); text-transform: uppercase; }
+.fantasy-match strong { margin-top: .25rem; color: var(--warm-white); font: 700 .68rem var(--font-ui); }
+.fantasy-match small { margin-top: .16rem; color: var(--text-dim); font: .58rem var(--font-mono); }
+.fantasy-table-wrap { margin-top: .75rem; max-height: 260px; overflow: auto; border: 1px solid var(--border); border-radius: 6px; }
+.fantasy-table { width: 100%; border-collapse: collapse; font: .58rem var(--font-mono); }
+.fantasy-table th { position: sticky; top: 0; background: var(--bg3); color: var(--text-dim); text-align: left; text-transform: uppercase; }
+.fantasy-table th, .fantasy-table td { padding: .42rem .38rem; border-bottom: 1px solid var(--border); }
+.fantasy-table th:first-child, .fantasy-table td:first-child { text-align: center; width: 28px; }
+.fantasy-table th:nth-last-child(-n+3), .fantasy-table td:nth-last-child(-n+3) { text-align: right; }
+.fantasy-table tbody tr:last-child td { border-bottom: 0; }
+.fantasy-table .is-mine { background: rgba(212,175,55,.09); color: var(--gold-bright); font-weight: 700; }
+.fantasy-wide { grid-column: 1 / -1; margin-top: .35rem; }
+.fantasy-wide > h2 { margin: 0 0 .65rem; color: var(--gold); font: 700 .78rem var(--font-mono); text-transform: uppercase; letter-spacing: .12em; }
+.fantasy-mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: .55rem; }
+.fantasy-mini-card, .fantasy-history, .fantasy-cup { padding: .75rem; border: 1px solid var(--border); border-radius: 7px; background: rgba(255,255,255,.018); }
+.fantasy-mini-card summary > span, .fantasy-winner span, .fantasy-cup > span { display: block; color: var(--text-dim); font: .52rem var(--font-mono); text-transform: uppercase; }
+.fantasy-mini-card h3 { margin: .25rem 0; color: var(--warm-white); font: 700 .7rem var(--font-ui); }
+.fantasy-mini-card summary > strong, .fantasy-mini-card .fantasy-detail > small { display: block; }
+.fantasy-mini-card summary > strong { color: var(--gold-bright); font: 700 .65rem var(--font-ui); }
+.fantasy-mini-card .fantasy-detail > small { margin-top: .18rem; color: var(--text-dim); font: .52rem var(--font-ui); }
+.fantasy-mini-card details, .fantasy-history details { margin-top: .55rem; }
+.fantasy-mini-card summary, .fantasy-history summary { color: var(--gold-dim); cursor: pointer; font: .58rem var(--font-mono); }
+.fantasy-roster { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .3rem; margin-top: .5rem; }
+.fantasy-roster span, .fantasy-trophies span { display: flex; gap: .4rem; color: var(--text); font: .55rem var(--font-ui); }
+.fantasy-roster b { color: var(--gold); font-family: var(--font-mono); }
+.fantasy-cups { display: grid; grid-template-columns: repeat(auto-fit,minmax(230px,1fr)); gap: .55rem; }
+.fantasy-cup strong, .fantasy-cup small { display: block; margin-top: .25rem; }
+.fantasy-cup strong { color: var(--warm-white); font: 700 .68rem var(--font-ui); }
+.fantasy-cup small { color: var(--text-dim); font: .55rem var(--font-ui); }
+.fantasy-winner { padding: .35rem 0 .7rem; text-align: center; }
+.fantasy-winner strong, .fantasy-winner small { display: block; }
+.fantasy-winner strong { margin-top: .25rem; color: var(--gold-bright); font: 700 1rem var(--font-ui); }
+.fantasy-winner small { margin-top: .2rem; color: var(--text); font: .58rem var(--font-ui); }
+.fantasy-history ol { max-height: 260px; overflow: auto; margin: .55rem 0 0; padding: 0; list-style: none; counter-reset: standing; }
+.fantasy-history li { counter-increment: standing; display: flex; justify-content: space-between; gap: .7rem; padding: .36rem .45rem; border-bottom: 1px solid var(--border); color: var(--text); font: .57rem var(--font-mono); }
+.fantasy-history li span::before { content: counter(standing) '. '; color: var(--text-dim); }
+.fantasy-history li.is-champion { color: var(--gold-bright); background: rgba(212,175,55,.08); }
+.fantasy-trophies { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: .45rem; margin-top: .7rem; }
+.fantasy-trophies span { flex-direction: column; gap: .15rem; padding: .5rem; border: 1px solid var(--border); border-radius: 5px; }
+.fantasy-trophies b { color: var(--gold-dim); }
 .fantasy-empty {
   display: flex;
   align-items: center;
