@@ -582,6 +582,54 @@ html, body {
 }
 
 /* Fantasy football */
+.fantasy-app { margin: .45rem 0; width: 100%; max-width: 760px; }
+.fantasy-overview-head, .fantasy-league-head { margin-bottom: .8rem; }
+.fantasy-overview-head { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+.fantasy-overview-head span, .fantasy-league-head > span { color: var(--text-dim); font: .55rem var(--font-mono); letter-spacing: .12em; text-transform: uppercase; }
+.fantasy-overview-head h2, .fantasy-league-head h2 { margin: .2rem 0 0; color: var(--warm-white); font: 700 1rem var(--font-ui); text-wrap: balance; }
+.fantasy-overview-head small { color: var(--gold-dim); font: .58rem var(--font-mono); }
+.fantasy-league-list { overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: var(--bg3); }
+.fantasy-league-row { display: grid; grid-template-columns: 42px minmax(0,1fr) auto; align-items: center; gap: .75rem; width: 100%; min-height: 62px; padding: .65rem .75rem; border: 0; border-bottom: 1px solid var(--border); color: inherit; background: transparent; text-align: left; cursor: pointer; transition: background-color 150ms ease-out, transform 100ms ease-out; }
+.fantasy-league-row:last-child { border-bottom: 0; }
+.fantasy-league-row:hover, .fantasy-league-row:focus-visible { background: rgba(212,175,55,.055); outline: none; }
+.fantasy-league-row:active { transform: scale(.992); }
+.fantasy-league-mark { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid var(--border-hover); border-radius: 7px; color: var(--gold); background: rgba(212,175,55,.05); font: 700 .64rem var(--font-mono); font-variant-numeric: tabular-nums; }
+.fantasy-league-copy strong, .fantasy-league-copy small { display: block; }
+.fantasy-league-copy strong { color: var(--warm-white); font: 700 .72rem var(--font-ui); text-wrap: balance; }
+.fantasy-league-copy small { margin-top: .2rem; color: var(--text-dim); font: .56rem var(--font-ui); text-wrap: pretty; }
+.fantasy-league-meta { display: flex; align-items: center; gap: .6rem; color: var(--text-dim); font: .54rem var(--font-mono); white-space: nowrap; }
+.fantasy-league-meta b { color: var(--gold-dim); font-size: 1rem; font-weight: 400; }
+.fantasy-back { min-height: 40px; margin: 0 0 .45rem; padding: 0 .3rem; border: 0; color: var(--gold-dim); background: transparent; font: .6rem var(--font-mono); cursor: pointer; }
+.fantasy-back:hover, .fantasy-back:focus-visible { color: var(--gold-bright); outline: none; }
+.fantasy-league-head { padding: 0 .3rem; }
+.fantasy-league-head p { margin: .28rem 0 0; color: var(--gold); font: 700 .66rem var(--font-ui); }
+.fantasy-season-switch, .fantasy-tabs { display: flex; gap: .35rem; overflow-x: auto; scrollbar-width: none; }
+.fantasy-season-switch { margin-bottom: .65rem; }
+.fantasy-season-switch button, .fantasy-tabs button { min-height: 40px; padding: 0 .75rem; border: 1px solid var(--border); border-radius: 6px; color: var(--text-dim); background: var(--bg3); font: .58rem var(--font-mono); cursor: pointer; transition: color 150ms ease-out, border-color 150ms ease-out, background-color 150ms ease-out, transform 100ms ease-out; }
+.fantasy-season-switch button:active, .fantasy-tabs button:active { transform: scale(.96); }
+.fantasy-season-switch button.is-active, .fantasy-tabs button.is-active { border-color: var(--gold-dim); color: var(--gold-bright); background: rgba(212,175,55,.075); }
+.fantasy-single-season { margin-bottom: .65rem; color: var(--text-dim); font: .58rem var(--font-mono); }
+.fantasy-tabs { padding-bottom: .55rem; border-bottom: 1px solid var(--border); }
+.fantasy-tabs button { flex: 1; min-width: 105px; border-color: transparent; background: transparent; }
+.fantasy-panel { min-height: 170px; animation: fantasy-panel-in 180ms ease-out; }
+@keyframes fantasy-panel-in { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
+.fantasy-panel-empty { display: grid; place-items: center; min-height: 170px; padding: 1rem; color: var(--text-dim); text-align: center; }
+.fantasy-panel-empty span { color: var(--gold-dim); font-size: 1.2rem; }
+.fantasy-panel-empty p { max-width: 390px; margin: .45rem 0 0; font: .62rem/1.6 var(--font-ui); text-wrap: pretty; }
+.fantasy-roster-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(170px,1fr)); gap: .45rem; padding-top: .75rem; }
+.fantasy-roster-list > div { display: flex; align-items: center; gap: .55rem; min-height: 42px; padding: .45rem .55rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg3); }
+.fantasy-roster-list b { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 5px; color: var(--gold); background: rgba(212,175,55,.075); font: 700 .55rem var(--font-mono); }
+.fantasy-roster-list span { color: var(--text); font: .61rem var(--font-ui); }
+.fantasy-cup-list { display: grid; gap: .5rem; padding-top: .75rem; }
+.fantasy-cup-list > div { display: flex; align-items: center; gap: .7rem; padding: .65rem; border: 1px solid var(--border); border-radius: 7px; background: var(--bg3); }
+.fantasy-cup-list p, .fantasy-cup-list strong, .fantasy-cup-list small { display: block; margin: 0; }
+.fantasy-cup-list strong { color: var(--warm-white); font: 700 .65rem var(--font-ui); }
+.fantasy-cup-list small { margin-top: .18rem; color: var(--text-dim); font: .54rem var(--font-ui); }
+.fantasy-app .fantasy-table-wrap { max-height: 420px; margin-top: .75rem; }
+.fantasy-app .fantasy-table { font-variant-numeric: tabular-nums; }
+@media (max-width: 520px) { .fantasy-league-meta { font-size: 0; gap: .2rem; } .fantasy-league-meta b { font-size: 1rem; } .fantasy-roster-list { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .fantasy-panel { animation: none; } .fantasy-league-row, .fantasy-tabs button, .fantasy-season-switch button { transition: none; } }
+
 .fantasy-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));

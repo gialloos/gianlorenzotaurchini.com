@@ -1164,81 +1164,65 @@ class Terminal {
           dateStyle: 'medium', timeStyle: 'short'
         }).format(new Date(data.updatedAt));
 
-        const leagueCards = data.leagues.map(league => {
-          const standing = league.myStanding || {};
-          const form = `${standing.wins ?? 0}V · ${standing.draws ?? 0}N · ${standing.losses ?? 0}P`;
-          const latest = [...(league.matchdays || [])].reverse().find(day => day.status === 'final')
-            || (league.matchdays || [])[0];
-          const hasScore = latest && latest.homeGoals != null && latest.awayGoals != null;
-          const score = hasScore
-            ? `${latest.homeGoals}, ${latest.awayGoals}`
-            : (latest?.rawScore || 'da giocare');
-          const match = latest ? `
-            <div class="fantasy-match">
-              <span>${latest.matchday}ª giornata</span>
-              <strong>${this._esc(latest.home)} ${this._esc(score)} ${this._esc(latest.away)}</strong>
-              ${latest.homePoints != null ? `<small>${latest.homePoints}, ${latest.awayPoints} fantapunti</small>` : '<small>Da giocare</small>'}
-            </div>` : '';
-          const standings = (league.standings || []).map(row => `
-            <tr class="${row.team.toLowerCase() === league.team.toLowerCase() ? 'is-mine' : ''}">
-              <td>${row.position}</td><td>${this._esc(row.team)}</td><td>${row.played}</td><td>${row.points}</td><td>${row.totalPoints}</td>
-            </tr>`).join('');
-          const archived = (data.seasons || []).filter(season => season.league === league.name).map(season => `
-            <details class="fantasy-season"><summary>${this._esc(season.season)} · ${this._esc(season.competition)}</summary>
-              <div class="fantasy-winner"><strong>🏆 ${this._esc(season.winner)}</strong><small>Campione con ${season.winnerPoints} punti</small></div>
-              <ol>${season.standings.map(row => `<li class="${row.position === 1 ? 'is-champion' : ''}"><span>${this._esc(row.team)}</span><b>${row.points} pt</b></li>`).join('')}</ol>
-            </details>`).join('');
-          return `
-            <details class="fantasy-card">
-              <summary class="fantasy-card-head">
-                <div><span>${this._esc(league.platform)}</span><h3>${this._esc(league.name)}</h3></div>
-                <strong>${this._esc(data.season)} · apri</strong>
-              </summary>
-              <div class="fantasy-detail"><div class="fantasy-team">${this._esc(league.team)}</div>
-              <div class="fantasy-stats">
-                <div><strong>${standing.position ?? '–'}ª</strong><span>posizione</span></div>
-                <div><strong>${standing.points ?? '–'}</strong><span>punti</span></div>
-                <div><strong>${standing.totalPoints ?? '–'}</strong><span>fantapunti</span></div>
-                <div><strong>${form}</strong><span>andamento</span></div>
-              </div>
-              ${match}
-              ${standings ? `<div class="fantasy-table-wrap"><table class="fantasy-table"><thead><tr><th>#</th><th>Squadra</th><th>G</th><th>Pt</th><th>Fpt</th></tr></thead><tbody>${standings}</tbody></table></div>` : ''}
-              ${(league.roster || []).length ? `<details class="fantasy-season"><summary>Rosa ${this._esc(data.season)}</summary><div class="fantasy-roster">${league.roster.map(player => `<span><b>${this._esc(player.role)}</b>${this._esc(player.name)}</span>`).join('')}</div></details>` : ''}
-              ${archived ? `<h4 class="fantasy-subtitle">Stagioni precedenti</h4>${archived}` : ''}
-              </div>
-            </details>`;
-        }).join('');
+        const primaryIds = new Set((data.leagues || []).map(league => league.id));
+        const leagues = [...(data.leagues || []), ...(data.otherLeagues || []).filter(league => !primaryIds.has(league.id))];
+        let selectedLeague = null;
+        let selectedSeason = 0;
+        let selectedTab = 'standings';
 
-        const otherLeagues = (data.otherLeagues || []).map(league => {
-          const leagueStandings = (league.standings || []).map(row => `
-            <tr class="${row.team.toLowerCase() === league.team.toLowerCase() ? 'is-mine' : ''}"><td>${row.position}</td><td>${this._esc(row.team)}</td><td>${row.played}</td><td>${row.points}</td><td>${row.totalPoints}</td></tr>`).join('');
-          return `
-          <details class="fantasy-mini-card">
-            <summary><span>${this._esc(league.competition)}</span><h3>${this._esc(league.name)}</h3><strong>${this._esc(league.team)}</strong></summary>
-            <div class="fantasy-detail"><small>${league.status === 'setup' ? 'Stagione in configurazione' : 'Stagione attiva'}</small>
-            ${leagueStandings ? `<div class="fantasy-table-wrap"><table class="fantasy-table"><thead><tr><th>#</th><th>Squadra</th><th>G</th><th>Pt</th><th>Fpt</th></tr></thead><tbody>${leagueStandings}</tbody></table></div>` : ''}
-            ${(league.roster || []).length ? `<h4 class="fantasy-subtitle">Rosa attuale</h4><div class="fantasy-roster">${league.roster.map(player => `<span><b>${this._esc(player.role)}</b>${this._esc(player.name)}</span>`).join('')}</div>` : (!leagueStandings ? '<p class="fantasy-unavailable">Classifica e rosa non ancora disponibili su Fantacalcio.</p>' : '')}
-            </div>
-          </details>`;
-        }).join('');
+        const seasonsFor = league => [
+          { season: data.season, competition: league.competition, standings: league.standings || [], roster: league.roster || [], current: true },
+          ...(data.seasons || []).filter(season => season.league === league.name).map(season => ({ ...season, roster: season.roster || [], current: false }))
+        ];
 
-        const cups = (data.cups || []).map(cup => `
-          <div class="fantasy-cup">
-            <span>${this._esc(cup.league)}</span><strong>🏆 ${this._esc(cup.name)}</strong>
-            <small>${this._esc(cup.team)} · ${this._esc(cup.status)}${cup.position ? ` · ${cup.position}ª posizione` : ''}</small>
-          </div>`).join('');
+        const emptyState = message => `<div class="fantasy-panel-empty"><span>○</span><p>${this._esc(message)}</p></div>`;
+        const standingsTable = (rows, team) => rows.length ? `
+          <div class="fantasy-table-wrap"><table class="fantasy-table"><thead><tr><th>#</th><th>Squadra</th><th>G</th><th>Pt</th><th>Fpt</th></tr></thead><tbody>
+          ${rows.map(row => `<tr class="${row.team.toLowerCase() === team.toLowerCase() ? 'is-mine' : ''}"><td>${row.position}</td><td>${this._esc(row.team)}</td><td>${row.played ?? ''}</td><td>${row.points ?? ''}</td><td>${row.totalPoints ?? ''}</td></tr>`).join('')}
+          </tbody></table></div>` : emptyState('Classifica non ancora disponibile per questa stagione.');
+        const rosterPanel = roster => roster.length ? `<div class="fantasy-roster-list">${roster.map(player => `<div><b>${this._esc(player.role || '•')}</b><span>${this._esc(player.name)}</span></div>`).join('')}</div>` : emptyState('Rosa non disponibile. Le rose finali verranno archiviate alla chiusura della stagione.');
 
-        const seasons = (data.seasons || []).map(season => `
-          <article class="fantasy-history">
-            <div class="fantasy-winner"><span>${this._esc(season.league)} · ${this._esc(season.season)}</span><strong>🏆 ${this._esc(season.winner)}</strong><small>Campione con ${season.winnerPoints} punti</small></div>
-            <details><summary>Classifica finale completa</summary><ol>${season.standings.map(row => `<li class="${row.position === 1 ? 'is-champion' : ''}"><span>${this._esc(row.team)}</span><b>${row.points} pt</b></li>`).join('')}</ol></details>
-            <div class="fantasy-trophies">${season.trophies.map(trophy => `<span><b>${this._esc(trophy.competition)}</b>${this._esc(trophy.winner)}</span>`).join('')}</div>
-          </article>`).join('');
+        const render = () => {
+          if (selectedLeague === null) {
+            section.className = 'out-line fantasy-app';
+            section.innerHTML = `
+              <header class="fantasy-overview-head"><div><span>Le mie competizioni</span><h2>Leghe</h2></div><small>${leagues.length} totali</small></header>
+              <div class="fantasy-league-list">${leagues.map((league, index) => {
+                const seasons = seasonsFor(league);
+                const standing = league.myStanding || (league.standings || []).find(row => row.team.toLowerCase() === league.team.toLowerCase());
+                return `<button class="fantasy-league-row" data-league="${index}"><span class="fantasy-league-mark">${standing?.position ? standing.position + 'ª' : 'FC'}</span><span class="fantasy-league-copy"><strong>${this._esc(league.name)}</strong><small>${this._esc(league.team)} · ${this._esc(data.season)}</small></span><span class="fantasy-league-meta">${seasons.length > 1 ? `${seasons.length} stagioni` : this._esc(league.competition || 'Classic')}<b>›</b></span></button>`;
+              }).join('')}</div>
+              <div class="fantasy-updated">Aggiornato ${updated}</div>`;
+            return;
+          }
 
-        section.innerHTML = leagueCards
-          + (otherLeagues ? `<section class="fantasy-wide"><h2>Le altre leghe</h2><div class="fantasy-mini-grid">${otherLeagues}</div></section>` : '')
-          + (cups ? `<section class="fantasy-wide"><h2>Coppe</h2><div class="fantasy-cups">${cups}</div></section>` : '')
-          + `<div class="fantasy-updated">Ultimo aggiornamento: ${updated}</div>`;
+          const league = leagues[selectedLeague];
+          const seasons = seasonsFor(league);
+          const season = seasons[Math.min(selectedSeason, seasons.length - 1)];
+          const cups = season.current ? (data.cups || []).filter(cup => cup.league === league.name) : (season.trophies || []);
+          const panel = selectedTab === 'roster' ? rosterPanel(season.roster)
+            : selectedTab === 'cups' ? (cups.length ? `<div class="fantasy-cup-list">${cups.map(cup => `<div><span>🏆</span><p><strong>${this._esc(cup.name || cup.competition)}</strong><small>${this._esc(cup.winner || cup.status || '')}</small></p></div>`).join('')}</div>` : emptyState('Nessuna coppa disponibile per questa stagione.'))
+            : standingsTable(season.standings, league.team);
+
+          section.className = 'out-line fantasy-app';
+          section.innerHTML = `
+            <button class="fantasy-back" data-back>‹ Tutte le leghe</button>
+            <header class="fantasy-league-head"><span>${this._esc(league.platform || 'Leghe Fantacalcio')}</span><h2>${this._esc(league.name)}</h2><p>${this._esc(league.team)}</p></header>
+            ${seasons.length > 1 ? `<nav class="fantasy-season-switch" aria-label="Seleziona stagione">${seasons.map((item, index) => `<button class="${index === selectedSeason ? 'is-active' : ''}" data-season="${index}">${this._esc(item.season)}</button>`).join('')}</nav>` : `<div class="fantasy-single-season">Stagione ${this._esc(season.season)}</div>`}
+            <nav class="fantasy-tabs" aria-label="Dettaglio lega"><button class="${selectedTab === 'standings' ? 'is-active' : ''}" data-tab="standings">Classifica</button><button class="${selectedTab === 'roster' ? 'is-active' : ''}" data-tab="roster">Rosa</button><button class="${selectedTab === 'cups' ? 'is-active' : ''}" data-tab="cups">Coppe</button></nav>
+            <div class="fantasy-panel">${panel}</div>`;
+        };
+
+        section.addEventListener('click', event => {
+          const leagueButton = event.target.closest('[data-league]');
+          const seasonButton = event.target.closest('[data-season]');
+          const tabButton = event.target.closest('[data-tab]');
+          if (leagueButton) { selectedLeague = Number(leagueButton.dataset.league); selectedSeason = 0; selectedTab = 'standings'; render(); }
+          else if (event.target.closest('[data-back]')) { selectedLeague = null; render(); }
+          else if (seasonButton) { selectedSeason = Number(seasonButton.dataset.season); selectedTab = 'standings'; render(); }
+          else if (tabButton) { selectedTab = tabButton.dataset.tab; render(); }
+        });
+        render();
       } catch (error) {
         section.innerHTML = `
           <article class="fantasy-empty">
