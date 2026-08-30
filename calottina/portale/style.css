@@ -4,3 +4,9 @@
 .data-card{display:block;padding:22px;border:1px solid #c9e1e5;border-radius:18px;background:#fff;color:#092c3c;text-decoration:none;box-shadow:0 8px 30px #07384a0a}.data-card:hover{border-color:#12a7c6;transform:translateY(-2px)}
 .data-card h3{margin:8px 0;font-size:1.2rem}.meta{color:#397083;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}.muted{color:#52717d}.match-card{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;padding:18px 22px;border-radius:16px;background:#fff;border:1px solid #c9e1e5}.match-card .away{text-align:right}.score{font:800 1.45rem 'Saira Condensed',sans-serif;color:#062f47}.pill{display:inline-block;border-radius:999px;padding:4px 10px;background:#d8f7f2;color:#08715d;font-size:.75rem;font-weight:800}.pill.warn{background:#fff0d2;color:#8a5b05}.pill.fail{background:#ffe0dd;color:#a62d25}.loading,.empty{padding:24px;border:1px dashed #9fcbd4;border-radius:16px;color:#52717d}.text-button{border:0;background:none;color:#087f99;font:700 1rem inherit;cursor:pointer;padding:8px 0}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}th,td{padding:12px;text-align:left;border-bottom:1px solid #dcebed}th{font-size:.75rem;text-transform:uppercase;color:#52717d}.detail-block{margin-top:40px}.detail-block h3{font-size:1.8rem}.privacy-note{font-size:.85rem;color:#52717d}
 @media(max-width:700px){.topnav a:nth-child(n+3){display:none}.match-card{grid-template-columns:1fr auto 1fr;padding:14px 12px;font-size:.88rem}.portal-hero{padding-top:120px}}
+
+/* Explicit contrast: the parent detail section uses light text on navy. */
+table,table td{color:#173d4c}
+table th{color:#466875;background:#f4fafb}
+table tbody tr:nth-child(even){background:#f8fcfd}
+table td b{color:#092c3c}
