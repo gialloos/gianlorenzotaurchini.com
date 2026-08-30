@@ -174,4 +174,16 @@
     <loc>https://gianlorenzotaurchini.com/selenite/terms/</loc>
     <lastmod>2026-08-11</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/crossdex/</loc>
+    <lastmod>2026-08-30</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/crossdex/privacy/</loc>
+    <lastmod>2026-08-30</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://gianlorenzotaurchini.com/crossdex/support/</loc>
+    <lastmod>2026-08-30</lastmod><changefreq>yearly</changefreq><priority>0.5</priority>
+  </url>
 </urlset>

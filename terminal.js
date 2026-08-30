@@ -550,6 +550,25 @@ Built in Flutter with a bundled players database. No ads, no tracking, no data l
     github: null,
   },
   {
+    id: 'crossdex',
+    name: 'CrossDex',
+    tag_it: 'iOS & Android · Puzzle Pokémon', tag_en: 'iOS & Android · Pokémon Puzzle',
+    shortDesc_it: 'La sfida Pokémon 3×3, ogni giorno.',
+    shortDesc_en: 'The daily 3×3 Pokémon challenge.',
+    icon: '◉',
+    iconAsset: '/crossdex/img/icon.png',
+    tech: ['Flutter', 'Dart', 'iOS', 'Android', 'Game Design'],
+    description_it: `CrossDex è un puzzle 3×3 basato su incroci di criteri Pokémon. Trova una specie che soddisfi insieme il criterio di riga e quello di colonna, completa la sfida giornaliera e costruisci la tua streak.
+Include allenamento, difficoltà Relax, Standard e Blitz, modalità a tempo e coppia locale, statistiche e cache progressiva del catalogo. Nessun account e nessuna pubblicità.`,
+    description_en: `CrossDex is a 3×3 puzzle built around Pokémon criteria intersections. Find a species matching both its row and column, complete the daily challenge, and build your streak.
+It includes training, Relax, Standard and Blitz difficulties, timed and local pair modes, statistics, and progressive catalog caching. No account and no advertising.`,
+    features_it: ['Sfida giornaliera e allenamento', 'Difficoltà Relax, Standard e Blitz', 'Modalità a tempo e coppia locale', 'Statistiche e streak sul dispositivo', 'Italiano e inglese'],
+    features_en: ['Daily challenge and training', 'Relax, Standard and Blitz difficulties', 'Timed and local pair modes', 'On-device statistics and streaks', 'Italian and English'],
+    website: '/crossdex/',
+    appStore: 'https://apps.apple.com/app/id6806791071',
+    github: null,
+  },
+  {
     id: 'sette',
     name: 'SETTE',
     tag_it: 'iOS & Android · Arcade Sportivo',  tag_en: 'iOS & Android · Sports Arcade',
