@@ -631,6 +631,37 @@ Explore 32 handcrafted levels across four increasingly challenging chapters, ful
     github: null,
   },
   {
+    id: 'veylith',
+    name: 'Veylith',
+    tag_it: 'iOS & Android · Password Manager', tag_en: 'iOS & Android · Password Manager',
+    shortDesc_it: 'Password e codici di accesso in un vault locale cifrato.',
+    shortDesc_en: 'Passwords and passcodes in an encrypted local vault.',
+    icon: '🔐',
+    iconAsset: '/veylith/assets/veylith-icon.png',
+    tech: ['iOS', 'Android', 'Security', 'Offline', 'Encryption'],
+    description_it: `Veylith conserva password, codici di accesso e copie cifrate in un vault locale utilizzabile anche senza Internet e senza creare un account Veylith.
+Include compilazione automatica, codici temporanei di autenticazione, backup cifrati e una verifica facoltativa delle password compromesse. Nessuna pubblicità e nessuno strumento di analisi dell'utilizzo.`,
+    description_en: `Veylith stores passwords, passcodes, and encrypted backups in a local vault that works without Internet and without creating a Veylith account.
+It includes autofill, temporary authentication codes, encrypted backups, and an optional compromised-password check. No advertising or usage analytics.`,
+    features_it: [
+      'Vault locale cifrato, senza account',
+      'Password e codici temporanei di autenticazione',
+      'Compilazione automatica su iOS e Android',
+      'Backup cifrati esportabili e verificabili',
+      'Nessuna pubblicità o analytics',
+    ],
+    features_en: [
+      'Encrypted local vault with no account',
+      'Passwords and temporary authentication codes',
+      'Autofill on iOS and Android',
+      'Exportable, verifiable encrypted backups',
+      'No advertising or analytics',
+    ],
+    website: '/veylith/',
+    appStore: null,
+    github: null,
+  },
+  {
     id: 'career',
     name: 'CAREER Football Legend',
     tag_it: 'iOS · Simulazione calcistica', tag_en: 'iOS · Football Simulation',
@@ -1267,6 +1298,7 @@ class Terminal {
 
     // URL-style alias requested for the Selenite project command.
     cmds['/selenite'] = cmds['selenite'];
+    cmds['/veylith'] = cmds['veylith'];
 
     // SKILLS
     cmds['skills'] = () => {
